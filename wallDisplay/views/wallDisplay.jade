@@ -1,0 +1,20 @@
+doctype html
+html(lang=it)
+	head
+		link(rel="stylesheet" href="css/WallDisplay.css")
+		script(src="https://use.fontawesome.com/9921b3da48.js")
+		script(src="js/jquery.min.js")
+		script(src="js/raphael.js")
+		script(src="js/morris.js")
+		script(src="/socket.io/socket.io.js")
+		script.
+			var abi='#{abi_code}';
+			var connection_id='#{connection_id}';
+		script(src='js/wallDisplay.js')
+		script(src='js/script.js')
+		title WallDisplay
+	body
+		#header
+			img#logo(src="bank.png")
+			h3(id="title")
+		#wallDisplay

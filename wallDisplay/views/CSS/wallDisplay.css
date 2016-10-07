@@ -1,0 +1,147 @@
+body{
+	background-color: #f7f7f7;
+}
+#header{
+	margin-top: 0;
+}
+#datetime{
+	color: #3B5998;
+	font-family: "Lucida Grande", sans-serif;
+	font-weight: normal;
+	display:inline;
+	float: right;
+}
+
+#title{
+	color: #3B5998;
+	font-weight: bold;
+	/*text-decoration: underline;*/
+	font-family: "Lucida Grande", sans-serif;
+	margin-left: 1%;
+	display:inline;
+	margin-top: 0%;
+	font-size: xx-large;
+}
+
+.logtime{
+	float: right;
+	padding-right: 2%;	 
+	color: #3B5998;
+	font-weight: normal;
+	margin-left: 0;
+	padding-left: 0;
+}
+.field{
+	color: #3B5998;
+}
+#logo{
+	vertical-align: middle;
+	height:10%; 
+	width:10%;
+	display:inline;
+	/*border-style: solid;
+	border-radius: 10px;
+	border-width: 2px;
+	border-color:#dfe3ee;*/	
+}
+#wallDisplay{
+	margin-top:3%;
+	margin-left: 5%; 
+	/*padding-left: 30%;*/
+	width:100%;
+}
+/*.serviceLight{
+	height:auto;
+	margin-bottom: 20%; 
+	width:10%;
+	float: left;
+
+}*/
+.container{
+	height: auto;
+	display:inline-block;
+	margin-right: .5%;
+	margin-left: .5%; 
+	margin-bottom:  .5%;
+	background-color:#f7f7f7;
+	border-radius: 10px;
+	border-style: solid;
+	border-color: #3B5998;
+	border-width: 1px;
+	position: relative;
+}
+
+.total{
+	float:right;
+	font-weight: bold;
+	margin-top: 3%;
+	max-height: 1px;
+	font-size: xx-large;
+	font-family: "Lucida Grande", sans-serif;
+	color: #3B5998;
+}
+.footer{
+	position: relative;
+	border-width: 1px;
+	margin-bottom: 0%;
+	padding-left: 5%;
+	background-color: #dfe3ee;
+	font-family: "Lucida Grande", sans-serif;
+	border-bottom-left-radius:  10px;
+	border-bottom-right-radius:  10px;
+}
+.titleCard
+{
+	margin:auto;
+	color: #3B5998;
+	font-weight: normal;
+	font-family: "Lucida Grande", sans-serif;
+}
+.titleCardSmall{
+	font-size: small;
+}
+@media screen and (max-width: 599px) {
+    .container{
+		width:90%;
+	}
+	.titleCard{
+		font-size: small;
+	}
+}
+@media screen and (min-width: 600px){
+    .container{
+		width:40%;
+	}
+	
+	.containerFull{
+		margin-right: 10%;
+		margin-left: 10%;
+		width: 75%;
+	}
+	.titleCard{
+		font-size: medium;
+	}
+}	
+@media screen and (min-width: 900px){
+	.containerSmall{
+		width:20%;
+	}
+	.containerMedium{
+		width:30%;
+		height: auto;
+	}
+	.containerLarge{
+	width:40%;
+	}
+	.titleCardLarge{
+		font-size: large;
+	}
+	.containerFull{
+		margin-right: 10%;
+		margin-left: 10%;
+		width: 75%;
+	}
+    .titleCardFull{
+		font-size: large;
+	}
+}

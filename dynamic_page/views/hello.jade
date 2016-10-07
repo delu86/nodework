@@ -1,0 +1,21 @@
+doctype html
+html(lang=it)
+	head
+		script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+		script(type='text/javascript').
+			function logout(){
+				$.get("/logout",onLogout);
+			}
+			function onLogout(data){
+				if(data==='done'){
+					window.location.href="/hello";
+				}
+			}
+			$(function(){
+				$("#exit").click(logout);
+			})	
+		title Hello page
+	body
+		h1 Hello to you 
+		h1 #{username}
+		button(id="exit") Exit

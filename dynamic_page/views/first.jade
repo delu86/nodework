@@ -1,0 +1,23 @@
+doctype html
+html(lang=it)
+	head
+		script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+		script(type='text/javascript').
+			$(document).ready(function(){
+				$("#submit").click(function(){
+					var username=$("#username").val();
+					$.post("http://localhost:3000/login",{username:username},function(data){
+						if(data==='ok')
+						{
+						    console.log("..");
+							window.location.href="/hello";
+						}
+					});
+				});
+			});
+		title myFirstJadePage
+		body
+			h1 La mia prima pagina con jade
+			p Inserisci qui il tuo nome
+			input(type="text" id="username" name="username")
+			button(id="submit") OK!
