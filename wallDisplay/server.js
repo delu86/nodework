@@ -28,7 +28,7 @@ function getWallDisplay(req,res) {
 		res.render('wallDisplay.jade',{connection_id:connection_id,abi_code:req.params.abi_code});
 }
 function getCard(req,res) {
-	res.render('walle.pug');
+	res.render('wall-e.pug');
 }
 function getJSON(req,res) {
 	MongoClient.connect(url,function(err,db) {

@@ -1,0 +1,1 @@
+{"options":{"autoIndexId":true},"indexes":[{"v":1,"key":{"_id":1},"name":"_id_","ns":"FAC.WallDisplay"},{"v":1,"unique":true,"key":{"abi":1,"data":-1},"name":"abi_data","ns":"FAC.WallDisplay"}]}
