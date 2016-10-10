@@ -58,8 +58,9 @@ WallDisplay.prototype.setUpContainer=function(service) {
         	$("#wallDisplay").append("<div class='"+this.containerClass+"' id='"+service.nomeservizio+"'><div>");
 			$("#"+service.nomeservizio).append("<p class='total' id='total"+service.nomeservizio+"'></p>");
 			$("#"+service.nomeservizio).append("<h4 class='field' id='field"+service.nomeservizio+"'></h4>");
+			// $("#"+service.nomeservizio).append("<h4 class='delta' id='delta"+service.nomeservizio+"'>+5%</h4>");
 			$("#"+service.nomeservizio).append("<h4 class='logtime' id='logtime"+service.nomeservizio+"'></h4>");
-			$("#"+service.nomeservizio).append("<div class='footer' id='footer"+service.nomeservizio+"></div>");
+			$("#"+service.nomeservizio).append("<div class='footer' id='footer"+service.nomeservizio+"'></div>");
 			$("#footer"+service.nomeservizio).append("<h5 class='"+this.titleCardClass+"'>"+service.nomeservizio+"</h5>");	
     }
 

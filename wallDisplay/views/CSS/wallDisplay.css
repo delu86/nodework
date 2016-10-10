@@ -80,22 +80,22 @@ body{
 	font-family: "Lucida Grande", sans-serif;
 	color: #3B5998;
 }
-.footer{
-	position: relative;
-	border-width: 1px;
-	margin-bottom: 0%;
-	padding-left: 5%;
-	background-color: #dfe3ee;
+
+.titleCard
+{
+	font-weight: normal;
 	font-family: "Lucida Grande", sans-serif;
 	border-bottom-left-radius:  10px;
 	border-bottom-right-radius:  10px;
-}
-.titleCard
-{
-	margin:auto;
+	width: 95%;
 	color: #3B5998;
-	font-weight: normal;
-	font-family: "Lucida Grande", sans-serif;
+	padding-left: 5%;
+	bottom: 0	;
+	font-size: xx-large;
+	position: absolute;
+	margin-bottom: 0%;
+	background-color: #dfe3ee;
+
 }
 .titleCardSmall{
 	font-size: small;
@@ -142,6 +142,6 @@ body{
 		width: 75%;
 	}
     .titleCardFull{
-		font-size: large;
+		font-size: xx-large;
 	}
 }
