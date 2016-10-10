@@ -1,13 +1,3 @@
-var ATM_SERVICE='atm';
-var CBI_SERVICE='CBI';
-var HB_SERVICE='HB';
-var CASSE_SERVICE='CasseSportello';
-var OPERAZIONI_SERVICE='OperazioniSportello';
-var PWS_SERVICE='PWS';
-var FEA_SERVICE='FEAfirmati';
-var TICKET_SERVICE='Ticket';
-var containerClass;
-var titleCardClass;
 var socket = io();
 var wallDisplay;
 $(function(){
@@ -31,8 +21,8 @@ function renderWallDisplay(){
 	//controlla l'esistenza dell'immagine di logo
 	$.get("img/"+abi+".png")
     .done(function() {
-    	$("#logo").attr("src", "img/"+abi+".png") 
-        }).fail(function() { 
+    	$("#logo").attr("src", "img/"+abi+".png")
+        }).fail(function() {
         $("#logo").attr("src", "img/bank.png")
 
     })

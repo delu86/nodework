@@ -20,15 +20,16 @@ http.listen(3000, function(){
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.get('/getJSON/:abi_code',getJSON);
-app.get('/card',getCard);
+app.get('/wall-e/:abi_code',getWallE);
 app.get('/:abi_code',getWallDisplay);
 
 function getWallDisplay(req,res) {
 	    connection_id = Math.floor(Math.random() * 1000);
 		res.render('wallDisplay.jade',{connection_id:connection_id,abi_code:req.params.abi_code});
 }
-function getCard(req,res) {
-	res.render('wall-e.pug');
+function getWallE(req,res) {
+	    connection_id = Math.floor(Math.random() * 1000);
+		res.render('wall-e.pug',{connection_id:connection_id,abi_code:req.params.abi_code});
 }
 function getJSON(req,res) {
 	MongoClient.connect(url,function(err,db) {

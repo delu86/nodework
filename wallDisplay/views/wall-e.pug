@@ -4,14 +4,46 @@ html(lang=it)
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Wall-E
     link(rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css")
-    link(rel="stylesheet" href="CSS/wall-e.css")
+    link(rel="stylesheet" href="../CSS/wall-e.css")
   body
-    .row(style="  display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;flex-wrap: wrap;")
-      .col-md-3(style="display:flex; flex-direction:column;background-color: #dedef8; box-shadow:inset 1px -1px 1px #444, inset -1px 1px 1px #444;")
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      .col-md-9(style="display:flex; flex-direction:column;background-color: #dddef8; box-shadow:inset 1px -1px 1px #444, inset -1px 1px 1px #444;")
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    script(src="js/jquery.min.js")
+    #header
+      h1 This is the header
+    #wall-e
+    #footer
+    script.
+      var abi='#{abi_code}';
+      var connection_id='#{connection_id}';
+    script(src="../js/jquery.min.js")
     script(src="/bootstrap/dist/js/bootstrap.min.js")
+    script(src="/socket.io/socket.io.js")
+    script(src="../js/wall-e.js")
+    script.
+      var socket = io();
+      var wallDisplay;
+      $(function(){
+        renderWallDisplay();
+        // console.log((abi+'_'+connection_id).split("_")[0]);
+        socket.on('json '+abi+'_'+connection_id+' response', function(jsonString){
+          json=JSON.parse(jsonString);
+              wallDisplay.update(json);
+              // console.log("UPDATED!!!!");
+              });
+              setInterval(refreshData, 60*1000);
+              });
+              function refreshData() {
+              socket.emit('json request',abi+'_'+connection_id);
+              // console.log("UPDATE");
+              }
+              function renderWallDisplay(){
+              $.getJSON('/getJSON/'+abi,function(json){
+              //- $("#title").text(json.abi_desc);
+              //- //controlla l'esistenza dell'immagine di logo
+              //- $.get("img/"+abi+".png")
+              //-   .done(function() {
+              //-     $("#logo").attr("src", "../img/"+abi+".png")
+              //-   }).fail(function() {
+              //-     $("#logo").attr("src", "../img/bank.png")});
+                  wallDisplay=new WallE(json);
+                  wallDisplay.render();
+                  })
+                  }
