@@ -8,11 +8,11 @@ var path = require('path');
 var http=require('http').Server(app);
 var io = require('socket.io')(http);
 var url= "mongodb://10.99.252.22:27017/FAC";
-
 app.use(express.static(path.join(__dirname,'views')));
+app.use('/bootstrap',express.static('C:/Users/cre0260/node/node_modules/bootstrap'));
 app.set('views',__dirname+'/views');
 //set up jade as view engine
-app.set('view engine','jade');
+app.set('view engine','pug');
 //start server on port 3000
 http.listen(3000, function(){
   console.log('listening on *:3000');
@@ -28,7 +28,7 @@ function getWallDisplay(req,res) {
 		res.render('wallDisplay.jade',{connection_id:connection_id,abi_code:req.params.abi_code});
 }
 function getCard(req,res) {
-	res.render('card.jade');
+	res.render('walle.pug');
 }
 function getJSON(req,res) {
 	MongoClient.connect(url,function(err,db) {
@@ -54,7 +54,7 @@ io.on('connection', function(socket){
 				// console.log(id);
 				var json=JSON.stringify(doc);
 				io.emit('json '+id+' response', json);
-			}); 	
+			});
   		});
 	});
 });
