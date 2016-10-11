@@ -35,10 +35,16 @@ function getJSON(req,res) {
 	MongoClient.connect(url,function(err,db) {
 		try{
 		assert.equal(null,err);
-		db.collection("WallDisplay").findOne({"abi":req.params.abi_code},{"servizio.rilevazioni":{$slice:-1}},
-		function(err,doc){
-			var json=JSON.stringify(doc);
-			res.end(json)
+    //get the last relevation
+    db.collection("WallDisplay").findOne({"abi":req.params.abi_code},{"servizio.rilevazioni":{$slice:-1}},
+		function(err,lastRel){
+			var json="{\"lastRel\":"+JSON.stringify(lastRel);
+      //get the tresholds
+      db.collection("WallDisplay").findOne({"abi":req.params.abi_code},{"servizio.rilevazioni":{$slice:-1}},
+      function(err2,tresholds){
+        json=json+" ,\"tresholds\":"+JSON.stringify(tresholds)+"}";
+        res.end(json);
+      });
 		});}
 		catch(e){
 			console.log("Error on db: "+e);

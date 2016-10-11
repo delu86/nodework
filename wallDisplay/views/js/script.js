@@ -17,7 +17,7 @@ function refreshData() {
 }
 function renderWallDisplay(){
 	$.getJSON('/getJSON/'+abi,function(json){
-	$("#title").text(json.abi_desc);
+	$("#title").text(json.lastRel.abi_desc);
 	//controlla l'esistenza dell'immagine di logo
 	$.get("img/"+abi+".png")
     .done(function() {

@@ -1,5 +1,5 @@
 var WallDisplay = function(jsonObject){
-	this.servicesData=jsonObject.servizio;
+	this.servicesData=jsonObject.lastRel.servizio;
 	this.setHtmlClasses();
 	this.intervalID=[];
 }
@@ -44,7 +44,7 @@ WallDisplay.prototype.update=function(jsonObject){
 	//contiene gli id per annullare lo scorrimento dei dati nei container
 	//una volta che i dati vengono aggiornati
 	this.intervalID=[];
-	this.servicesData=jsonObject.servizio;
+	this.servicesData=jsonObject.lastRel.servizio;
 	this.render();
 }
 WallDisplay.prototype.displayService=function(service) {
