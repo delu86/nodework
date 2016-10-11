@@ -58,9 +58,10 @@ io.on('connection', function(socket){
 		assert.equal(null,err);
         db.collection("WallDisplay").findOne({"abi":id.split("_")[0]},{"servizio.rilevazioni":{$slice:-1}},
 			function(err,doc){
-        db.collection("WallDisplaySoglie").findOne({"abi":req.params.abi_code},
+        db.collection("WallDisplaySoglie").findOne({"abi":id.split("_")[0]},
         function(err2,tresholds){
-          json="{\"lastRel:\""+JSON.stringify(doc)+" ,\"tresholds\":"+JSON.stringify(tresholds)+"}";
+          json="{\"lastRel\":"+JSON.stringify(doc)+" ,\"tresholds\":"+JSON.stringify(tresholds)+"}";
+          // console.log(json);
           io.emit('json '+id+' response', json);
         });
 

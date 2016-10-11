@@ -1,5 +1,6 @@
 var WallDisplay = function(jsonObject){
 	this.servicesData=jsonObject.lastRel.servizio;
+	this.tresholds=jsonObject.tresholds.servizio;
 	this.setHtmlClasses();
 	this.intervalID=[];
 }
@@ -45,6 +46,7 @@ WallDisplay.prototype.update=function(jsonObject){
 	//una volta che i dati vengono aggiornati
 	this.intervalID=[];
 	this.servicesData=jsonObject.lastRel.servizio;
+	this.tresholds=jsonObject.tresholds.servizio;
 	this.render();
 }
 WallDisplay.prototype.displayService=function(service) {
@@ -58,7 +60,7 @@ WallDisplay.prototype.setUpContainer=function(service) {
       $("#wallDisplay").append("<div class='"+this.containerClass+"' id='"+service.nomeservizio+"'><div>");
 			$("#"+service.nomeservizio).append("<p class='total' id='total"+service.nomeservizio+"'></p>");
 			$("#"+service.nomeservizio).append("<h4 class='field' id='field"+service.nomeservizio+"'></h4>");
-			// $("#"+service.nomeservizio).append("<h4 class='delta' id='delta"+service.nomeservizio+"'>+5%</h4>");
+			$("#"+service.nomeservizio).append("<h1 class='delta' id='delta"+service.nomeservizio+"'></h1>");
 			$("#"+service.nomeservizio).append("<h4 class='logtime' id='logtime"+service.nomeservizio+"'></h4>");
 			$("#"+service.nomeservizio).append("<div class='footer' id='footer"+service.nomeservizio+"'></div>");
 			$("#footer"+service.nomeservizio).append("<h5 class='"+this.titleCardClass+"'>"+service.nomeservizio+"</h5>");
@@ -67,24 +69,33 @@ WallDisplay.prototype.setUpContainer=function(service) {
 }
 
 WallDisplay.prototype.insertValuesIntoContainer=function(service) {
-	var values=[];
+var values=[];
 	for(var key in service.rilevazioni[0]){
-		if(!(key==='logtime'))
-			values.push({name:key, value:service.rilevazioni[0][key]});
+		var treshold=this.getTreshold(service.nomeservizio,key);
+		if(!(treshold===null))
+			values.push({name:key, value:service.rilevazioni[0][key], treshold:treshold});
 	}
 	var counter=0;
-	$("#logtime"+service.nomeservizio).html("<i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i><i>"+service.rilevazioni[0].logtime.substr(10,9));
-	insertValueText(service,values[counter].value,values[counter].name);
+	$("#logtime"+service.nomeservizio).html("<i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i><i>"+service.rilevazioni[0].logtime.substr(11,5));
+	insertValueText(service,values[counter].value,values[counter].name,values[counter].treshold,service.rilevazioni[0].logtime.substr(11,2));
 	if(values.length>1)
 		{counter++;
 		this.intervalID.push(setInterval(function(){
-							    insertValueText(service,values[counter].value,values[counter].name);
+							    insertValueText(service,values[counter].value,values[counter].name,values[counter].treshold,service.rilevazioni[0].logtime.substr(11,2));
 								if(++counter==values.length)
 									counter=0;}, 5*1000));
 	}
 }
-
-insertValueText=function(service,value,field) {
+WallDisplay.prototype.getTreshold = function (serviceName,key) {
+	for (var i = 0; i < this.tresholds.length; i++) {
+		if(this.tresholds[i].nomeservizio===serviceName){
+			if(this.tresholds[i].soglie[key]!=undefined)
+				return Number(this.tresholds[i].soglie[key])
+			else return null;}
+	}
+	return null;
+};
+insertValueText=function(service,value,field,treshold,hour) {
 	var valueText;
 	if (value>=10*1000&&value<1000*1000) {
 		valueText=(value/1000).toFixed(2).toString()+"K";
@@ -92,6 +103,18 @@ insertValueText=function(service,value,field) {
 		valueText=(value/1000000).toFixed(2).toString()+"M";
 	}else{
 		valueText=value.toString();
+	}
+	treshold=treshold*((parseInt(hour)-7)/11);
+	delta=100*(value-treshold)/treshold
+	// console.log(100*(value-treshold)/treshold);
+	// console.log(hour);
+	if(delta>0){
+		$("#delta"+service.nomeservizio).attr("style","color:red");
+		$("#delta"+service.nomeservizio).text("+"+delta.toFixed(1)+'%');
+	}
+	else{
+		$("#delta"+service.nomeservizio).attr("style","color:green");
+		$("#delta"+service.nomeservizio).text(delta.toFixed(1)+'%');
 	}
   $("#total"+service.nomeservizio).text(valueText);
 	$("#field"+service.nomeservizio).text(field);
