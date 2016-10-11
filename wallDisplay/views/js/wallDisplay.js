@@ -55,13 +55,13 @@ WallDisplay.prototype.displayService=function(service) {
 WallDisplay.prototype.setUpContainer=function(service) {
 	//crea solo se non esiste il div
 	if (!$('#'+service.nomeservizio).length){
-        	$("#wallDisplay").append("<div class='"+this.containerClass+"' id='"+service.nomeservizio+"'><div>");
+      $("#wallDisplay").append("<div class='"+this.containerClass+"' id='"+service.nomeservizio+"'><div>");
 			$("#"+service.nomeservizio).append("<p class='total' id='total"+service.nomeservizio+"'></p>");
 			$("#"+service.nomeservizio).append("<h4 class='field' id='field"+service.nomeservizio+"'></h4>");
 			// $("#"+service.nomeservizio).append("<h4 class='delta' id='delta"+service.nomeservizio+"'>+5%</h4>");
 			$("#"+service.nomeservizio).append("<h4 class='logtime' id='logtime"+service.nomeservizio+"'></h4>");
 			$("#"+service.nomeservizio).append("<div class='footer' id='footer"+service.nomeservizio+"'></div>");
-			$("#footer"+service.nomeservizio).append("<h5 class='"+this.titleCardClass+"'>"+service.nomeservizio+"</h5>");	
+			$("#footer"+service.nomeservizio).append("<h5 class='"+this.titleCardClass+"'>"+service.nomeservizio+"</h5>");
     }
 
 }
@@ -75,17 +75,24 @@ WallDisplay.prototype.insertValuesIntoContainer=function(service) {
 	var counter=0;
 	$("#logtime"+service.nomeservizio).html("<i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i><i>"+service.rilevazioni[0].logtime.substr(10,9));
 	insertValueText(service,values[counter].value,values[counter].name);
-	if(values.length>1)	
+	if(values.length>1)
 		{counter++;
 		this.intervalID.push(setInterval(function(){
 							    insertValueText(service,values[counter].value,values[counter].name);
 								if(++counter==values.length)
 									counter=0;}, 5*1000));
-
 	}
 }
 
 insertValueText=function(service,value,field) {
-	$("#total"+service.nomeservizio).text(value);
+	var valueText;
+	if (value>=10*1000&&value<1000*1000) {
+		valueText=(value/1000).toFixed(2).toString()+"K";
+	}else if (value>1000*1000) {
+		valueText=(value/1000000).toFixed(2).toString()+"M";
+	}else{
+		valueText=value.toString();
+	}
+  $("#total"+service.nomeservizio).text(valueText);
 	$("#field"+service.nomeservizio).text(field);
 }
