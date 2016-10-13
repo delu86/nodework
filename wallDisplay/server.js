@@ -61,7 +61,6 @@ io.on('connection', function(socket){
         db.collection("WallDisplaySoglie").findOne({"abi":id.split("_")[0]},
         function(err2,tresholds){
           json="{\"lastRel\":"+JSON.stringify(doc)+" ,\"tresholds\":"+JSON.stringify(tresholds)+"}";
-          // console.log(json);
           io.emit('json '+id+' response', json);
         });
 
