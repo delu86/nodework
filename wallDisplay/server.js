@@ -41,8 +41,8 @@ function getJSON(req,res) {
 			var json="{\"lastRel\":"+JSON.stringify(lastRel);
       //get the tresholds
       db.collection("WallDisplaySoglie").findOne({"abi":req.params.abi_code},
-      function(err2,tresholds){
-        json=json+" ,\"tresholds\":"+JSON.stringify(tresholds)+"}";
+      function(err2,metaData){
+        json=json+" ,\"metaData\":"+JSON.stringify(metaData)+"}";
         res.end(json);
       });
 		});}
@@ -59,8 +59,8 @@ io.on('connection', function(socket){
         db.collection("WallDisplay").findOne({"abi":id.split("_")[0]},{"servizio.rilevazioni":{$slice:-1}},
 			function(err,doc){
         db.collection("WallDisplaySoglie").findOne({"abi":id.split("_")[0]},
-        function(err2,tresholds){
-          json="{\"lastRel\":"+JSON.stringify(doc)+" ,\"tresholds\":"+JSON.stringify(tresholds)+"}";
+        function(err2,metaData){
+          json="{\"lastRel\":"+JSON.stringify(doc)+" ,\"metaData\":"+JSON.stringify(metaData)+"}";
           io.emit('json '+id+' response', json);
         });
 
