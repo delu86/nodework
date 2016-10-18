@@ -100,17 +100,8 @@ WallDisplay.prototype.getMetaData = function (serviceName,key) {
   return null;
 };
 insertValueText=function(service,data,hour,minutes) {
-	var valueText;
-	// console.log(data);
-	if (data.value>=10*1000&&data.value<1000*1000) {
-		valueText=(data.value/1000).toFixed(2).toString()+"K";
-	}else if (data.value>1000*1000) {
-		valueText=(data.value/1000000).toFixed(2).toString()+"M";
-	}else{
-		valueText=data.value.toString();
-	}
+	var valueText=setValueText(data.value);
 	delta=calculateDelta(data.value,data.treshold,data.type,hour,minutes);
-
 	if(delta>0){
 		$("#delta"+service.nomeservizio).attr("style","color:red");
 		$("#delta"+service.nomeservizio).text("+"+delta.toFixed(1)+'%');
@@ -121,6 +112,16 @@ insertValueText=function(service,data,hour,minutes) {
 	}
   $("#total"+service.nomeservizio).text(valueText);
 	$("#field"+service.nomeservizio).text(data.label);
+}
+
+setValueText=function(value){
+	if (value>=10*1000&&value<1000*1000) {
+		return (value/1000).toFixed(2).toString()+"K";
+	}else if (value>1000*1000) {
+		return (value/1000000).toFixed(2).toString()+"M";
+	}else{
+		return value.toString();
+	}
 }
 calculateDelta=function(val,treshold,valType,hour,minutes) {
   if(valType==="Progressivo"){
