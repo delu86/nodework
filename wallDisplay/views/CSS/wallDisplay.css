@@ -1,3 +1,5 @@
+@font-face { font-family: Delicious; src: url('../font/sketchy.ttf'); }
+
 body{
 	background-color: #f7f7f7;
 }
@@ -12,10 +14,10 @@ body{
 	float: right;
 }
 #title{
-	color: #3B5998;
+	color: #333333;
 	font-weight: bold;
 	/*text-decoration: underline;*/
-	font-family: "Lucida Grande", sans-serif;
+	font-family: "Delicious", sans-serif;
 	margin-left: 1%;
 	display:inline;
 	margin-top: 0%;

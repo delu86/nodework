@@ -4,34 +4,32 @@ var WallDisplay = function(jsonObject){
 	this.setHtmlClasses();
 	this.intervalID=[];
 }
+
+
 WallDisplay.prototype.setHtmlClasses = function() {
 		switch(this.servicesData.length){
-		case 8: this.containerClass="containerSmall container";
-				this.titleCardClass="titleCardSmall titleCard";
-				break;
-		case 7: this.containerClass="containerSmall container";
-				this.titleCardClass="titleCardSmall titleCard";
-				break;
-		case 6: this.containerClass="containerMedium container";
-				this.titleCardClass="titleCardMedium titleCard";
-				break;
-		case 5: this.containerClass="containerMedium container";
-		        this.titleCardClass="titleCardMedium titleCard ";
-				break;
-		case 4: this.containerClass="containerLarge container";
-				this.titleCardClass="titleCardLarge titleCard";
-				break;
-		case 3: this.containerClass="containerLarge container"
-				this.titleCardClass="titleCardLarge titleCard";
-				break;
-		case 2: this.containerClass="containerLarge container";
-				this.titleCardClass="titleCardLarge titleCard";
-				break;
-		case 1: this.containerClass="containerFull container";
-				this.titleCardClass="titleCardFull titleCard";
-				break;
+		case 8: this.assignHtmlClasses("containerSmall container","titleCardSmall titleCard");
+				    break;
+		case 7: this.assignHtmlClasses("containerSmall container","titleCardSmall titleCard");
+				    break;
+		case 6: this.assignHtmlClasses("containerMedium container","titleCardMedium titleCard");
+				    break;
+		case 5: this.assignHtmlClasses("containerMedium container","titleCardMedium titleCard ");
+				    break;
+		case 4: this.assignHtmlClasses("containerLarge container","titleCardLarge titleCard");
+				    break;
+		case 3: this.assignHtmlClasses("containerLarge container","titleCardLarge titleCard");
+				    break;
+		case 2: this.assignHtmlClasses("containerLarge container","titleCardLarge titleCard");
+				    break;
+		case 1: this.assignHtmlClasses("containerFull container","titleCardFull titleCard");
+				    break;
 	}
 };
+WallDisplay.prototype.assignHtmlClasses=function(containerClass,titleCardClass){
+	this.containerClass=containerClass;
+	this.titleCardClass=titleCardClass;
+}
 WallDisplay.prototype.render=function() {
 	for (var i = this.servicesData.length - 1; i >= 0; i--) {
 		this.displayService(this.servicesData[i]);
