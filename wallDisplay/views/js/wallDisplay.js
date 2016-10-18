@@ -1,3 +1,57 @@
+var chart;
+var optionsChart={
+	chart: {
+			renderTo:'containerChartPWS'
+	},
+        title: {
+            text: null,
+            x: 0 //center
+        },
+        subtitle: {
+            text: null,
+            x: 0
+        },
+        xAxis: {
+         gridLineWidth: 1,
+         labels: {
+                style: {
+                    color: 'black',
+                    fontSize:'8px'
+                }
+                },
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        yAxis: {
+            title: {
+                text: null
+            },
+                                                                                              tickAmount: 5,
+            gridLineWidth: 1,
+                labels: {
+                style: {
+                    color: 'black',
+                    fontSize:'8px'
+                }},
+                 alternateGridColor: '#FDFFD5',
+            plotLines: [{
+                value: 0.52,
+                width: 1,
+                color: 'red'
+            }]
+        },
+        series: [{
+         marker: {
+            enabled: false,
+            symbol: 'circle',
+            radius: 7
+       },
+          showInLegend: false,
+          color: 'gray',
+            name: 'Tokyo',
+            data: [0.23, 0.6, 0.5, 0.5, 0.2, 0.5, 0.07, 0.32, 0.34, 0.18, 0.13, 0.9]
+        }]
+    };
 var WallDisplay = function(jsonObject){
 	this.servicesData=jsonObject.lastRel.servizio;
 	this.metaData=jsonObject.metaData.servizio;
@@ -34,8 +88,11 @@ WallDisplay.prototype.render=function() {
 	for (var i = this.servicesData.length - 1; i >= 0; i--) {
 		this.displayService(this.servicesData[i]);
 	}
+	chart=new Highcharts.Chart(optionsChart);
+
 }
 WallDisplay.prototype.update=function(jsonObject){
+	chart.destroy();
 	//distrugge gli intervalli di scorrimento impostati nella funzione insertValuesIntoContainer
 	for (var i = this.intervalID.length - 1; i >= 0; i--) {
 		clearInterval(this.intervalID[i]);
@@ -49,19 +106,20 @@ WallDisplay.prototype.update=function(jsonObject){
 }
 WallDisplay.prototype.displayService=function(service) {
     this.setUpContainer(service);
-    this.insertValuesIntoContainer(service);
+		this.insertValuesIntoContainer(service);
 }
 
 WallDisplay.prototype.setUpContainer=function(service) {
 	//crea solo se non esiste il div
 	if (!$('#'+service.nomeservizio).length){
       $("#wallDisplay").append("<div class='"+this.containerClass+"' id='"+service.nomeservizio+"'><div>");
+			$("#"+service.nomeservizio).append("<div class='header' id='header"+service.nomeservizio+"'></div>");
+			$("#header"+service.nomeservizio).append("<h5 class='"+this.titleCardClass+"'>"+this.getServiceLabel(service.nomeservizio)+"</h5>")
 			$("#"+service.nomeservizio).append("<p class='total' id='total"+service.nomeservizio+"'></p>");
 			$("#"+service.nomeservizio).append("<h4 class='field' id='field"+service.nomeservizio+"'></h4>");
-			$("#"+service.nomeservizio).append("<h1 class='delta' id='delta"+service.nomeservizio+"'></h1>");
-			$("#"+service.nomeservizio).append("<h4 class='logtime' id='logtime"+service.nomeservizio+"'></h4>");
-			$("#"+service.nomeservizio).append("<div class='footer' id='footer"+service.nomeservizio+"'></div>");
-			$("#footer"+service.nomeservizio).append("<h5 class='"+this.titleCardClass+"'>"+service.nomeservizio+"</h5>");
+			$("#"+service.nomeservizio).append("<div class='containerChart' id='containerChart"+service.nomeservizio+"'></div>");
+      // $("#"+service.nomeservizio).append("<h4 class='logtime' id='logtime"+service.nomeservizio+"'></h4>");
+
     }
 
 }
@@ -75,7 +133,7 @@ var values=[];
 									 "label":meta.label, "type":meta.type});
 	}
 	var counter=0;
-	$("#logtime"+service.nomeservizio).html("<i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i><i>"+service.rilevazioni[0].logtime.substr(11,5));
+	$("#logtime"+service.nomeservizio).html("<i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i>"+service.rilevazioni[0].logtime.substr(11,5));
 	insertValueText(service,values[counter],service.rilevazioni[0].logtime.substr(11,2),service.rilevazioni[0].logtime.substr(14,2));
 	if(values.length>1)
 		{counter++;
@@ -85,6 +143,14 @@ var values=[];
 									counter=0;}, 5*1000));
 	}
 }
+WallDisplay.prototype.getServiceLabel = function (serviceName) {
+		for (var i = 0; i < this.metaData.length; i++) {
+			if(this.metaData[i].nomeservizio===serviceName){
+				return this.metaData[i].labelservizio;
+			}
+		}
+  return serviceName;
+};
 WallDisplay.prototype.getMetaData = function (serviceName,key) {
 		for (var i = 0; i < this.metaData.length; i++) {
 			if(this.metaData[i].nomeservizio===serviceName){
@@ -100,16 +166,19 @@ WallDisplay.prototype.getMetaData = function (serviceName,key) {
 insertValueText=function(service,data,hour,minutes) {
 	var valueText=setValueText(data.value);
 	delta=calculateDelta(data.value,data.treshold,data.type,hour,minutes);
-	if(delta>0){
-		$("#delta"+service.nomeservizio).attr("style","color:red");
-		$("#delta"+service.nomeservizio).text("+"+delta.toFixed(1)+'%');
-	}
-	else{
-		$("#delta"+service.nomeservizio).attr("style","color:green");
-		$("#delta"+service.nomeservizio).text(delta.toFixed(1)+'%');
-	}
-  $("#total"+service.nomeservizio).text(valueText);
-	$("#field"+service.nomeservizio).text(data.label);
+	 if(delta>0){
+		// 	$("#delta"+service.nomeservizio).attr("style","color:red");
+		// 	$("#delta"+service.nomeservizio).text("+"+delta.toFixed(1)+'%');
+		$("#total"+service.nomeservizio).text(valueText);
+		// $("#field"+service.nomeservizio).attr("style","color:red");
+	$("#field"+service.nomeservizio).html(data.label+" <span style=\"color:red\"> +"+delta.toFixed(1)+'% </span>');
+	 }
+	 else{
+		 $("#total"+service.nomeservizio).text(valueText);
+		//  $("#field"+service.nomeservizio).attr("style","color:green");
+		 $("#field"+service.nomeservizio).html(data.label+" <span style=\"color:green\">"+delta.toFixed(1)+'% </span>');
+	 }
+
 }
 
 setValueText=function(value){
