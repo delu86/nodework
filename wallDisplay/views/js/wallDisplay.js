@@ -89,7 +89,6 @@ WallDisplay.prototype.render=function() {
 		this.displayService(this.servicesData[i]);
 	}
 	chart=new Highcharts.Chart(optionsChart);
-
 }
 WallDisplay.prototype.update=function(jsonObject){
 	chart.destroy();
