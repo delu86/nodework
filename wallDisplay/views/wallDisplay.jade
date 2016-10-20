@@ -9,11 +9,13 @@ html(lang=it)
 		script.
 			var abi='#{abi_code}';
 			var connection_id='#{connection_id}';
+		script(src='js/optionsChartFactory.js')
 		script(src='js/wallDisplay.js')
 		script(src='js/script.js')
 		title WallDisplay
 	body
 		#header
-			img#logo(src="bank.png")
 			h3(id="title")
 		#wallDisplay
+		#footer
+			img#logo(src="img/Abiwatch01.png")

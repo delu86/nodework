@@ -19,13 +19,7 @@ function renderWallDisplay(){
 	$.getJSON('/getJSON/'+abi,function(json){
 	$("#title").text(json.lastRel.abi_desc);
 	//controlla l'esistenza dell'immagine di logo
-	$.get("img/"+abi+".png")
-    .done(function() {
-    	$("#logo").attr("src", "img/"+abi+".png")
-        }).fail(function() {
-        $("#logo").attr("src", "img/bank.png")
 
-    })
         wallDisplay=new WallDisplay(json);
         wallDisplay.render();
 })

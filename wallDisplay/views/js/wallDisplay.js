@@ -1,64 +1,10 @@
-var chart;
-var optionsChart={
-	chart: {
-			renderTo:'containerChartPWS'
-	},
-        title: {
-            text: null,
-            x: 0 //center
-        },
-        subtitle: {
-            text: null,
-            x: 0
-        },
-        xAxis: {
-         gridLineWidth: 1,
-         labels: {
-                style: {
-                    color: 'black',
-                    fontSize:'8px'
-                }
-                },
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-        },
-        yAxis: {
-            title: {
-                text: null
-            },
-                                                                                              tickAmount: 5,
-            gridLineWidth: 1,
-                labels: {
-                style: {
-                    color: 'black',
-                    fontSize:'8px'
-                }},
-                 alternateGridColor: '#FDFFD5',
-            plotLines: [{
-                value: 0.52,
-                width: 1,
-                color: 'red'
-            }]
-        },
-        series: [{
-         marker: {
-            enabled: false,
-            symbol: 'circle',
-            radius: 7
-       },
-          showInLegend: false,
-          color: 'gray',
-            name: 'Tokyo',
-            data: [0.23, 0.6, 0.5, 0.5, 0.2, 0.5, 0.07, 0.32, 0.34, 0.18, 0.13, 0.9]
-        }]
-    };
 var WallDisplay = function(jsonObject){
 	this.servicesData=jsonObject.lastRel.servizio;
 	this.metaData=jsonObject.metaData.servizio;
 	this.setHtmlClasses();
 	this.intervalID=[];
+	this.charts=[];
 }
-
 
 WallDisplay.prototype.setHtmlClasses = function() {
 		switch(this.servicesData.length){
@@ -88,14 +34,17 @@ WallDisplay.prototype.render=function() {
 	for (var i = this.servicesData.length - 1; i >= 0; i--) {
 		this.displayService(this.servicesData[i]);
 	}
-	chart=new Highcharts.Chart(optionsChart);
 }
 WallDisplay.prototype.update=function(jsonObject){
-	chart.destroy();
 	//distrugge gli intervalli di scorrimento impostati nella funzione insertValuesIntoContainer
 	for (var i = this.intervalID.length - 1; i >= 0; i--) {
 		clearInterval(this.intervalID[i]);
 	}
+	//distrugge i grafici precedentemente creati
+	this.charts.map(function(chart){
+		chart.destroy();
+	});
+	this.charts=[];
 	//contiene gli id per annullare lo scorrimento dei dati nei container
 	//una volta che i dati vengono aggiornati
 	this.intervalID=[];
@@ -107,21 +56,52 @@ WallDisplay.prototype.displayService=function(service) {
     this.setUpContainer(service);
 		this.insertValuesIntoContainer(service);
 }
-
 WallDisplay.prototype.setUpContainer=function(service) {
 	//crea solo se non esiste il div
 	if (!$('#'+service.nomeservizio).length){
       $("#wallDisplay").append("<div class='"+this.containerClass+"' id='"+service.nomeservizio+"'><div>");
-			$("#"+service.nomeservizio).append("<div class='header' id='header"+service.nomeservizio+"'></div>");
-			$("#header"+service.nomeservizio).append("<h5 class='"+this.titleCardClass+"'>"+this.getServiceLabel(service.nomeservizio)+"</h5>")
-			$("#"+service.nomeservizio).append("<p class='total' id='total"+service.nomeservizio+"'></p>");
-			$("#"+service.nomeservizio).append("<h4 class='field' id='field"+service.nomeservizio+"'></h4>");
-			$("#"+service.nomeservizio).append("<div class='containerChart' id='containerChart"+service.nomeservizio+"'></div>");
-      // $("#"+service.nomeservizio).append("<h4 class='logtime' id='logtime"+service.nomeservizio+"'></h4>");
-
-    }
-
+			this.setUpHeaderCard(service);
+			this.setUpBodyCard(service);
+			this.setUpChart(service);
+			this.setUpFooterCard(service);
+		}else{
+			this.drawChart(service);
+		}
 }
+WallDisplay.prototype.setUpChart = function (service) {
+	$("#"+service.nomeservizio).append("<div class='containerChart' id='containerChart"+service.nomeservizio+"'></div>");
+	this.drawChart(service);
+};
+WallDisplay.prototype.drawChart=function(service){
+	var chartsArray=this.charts;
+	$.getJSON('/getJSON/'+abi+'/'+service.nomeservizio,function(json){
+		optionsChart=OptionsChartFactory.getOptionsChart(service.nomeservizio);
+		optionsChart.chart.renderTo='containerChart'+service.nomeservizio;
+		optionsChart.series[0].name=optionsChart.field;
+		optionsChart.series[0].data=json.data.map(Number);
+		optionsChart.xAxis.categories=json.categories.map(function(obj){
+			return optionsChart.renderCategories(obj)
+    //   if(optionsChart.chart.type==='column')
+		// 		return obj.substr(5,5);
+		//  else	return obj.substr(11,5);
+		});
+		chartsArray.push(new Highcharts.Chart(optionsChart));
+		});
+}
+
+WallDisplay.prototype.setUpHeaderCard = function (service) {
+	$("#"+service.nomeservizio).append("<div class='headerCard' id='header"+service.nomeservizio+"'></div>");
+	$("#header"+service.nomeservizio).append("<h5 class='"+this.titleCardClass+"'>"+this.getServiceLabel(service.nomeservizio)+"</h5>")
+};
+WallDisplay.prototype.setUpBodyCard = function (service) {
+	$("#"+service.nomeservizio).append("<div class='info' id='info"+service.nomeservizio+"'></div>");
+	$("#info"+service.nomeservizio).append("<p class='total' id='total"+service.nomeservizio+"'></p>");
+	$("#info"+service.nomeservizio).append("<h4 class='field' id='field"+service.nomeservizio+"'></h4>");
+};
+WallDisplay.prototype.setUpFooterCard = function (service) {
+	$("#"+service.nomeservizio).append("<div class='footerCard' id='footer"+service.nomeservizio+"'></div>");
+	$("#footer"+service.nomeservizio).append("<h4 class='logtime' id='logtime"+service.nomeservizio+"'></h4>");
+};
 
 WallDisplay.prototype.insertValuesIntoContainer=function(service) {
 var values=[];

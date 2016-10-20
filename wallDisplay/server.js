@@ -8,6 +8,7 @@
     var http=require('http').Server(app);
     var io = require('socket.io')(http);
     var url= "mongodb://10.99.252.22:27017/FAC";
+    var chartsData = require('./chartsData');
     app.use(express.static(path.join(__dirname,'views')));
     app.use('/bootstrap',express.static('C:/Users/cre0260/node/node_modules/bootstrap'));
     app.set('views',__dirname+'/views');
@@ -19,22 +20,23 @@
     });
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended:true}));
-    app.get('/getJSON/:abi_code',getJSON);
-    app.get('/wall-e/:abi_code',getWallE);
+    app.get('/getJSON/:abi_code',getJSONWallDisplay);
+    app.get('/getJSON/:abi_code/:service_name',getJSONCharts);
     app.get('/:abi_code',getWallDisplay);
 
     function getWallDisplay(req,res) {
     	    connection_id = Math.floor(Math.random() * 1000);
     		res.render('wallDisplay.jade',{connection_id:connection_id,abi_code:req.params.abi_code});
     }
-    function getWallE(req,res) {
-    	    connection_id = Math.floor(Math.random() * 1000);
-    		res.render('wall-e.pug',{connection_id:connection_id,abi_code:req.params.abi_code});
+    function getJSONCharts(req,res) {
+      chartsData.getData(req.params.abi_code,req.params.service_name,MongoClient,res);
     }
-    function getJSON(req,res) {
+
+    function getJSONWallDisplay(req,res) {
       try{
     	   MongoClient.connect(url,function(err,db) {
-           sendJSON(req.params.abi_code,err,db,function(json){
+           sendJSONWallDisplay(req.params.abi_code,err,db,function(json){
+                db.close();
                 res.end(json);
            });
     	});
@@ -43,13 +45,15 @@
       console.log("Error on db: "+e);
     }};
 
-    io.on('connection', function(socket){
+
+  io.on('connection', function(socket){
      try {
        // console.log("new connection");
      	socket.on('json request', function(id){
         		MongoClient.connect(url,function(err,db) {
-              sendJSON(id.split("_")[0],err,db,function(json){
+              sendJSONWallDisplay(id.split("_")[0],err,db,function(json){
                    io.emit('json '+id+' response', json);
+                   db.close();
               });//end sendJSON callback
      	      });//end MongoClient.connect callback
           });
@@ -57,8 +61,7 @@
       console.log("Error on db: "+e);
      }
     });
-
-    function sendJSON(abi,errorConnection,db,callback){
+    function sendJSONWallDisplay(abi,errorConnection,db,callback){
       assert.equal(null,errorConnection);
       //get the last relevation
       db.collection("WallDisplay").findOne({"abi":abi},{"servizio.rilevazioni":{$slice:-1}},
