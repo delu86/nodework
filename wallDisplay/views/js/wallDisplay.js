@@ -1,3 +1,4 @@
+
 var WallDisplay = function(jsonObject){
 	this.servicesData=jsonObject.lastRel.servizio;
 	this.metaData=jsonObject.metaData.servizio;
@@ -8,6 +9,8 @@ var WallDisplay = function(jsonObject){
 
 WallDisplay.prototype.setHtmlClasses = function() {
 		switch(this.servicesData.length){
+		case 9: this.assignHtmlClasses("containerSmall container","titleCardSmall titleCard");
+					    break;
 		case 8: this.assignHtmlClasses("containerSmall container","titleCardSmall titleCard");
 				    break;
 		case 7: this.assignHtmlClasses("containerSmall container","titleCardSmall titleCard");
@@ -24,6 +27,8 @@ WallDisplay.prototype.setHtmlClasses = function() {
 				    break;
 		case 1: this.assignHtmlClasses("containerFull container","titleCardFull titleCard");
 				    break;
+		default: this.assignHtmlClasses("containerSmall container","titleCardSmall titleCard");
+												break;
 	}
 };
 WallDisplay.prototype.assignHtmlClasses=function(containerClass,titleCardClass){
@@ -74,17 +79,25 @@ WallDisplay.prototype.setUpChart = function (service) {
 };
 WallDisplay.prototype.drawChart=function(service){
 	var chartsArray=this.charts;
+	var optionsChart=OptionsChartFactory.getOptionsChart(service.nomeservizio);
+    if(optionsChart.field!=undefined){
+	  	optionsChart.yAxis.plotLines[0].value=this.getMetaData(service.nomeservizio,optionsChart.field).treshold;
+	  }
 	$.getJSON('/getJSON/'+abi+'/'+service.nomeservizio,function(json){
-		optionsChart=OptionsChartFactory.getOptionsChart(service.nomeservizio);
-		optionsChart.chart.renderTo='containerChart'+service.nomeservizio;
-		optionsChart.series[0].name=optionsChart.field;
-		optionsChart.series[0].data=json.data.map(Number);
-		optionsChart.xAxis.categories=json.categories.map(function(obj){
-			return optionsChart.renderCategories(obj)
-    //   if(optionsChart.chart.type==='column')
-		// 		return obj.substr(5,5);
-		//  else	return obj.substr(11,5);
-		});
+		if(optionsChart.coloured==true)
+    	optionsChart.plotOptions.series.colorByPoint=optionsChart.coloured;
+    optionsChart.chart.renderTo='containerChart'+service.nomeservizio;
+		optionsChart.series[0].name=optionsChart.fieldLabel;
+		optionsChart.xAxis.categories=json.categories
+																			.filter(function(obj){
+                                        if(optionsChart.filterCategories)
+																					return optionsChart.filterCategories(obj)
+																				else return true
+																			})
+																			.map(function(obj){
+																					return optionsChart.renderCategories(obj)
+    																		});
+   optionsChart.series[0].data=json.data.map(Number).slice(json.data.length-optionsChart.xAxis.categories.length);
 		chartsArray.push(new Highcharts.Chart(optionsChart));
 		});
 }
@@ -112,7 +125,7 @@ var values=[];
 									 "label":meta.label, "type":meta.type});
 	}
 	var counter=0;
-	$("#logtime"+service.nomeservizio).html("<i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i>"+service.rilevazioni[0].logtime.substr(11,5));
+	$("#logtime"+service.nomeservizio).html("<i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i>"+service.rilevazioni[0].logtime.substr(0,16));
 	insertValueText(service,values[counter],service.rilevazioni[0].logtime.substr(11,2),service.rilevazioni[0].logtime.substr(14,2));
 	if(values.length>1)
 		{counter++;

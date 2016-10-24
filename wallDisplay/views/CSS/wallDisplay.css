@@ -8,17 +8,24 @@ body{
 	overflow-x: hidden;
 }
 #header{
+  display: inline-block;
 	margin-top: 0;
 	width:100%;
-	text-align: center;
+	/* text-align: center;*/
+}
+#logo{
+  float: left;
+	height:10%;
+	width:10%;
+
 }
 #title{
-	width:100%;
+	width:80%;
 	color: #333333;
 	font-weight: bold;
 	/*text-decoration: underline;*/
 	font-family: "Delicious", sans-serif;
-	margin-left: 1%;
+	padding-left: 15%;
 	display:inline;
 	margin-top: 0%;
 	font-size: xx-large;
@@ -29,15 +36,11 @@ body{
 	width:100%;
 	align:middle;
 }
-#logo{
-	height:20%;
-	width:2	0%;
 
-}
 #wallDisplay{
   padding-left: 5%;
 	width:100%;
-	margin-top:5%;
+	margin-top:1%;
 }
 .container{
 	height: auto;
@@ -109,9 +112,10 @@ body{
 }
 .logtime{
 	background-color: #E0E0E0;
-	color: #FC5400;
+	color: #000000;
 	font-family: "Delicious";
 	text-align: right;
+  font-size: small;
 	font-weight:bold;
 	bottom: 0;
 	top:0;
@@ -142,7 +146,7 @@ body{
 		width: 75%;
 	}
 	.titleCard{
-		font-size: x-large;
+		font-size: large;
 	}
 }
 @media screen and (min-width: 900px){

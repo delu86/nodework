@@ -121,7 +121,8 @@ var   _getData=function(abi,serviceName,mongoClient,res){
        // Create a collection
        var collection=db.collection('WallDisplay');
        collection.aggregate([
-         {$match: {"abi":abi,"data":"2016-10-20"}},
+         {$match: {"abi":abi}},
+         {$limit: 1},
          {$unwind:"$servizio"},
          {$match: {"servizio.nomeservizio":"PWS"}},
          {$project :   { "categories":"$servizio.rilevazioni.logtime"  , "data":"$servizio.rilevazioni.TempoMedio"}},
@@ -134,7 +135,8 @@ var   _getData=function(abi,serviceName,mongoClient,res){
        // Create a collection
        var collection=db.collection('WallDisplay');
        collection.aggregate([
-         {$match: {"abi":abi,"data":"2016-10-20"}},
+         {$match: {"abi":abi}},
+         {$limit: 1},
          {$unwind:"$servizio"},
          {$match: {"servizio.nomeservizio":"CasseSportello"}},
          {$project :   { "categories":"$servizio.rilevazioni.logtime"  , "data":"$servizio.rilevazioni.OpenCashesToday"}},
@@ -147,7 +149,8 @@ var   _getData=function(abi,serviceName,mongoClient,res){
        // Create a collection
        var collection=db.collection('WallDisplay');
        collection.aggregate([
-         {$match: {"abi":abi,"data":"2016-10-20"}},
+         {$match: {"abi":abi}},
+         {$limit: 1},
          {$unwind:"$servizio"},
          {$match: {"servizio.nomeservizio":"HB"}},
          {$project :   { "categories":"$servizio.rilevazioni.logtime"  , "data":"$servizio.rilevazioni.Durata"}},

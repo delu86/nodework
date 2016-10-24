@@ -25,11 +25,16 @@
     app.get('/:abi_code',getWallDisplay);
 
     function getWallDisplay(req,res) {
-    	    connection_id = Math.floor(Math.random() * 1000);
+    	  connection_id = Math.floor(Math.random() * 1000);
     		res.render('wallDisplay.jade',{connection_id:connection_id,abi_code:req.params.abi_code});
     }
     function getJSONCharts(req,res) {
-      chartsData.getData(req.params.abi_code,req.params.service_name,MongoClient,res);
+      try {
+          chartsData.getData(req.params.abi_code,req.params.service_name,MongoClient,res);
+      } catch (e) {
+        console.log(e);
+      }
+
     }
 
     function getJSONWallDisplay(req,res) {
