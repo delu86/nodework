@@ -6,6 +6,12 @@ var   _getData=function(abi,serviceName,mongoClient,res){
       var results;
       //  assert.equal(null,errorConnection);
       switch (serviceName) {
+          case "FEU_SintesiStatoCliente":
+           return _getFEUStatoCliente(db,abi,serviceName,res);
+            break;
+          case "FEU_QuadroDiControllo":
+            return _getFEUQuadroControllo(db,abi,serviceName,res);
+             break;
           case "PWS":
              return _getPWS(db,abi,serviceName,res);
             break;
@@ -35,6 +41,34 @@ var   _getData=function(abi,serviceName,mongoClient,res){
             break;
         }
     });
+  };
+  var _getFEUStatoCliente=function(db,abi,serviceName,res){
+    // Create a collection
+    var collection=db.collection('WallDisplay');
+    collection.aggregate([
+      {$match: {"abi":abi}},
+      {$limit: 1},
+      {$unwind:"$servizio"},
+      {$match: {"servizio.nomeservizio":"FEU_SintesiStatoCliente"}},
+      {$project :   { "categories":"$servizio.rilevazioni.logtime"  , "data":"$servizio.rilevazioni.TempoMedio"}},
+    ]).each(function(err, doc) {
+      res.end(JSON.stringify(doc));
+      db.close();
+  });
+  };
+  var _getFEUQuadroControllo=function(db,abi,serviceName,res){
+    // Create a collection
+    var collection=db.collection('WallDisplay');
+    collection.aggregate([
+      {$match: {"abi":abi}},
+      {$limit: 1},
+      {$unwind:"$servizio"},
+      {$match: {"servizio.nomeservizio":"FEU_QuadroDiControllo"}},
+      {$project :   { "categories":"$servizio.rilevazioni.logtime"  , "data":"$servizio.rilevazioni.TempoMedio"}},
+    ]).each(function(err, doc) {
+      res.end(JSON.stringify(doc));
+      db.close();
+  });
   };
   var _getFEA=function(db,abi,serviceName,res){
     var collection=db.collection('WallDisplay');
@@ -169,5 +203,7 @@ module.exports=
   getATM:_getATM,
   getTicket:_getTicket,
   getOperazioniSportello:_getOperazioniSportello,
-  getCBI:_getCBI
+  getCBI:_getCBI,
+  getFEUQuadroControllo:_getFEUQuadroControllo,
+  getFEUStatoCliente:   _getFEUStatoCliente
   }

@@ -20,10 +20,15 @@
     });
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended:true}));
+    app.get('/',getIndex);
+    app.get('/index.html',getIndex);
     app.get('/getJSON/:abi_code',getJSONWallDisplay);
     app.get('/getJSON/:abi_code/:service_name',getJSONCharts);
     app.get('/:abi_code',getWallDisplay);
 
+    function getIndex(req,res) {
+      res.render('index.html');
+    }
     function getWallDisplay(req,res) {
     	  connection_id = Math.floor(Math.random() * 1000);
     		res.render('wallDisplay.jade',{connection_id:connection_id,abi_code:req.params.abi_code});

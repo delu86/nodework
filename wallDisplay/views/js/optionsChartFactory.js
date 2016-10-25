@@ -131,6 +131,7 @@ let OptionsChartFactory=	{
 										title: {
 												text: null
 										},
+										min:0,
 								tickAmount: 4,
 										gridLineWidth: 1,
 												labels: {
