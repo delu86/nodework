@@ -73,7 +73,7 @@ var   _getData=function(abi,serviceName,mongoClient,res){
   var _getFEA=function(db,abi,serviceName,res){
     var collection=db.collection('WallDisplay');
     collection.aggregate([
-         {$match: {"abi":"06370"}},
+         {$match: {"abi":abi}},
          {$limit: 6}
     ,    {$unwind:"$servizio"}
     ,    {$match: {"servizio.nomeservizio":"FEAfirmati"}}
@@ -89,7 +89,7 @@ var   _getData=function(abi,serviceName,mongoClient,res){
   var _getCBI=function(db,abi,serviceName,res){
     var collection=db.collection('WallDisplay');
     collection.aggregate([
-         {$match: {"abi":"06370"}},
+         {$match: {"abi":abi}},
          {$limit: 6}
     ,    {$unwind:"$servizio"}
     ,    {$match: {"servizio.nomeservizio":"CBI"}}
@@ -105,7 +105,7 @@ var   _getData=function(abi,serviceName,mongoClient,res){
   var _getTicket=function(db,abi,serviceName,res){
     var collection=db.collection('WallDisplay');
     collection.aggregate([
-         {$match: {"abi":"06370"}},
+         {$match: {"abi":abi}},
          {$limit: 6}
     ,    {$unwind:"$servizio"}
     ,    {$match: {"servizio.nomeservizio":"Ticket"}}
@@ -121,7 +121,7 @@ var   _getData=function(abi,serviceName,mongoClient,res){
   var _getOperazioniSportello=function(db,abi,serviceName,res){
     var collection=db.collection('WallDisplay');
     collection.aggregate([
-         {$match: {"abi":"06370"}},
+         {$match: {"abi":abi}},
          {$limit: 6}
     ,    {$unwind:"$servizio"}
     ,    {$match: {"servizio.nomeservizio":"OperazioniSportello"}}
@@ -138,7 +138,7 @@ var   _getData=function(abi,serviceName,mongoClient,res){
        // Create a collection
        var collection=db.collection('WallDisplay');
        collection.aggregate([
-         {$match: {"abi":"06370"}},
+         {$match: {"abi":abi}},
          {$limit: 1}
     ,    {$unwind:"$servizio"}
     ,    {$match: {"servizio.nomeservizio":"atm"}}

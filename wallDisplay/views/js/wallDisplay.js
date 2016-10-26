@@ -8,28 +8,29 @@ var WallDisplay = function(jsonObject){
 }
 
 WallDisplay.prototype.setHtmlClasses = function() {
-		switch(this.servicesData.length){
-		case 9: this.assignHtmlClasses("containerSmall container","titleCardSmall titleCard");
-					    break;
-		case 8: this.assignHtmlClasses("containerSmall container","titleCardSmall titleCard");
-				    break;
-		case 7: this.assignHtmlClasses("containerSmall container","titleCardSmall titleCard");
-				    break;
-		case 6: this.assignHtmlClasses("containerMedium container","titleCardMedium titleCard");
-				    break;
-		case 5: this.assignHtmlClasses("containerMedium container","titleCardMedium titleCard ");
-				    break;
-		case 4: this.assignHtmlClasses("containerLarge container","titleCardLarge titleCard");
-				    break;
-		case 3: this.assignHtmlClasses("containerLarge container","titleCardLarge titleCard");
-				    break;
-		case 2: this.assignHtmlClasses("containerLarge container","titleCardLarge titleCard");
-				    break;
-		case 1: this.assignHtmlClasses("containerFull container","titleCardFull titleCard");
-				    break;
-		default: this.assignHtmlClasses("containerSmall container","titleCardSmall titleCard");
-												break;
-	}
+	this.assignHtmlClasses("containerSmall container","titleCardSmall titleCard");
+	// 	switch(this.servicesData.length){
+	// 	case 9: this.assignHtmlClasses("containerSmall container","titleCardSmall titleCard");
+	// 				    break;
+	// 	case 8: this.assignHtmlClasses("containerSmall container","titleCardSmall titleCard");
+	// 			    break;
+	// 	case 7: this.assignHtmlClasses("containerSmall container","titleCardSmall titleCard");
+	// 			    break;
+	// 	case 6: this.assignHtmlClasses("containerMedium container","titleCardMedium titleCard");
+	// 			    break;
+	// 	case 5: this.assignHtmlClasses("containerMedium container","titleCardMedium titleCard ");
+	// 			    break;
+	// 	case 4: this.assignHtmlClasses("containerLarge container","titleCardLarge titleCard");
+	// 			    break;
+	// 	case 3: this.assignHtmlClasses("containerLarge container","titleCardLarge titleCard");
+	// 			    break;
+	// 	case 2: this.assignHtmlClasses("containerLarge container","titleCardLarge titleCard");
+	// 			    break;
+	// 	case 1: this.assignHtmlClasses("containerFull container","titleCardFull titleCard");
+	// 			    break;
+	// 	default: this.assignHtmlClasses("containerSmall container","titleCardSmall titleCard");
+	// 											break;
+	// }
 };
 WallDisplay.prototype.assignHtmlClasses=function(containerClass,titleCardClass){
 	this.containerClass=containerClass;

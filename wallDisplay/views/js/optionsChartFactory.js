@@ -29,7 +29,7 @@ let OptionsChartFactory=	{
 									plotLines: [{
 										zIndex:10,
 											value: 121,
-											width: 6,
+											width: 1,
 											color: 'orange'
 									}]
 							},
