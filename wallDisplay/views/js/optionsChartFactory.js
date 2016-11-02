@@ -6,9 +6,13 @@ let OptionsChartFactory=	{
 									type: 'areaspline'
 							},
 							title: {  text: null  },
+							subtitle: {
+									text: "Area chart",
+									floating: true,
+									align: 'center' , y:0
+							},
 						 xAxis: {
-
-									categories: [],
+							 	categories: [],
 									 labels: {
 											style: {
 													color: 'black',
@@ -29,18 +33,23 @@ let OptionsChartFactory=	{
 									plotLines: [{
 										zIndex:10,
 											value: 121,
-											width: 1,
-											color: 'orange'
+											width: 3,
+											color: 'orange',
+											dashStyle: 'shortdot'
 									}]
 							},
 							credits: {  enabled: false },
 							plotOptions: {
 									areaspline: {
-											fillOpacity: 0.3 ,
-																																																																		color: '#D6EAF8'
+											fillOpacity: 0.7 ,
+										color: '#e2d86a'
 										}
 							},
-							series: [{
+							series: [{ marker: {
+									enabled: true,
+									symbol: 'circle',
+									radius: 3
+						 },
 									showInLegend: false,
 									name: null,
 									data: []
@@ -59,7 +68,9 @@ let OptionsChartFactory=	{
 									text: null
 							},
 							subtitle: {
-									text: null
+									text: "Column chart",
+									floating: true,
+									align: 'center' , y:0
 							},
 							xAxis: {
 							gridLineWidth: 1,
@@ -91,8 +102,9 @@ let OptionsChartFactory=	{
 									plotLines: [{
 										zIndex:10,
 											value: 22,
-											width: 1,
-											color: 'red'
+											width: 2,
+											color: 'red',
+											dashStyle: 'shortdot'
 									}]
 
 							},
@@ -109,13 +121,11 @@ let OptionsChartFactory=	{
 					chart: {
 							renderTo:''
 					},
-								title: {
-										text: null,
-										x: 0 //center
-								},
+					title:{text:null},
 								subtitle: {
-										text: null,
-										x: 0
+										text: "Line chart",
+										floating: true,
+										align: 'center' , y:0
 								},
 								xAxis: {
 								 gridLineWidth: 1,
@@ -143,15 +153,16 @@ let OptionsChartFactory=	{
 										plotLines: [{
 											  zIndex:10,
 												value: 0.52,
-												width: 1,
-												color: 'red'
+												width: 2,
+												color: 'red',
+												dashStyle: 'shortdot'
 										}]
 								},
 								series: [{
 								 marker: {
-										enabled: false,
+										enabled: true,
 										symbol: 'circle',
-										radius: 7
+										radius: 3
 							 },
 									showInLegend: false,
 									color: 'gray',
@@ -169,30 +180,63 @@ let OptionsChartFactory=	{
 						}
 					switch (serviceName) {
 						case 'PWS':
-						return Object.assign({field:"TempoMedio",filterCategories:filter,fieldLabel:"AVG time",renderCategories:getTime},optionsCharts.optionsChartLine);
-						break;
+							var ret= Object.assign({field:"TempoMedio",filterCategories:filter,fieldLabel:"AVG time",renderCategories:getTime},optionsCharts.optionsChartLine);
+						  ret.subtitle.text="AVG time";
+							ret.series[0].color="#F6546A";
+							return ret;
+							break;
 						case 'CBI':
-						return Object.assign({field:"TotaleLogon",fieldLabel:"Totale Logon",renderCategories:getMonthDay},optionsCharts.optionsChartBar);
-						break;
+							var ret=Object.assign({field:"TotaleLogon",fieldLabel:"Totale Logon",renderCategories:getMonthDay},optionsCharts.optionsChartBar);
+						  ret.subtitle.text="#Logon";
+							ret.series[0].color="#b0e0e6";
+							return ret;
+							break;
 					  case 'HB':
-						return Object.assign({field:"Durata",fieldLabel:"AVG time",filterCategories:filter,renderCategories:getTime},optionsCharts.optionsChartLine);
-						break;
+							var ret=Object.assign({field:"Durata",fieldLabel:"AVG time",filterCategories:filter,renderCategories:getTime},optionsCharts.optionsChartLine);
+							ret.subtitle.text="AVG time";
+							ret.series[0].color="#003366";
+							return ret;
+							break;
 						case 'FEAfirmati':
-						return Object.assign({field:"firmati",fieldLabel:"#Signed",renderCategories:getMonthDay},optionsCharts.optionsChartBar);
-						break;
+							var ret= Object.assign({field:"firmati",fieldLabel:"#Signed",renderCategories:getMonthDay},optionsCharts.optionsChartBar);
+							ret.subtitle.text="#Signed";
+							ret.series[0].color="#20b2aa";
+							return ret;
+							break;
 						case 'Ticket':
-						return Object.assign({field:"Pervenuti",fieldLabel:"#Ticket",renderCategories:getMonthDay},optionsCharts.optionsChartBar);
-						break;
+							var ret= Object.assign({field:"Pervenuti",fieldLabel:"#Ticket",renderCategories:getMonthDay},optionsCharts.optionsChartBar);
+							ret.subtitle.text="#Ticket";
+							ret.series[0].color="#a0db8e";
+							return ret;
+							break;
 						case 'atm':
-								 return Object.assign({coloured:true,fieldLabel:"#Atm",renderCategories:function(string){return string}},optionsCharts.optionsChartBar);
+						var ret=  Object.assign({coloured:true,fieldLabel:"#Atm",renderCategories:function(string){return string}},optionsCharts.optionsChartBar);
+					 			ret.subtitle.text="Indisponibili";
+								return ret;
 								break;
 						case 'OperazioniSportello':
-							return Object.assign({field:"Operations",fieldLabel:"#Operations",renderCategories:getMonthDay},optionsCharts.optionsChartBar);
+							var ret= Object.assign({field:"Operations",fieldLabel:"#Operations",renderCategories:getMonthDay},optionsCharts.optionsChartBar);
+							ret.subtitle.text="#Operations";
+							ret.series[0].color="#cbbeb5";
+							return ret;
 							break;
 						case 'CasseSportello':
-							return Object.assign({field:"OpenCashesToday",fieldLabel:"#Operations",renderCategories:getTime},optionsCharts.optionsAreaChart);
+							var ret =Object.assign({field:"OpenCashesToday",fieldLabel:"#Operations",renderCategories:getTime},optionsCharts.optionsAreaChart);
+							ret.subtitle.text="#OpenCashes";
+							return ret;
 							break;
-						default: return Object.assign({renderCategories:getTime},optionsCharts.optionsChartLine);
+						case 'FEU_SintesiStatoCliente':
+							var ret= Object.assign({renderCategories:getTime},optionsCharts.optionsChartLine);
+							ret.subtitle.text="#Avg time";
+							ret.series[0].color="#660066";
+							return ret;
+							break;
+						case 'FEU_QuadroDiControllo':
+							var ret= Object.assign({renderCategories:getTime},optionsCharts.optionsChartLine);
+							ret.subtitle.text="#Avg time";
+							ret.series[0].color="magenta";
+							return ret;
+							break;
 					};
 
 			}

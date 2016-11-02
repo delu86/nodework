@@ -164,12 +164,16 @@ insertValueText=function(service,data,hour,minutes) {
 		// 	$("#delta"+service.nomeservizio).text("+"+delta.toFixed(1)+'%');
 		$("#total"+service.nomeservizio).text(valueText);
 		// $("#field"+service.nomeservizio).attr("style","color:red");
-	$("#field"+service.nomeservizio).html(data.label+" <span style=\"color:red\"> +"+delta.toFixed(1)+'% </span>');
+	  $("#field"+service.nomeservizio).html(data.label
+			//+" <span style=\"color:red\"> +"+delta.toFixed(1)+'% </span>'
+		);
 	 }
 	 else{
 		 $("#total"+service.nomeservizio).text(valueText);
 		//  $("#field"+service.nomeservizio).attr("style","color:green");
-		 $("#field"+service.nomeservizio).html(data.label+" <span style=\"color:green\">"+delta.toFixed(1)+'% </span>');
+	 	$("#field"+service.nomeservizio).html(data.label
+		//	+" <span style=\"color:green\">"+delta.toFixed(1)+'% </span>'
+		);
 	 }
 
 }
