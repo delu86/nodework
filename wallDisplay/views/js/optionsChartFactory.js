@@ -226,14 +226,14 @@ let OptionsChartFactory=	{
 							return ret;
 							break;
 						case 'FEU_SintesiStatoCliente':
-							var ret= Object.assign({renderCategories:getTime},optionsCharts.optionsChartLine);
-							ret.subtitle.text="#Avg time";
+							var ret= Object.assign({field:"TempoMedio",fieldLabel:"AVG time(s)",renderCategories:getTime},optionsCharts.optionsChartLine);
+							ret.subtitle.text="Avg time";
 							ret.series[0].color="#660066";
 							return ret;
 							break;
 						case 'FEU_QuadroDiControllo':
-							var ret= Object.assign({renderCategories:getTime},optionsCharts.optionsChartLine);
-							ret.subtitle.text="#Avg time";
+							var ret= Object.assign({field:"TempoMedio",fieldLabel:"AVG time(s)",renderCategories:getTime},optionsCharts.optionsChartLine);
+							ret.subtitle.text="Avg time";
 							ret.series[0].color="magenta";
 							return ret;
 							break;

@@ -46,11 +46,14 @@ var   _getData=function(abi,serviceName,mongoClient,res){
     // Create a collection
     var collection=db.collection('WallDisplay');
     collection.aggregate([
-      {$match: {"abi":abi}},
-      {$limit: 1},
-      {$unwind:"$servizio"},
-      {$match: {"servizio.nomeservizio":"FEU_SintesiStatoCliente"}},
-      {$project :   { "categories":"$servizio.rilevazioni.logtime"  , "data":"$servizio.rilevazioni.TempoMedio"}},
+        {$match: {"abi":abi}}
+        ,{$limit: 1}
+        ,{$unwind:"$servizio"}
+        ,{$match:{"servizio.nomeservizio":"FEU_SintesiStatoCliente"}}
+        ,{$unwind:"$servizio.rilevazioni"}
+        ,{$group: {_id:{abi:"$abi",logtime:"$servizio.rilevazioni.logtime"},TempoMedio: { $max: "$servizio.rilevazioni.TempoMedio" }}}
+        ,{$sort: {"_id.logtime":1}}
+        ,{$group: {_id:"$_id.abi",categories:{$push:"$_id.logtime"},data:{$push:"$TempoMedio"}}}
     ]).each(function(err, doc) {
       res.end(JSON.stringify(doc));
       db.close();
@@ -60,11 +63,14 @@ var   _getData=function(abi,serviceName,mongoClient,res){
     // Create a collection
     var collection=db.collection('WallDisplay');
     collection.aggregate([
-      {$match: {"abi":abi}},
-      {$limit: 1},
-      {$unwind:"$servizio"},
-      {$match: {"servizio.nomeservizio":"FEU_QuadroDiControllo"}},
-      {$project :   { "categories":"$servizio.rilevazioni.logtime"  , "data":"$servizio.rilevazioni.TempoMedio"}},
+      {$match: {"abi":abi}}
+      ,{$limit: 1}
+      ,{$unwind:"$servizio"}
+      ,{$match:{"servizio.nomeservizio":"FEU_QuadroDiControllo"}}
+      ,{$unwind:"$servizio.rilevazioni"}
+      ,{$group: {_id:{abi:"$abi",logtime:"$servizio.rilevazioni.logtime"},TempoMedio: { $max: "$servizio.rilevazioni.TempoMedio" }}}
+      ,{$sort: {"_id.logtime":1}}
+      ,{$group: {_id:"$_id.abi",categories:{$push:"$_id.logtime"},data:{$push:"$TempoMedio"}}}
     ]).each(function(err, doc) {
       res.end(JSON.stringify(doc));
       db.close();

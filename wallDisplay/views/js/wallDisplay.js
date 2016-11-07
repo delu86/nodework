@@ -1,4 +1,3 @@
-
 var WallDisplay = function(jsonObject){
 	this.servicesData=jsonObject.lastRel.servizio;
 	this.metaData=jsonObject.metaData.servizio;
@@ -83,7 +82,7 @@ WallDisplay.prototype.drawChart=function(service){
 	var optionsChart=OptionsChartFactory.getOptionsChart(service.nomeservizio);
     if(optionsChart.field!=undefined){
 	  	optionsChart.yAxis.plotLines[0].value=this.getMetaData(service.nomeservizio,optionsChart.field).treshold;
-	  }
+}
 	$.getJSON('/getJSON/'+abi+'/'+service.nomeservizio,function(json){
 		if(optionsChart.coloured==true)
     	optionsChart.plotOptions.series.colorByPoint=optionsChart.coloured;
@@ -118,6 +117,7 @@ WallDisplay.prototype.setUpFooterCard = function (service) {
 };
 
 WallDisplay.prototype.insertValuesIntoContainer=function(service) {
+var thisWall=this;
 var values=[];
 	for(var key in service.rilevazioni[0]){
 		var meta=this.getMetaData(service.nomeservizio,key);
@@ -127,11 +127,11 @@ var values=[];
 	}
 	var counter=0;
 	$("#logtime"+service.nomeservizio).html("<i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i>"+service.rilevazioni[0].logtime.substr(0,16));
-	insertValueText(service,values[counter],service.rilevazioni[0].logtime.substr(11,2),service.rilevazioni[0].logtime.substr(14,2));
+	thisWall.insertValueText(service,values[counter],service.rilevazioni[0].logtime.substr(11,2),service.rilevazioni[0].logtime.substr(14,2));
 	if(values.length>1)
 		{counter++;
 		this.intervalID.push(setInterval(function(){
-							    insertValueText(service,values[counter],service.rilevazioni[0].logtime.substr(11,2),service.rilevazioni[0].logtime.substr(14,2));
+							    thisWall.insertValueText(service,values[counter],service.rilevazioni[0].logtime.substr(11,2),service.rilevazioni[0].logtime.substr(14,2));
 								if(++counter==values.length)
 									counter=0;}, 5*1000));
 	}
@@ -156,9 +156,9 @@ WallDisplay.prototype.getMetaData = function (serviceName,key) {
 		}
   return null;
 };
-insertValueText=function(service,data,hour,minutes) {
-	var valueText=setValueText(data.value);
-	delta=calculateDelta(data.value,data.treshold,data.type,hour,minutes);
+WallDisplay.prototype.insertValueText=function(service,data,hour,minutes) {
+	var valueText=this.setValueText(data.value);
+	delta=this.calculateDelta(data.value,data.treshold,data.type,hour,minutes);
 	 if(delta>0){
 		// 	$("#delta"+service.nomeservizio).attr("style","color:red");
 		// 	$("#delta"+service.nomeservizio).text("+"+delta.toFixed(1)+'%');
@@ -178,7 +178,7 @@ insertValueText=function(service,data,hour,minutes) {
 
 }
 
-setValueText=function(value){
+WallDisplay.prototype.setValueText=function(value){
 	if (value>=10*1000&&value<1000*1000) {
 		return (value/1000).toFixed(2).toString()+"K";
 	}else if (value>1000*1000) {
@@ -187,7 +187,7 @@ setValueText=function(value){
 		return value.toString();
 	}
 }
-calculateDelta=function(val,treshold,valType,hour,minutes) {
+WallDisplay.prototype.calculateDelta=function(val,treshold,valType,hour,minutes) {
   if(valType==="Progressivo"){
 		treshold=treshold*(((parseInt(hour)*60+parseInt(minutes))-8*60)/600);
 	}

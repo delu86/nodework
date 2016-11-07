@@ -7,7 +7,7 @@
     var path = require('path');
     var http=require('http').Server(app);
     var io = require('socket.io')(http);
-    var url= "mongodb://10.99.252.22:27017/FAC";
+    var url_db= "mongodb://10.99.252.22:27017/FAC";
     var chartsData = require('./chartsData');
     app.use(express.static(path.join(__dirname,'views')));
     app.use('/bootstrap',express.static('C:/Users/cre0260/node/node_modules/bootstrap'));
@@ -24,6 +24,7 @@
     app.get('/index.html',getIndex);
     app.get('/getJSON/:abi_code',getJSONWallDisplay);
     app.get('/getJSON/:abi_code/:service_name',getJSONCharts);
+    app.get('/servicePage',getServiceDetail);
     app.get('/:abi_code',getWallDisplay);
 
     function getIndex(req,res) {
@@ -33,9 +34,13 @@
     	  connection_id = Math.floor(Math.random() * 1000);
     		res.render('wallDisplay.jade',{connection_id:connection_id,abi_code:req.params.abi_code});
     }
+    function getServiceDetail(req,res) {
+      //console.log(req.query.abi);
+      res.render(req.query.service+'.jade');
+    }
     function getJSONCharts(req,res) {
-      try {
-          chartsData.getData(req.params.abi_code,req.params.service_name,MongoClient,res);
+      try{
+        chartsData.getData(req.params.abi_code,req.params.service_name,MongoClient,res);
       } catch (e) {
         console.log(e);
       }
@@ -44,7 +49,7 @@
 
     function getJSONWallDisplay(req,res) {
       try{
-    	   MongoClient.connect(url,function(err,db) {
+    	   MongoClient.connect(url_db,function(err,db) {
            sendJSONWallDisplay(req.params.abi_code,err,db,function(json){
                 db.close();
                 res.end(json);
@@ -60,7 +65,7 @@
      try {
        // console.log("new connection");
      	socket.on('json request', function(id){
-        		MongoClient.connect(url,function(err,db) {
+        		MongoClient.connect(url_db,function(err,db) {
               sendJSONWallDisplay(id.split("_")[0],err,db,function(json){
                    io.emit('json '+id+' response', json);
                    db.close();
