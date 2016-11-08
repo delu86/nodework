@@ -1,8 +1,15 @@
 doctype html
 html(lang=it)
   head
-    title
-  body
-    #header
-    #body
-    #footer
+    title FEA
+    script(src="js/jquery.min.js")
+    script(src="https://code.highcharts.com/highcharts.js")
+    script.
+      var abi='#{abi_code}';
+    script(src="js/serviceDetail.js")
+    body
+      #header
+      #body
+        #table
+        #chart
+      #footer

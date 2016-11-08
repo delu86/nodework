@@ -9,6 +9,7 @@
     var io = require('socket.io')(http);
     var url_db= "mongodb://10.99.252.22:27017/FAC";
     var chartsData = require('./chartsData');
+    var servicesData = require('./servicesData');
     app.use(express.static(path.join(__dirname,'views')));
     app.use('/bootstrap',express.static('C:/Users/cre0260/node/node_modules/bootstrap'));
     app.set('views',__dirname+'/views');
@@ -24,7 +25,9 @@
     app.get('/index.html',getIndex);
     app.get('/getJSON/:abi_code',getJSONWallDisplay);
     app.get('/getJSON/:abi_code/:service_name',getJSONCharts);
-    app.get('/servicePage',getServiceDetail);
+    app.get('/servicePage',getServiceDetailPage);
+    app.get('/serviceDetailJSON',getServiceDetailJSON);
+    app.get('/getServiceJSON/:abi_code/:service_name',getServiceDetail);
     app.get('/:abi_code',getWallDisplay);
 
     function getIndex(req,res) {
@@ -34,9 +37,11 @@
     	  connection_id = Math.floor(Math.random() * 1000);
     		res.render('wallDisplay.jade',{connection_id:connection_id,abi_code:req.params.abi_code});
     }
-    function getServiceDetail(req,res) {
-      //console.log(req.query.abi);
-      res.render(req.query.service+'.jade');
+    function getServiceDetailPage(req,res) {
+      res.render('fea.jade',{abi_code:req.params.abi_code});
+    }
+    function getServiceDetailJSON(req,res) {
+      servicesData.getJSONData(res,req.query.abi,req.query.service);
     }
     function getJSONCharts(req,res) {
       try{

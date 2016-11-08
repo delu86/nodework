@@ -1,6 +1,6 @@
 "use strict";
 var  url="mongodb://10.99.252.22:27017/FAC";
-
+//gets data for WallDisplay charts
 var   _getData=function(abi,serviceName,mongoClient,res){
     mongoClient.connect(url,function(err,db){
       var results;
