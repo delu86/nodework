@@ -1,7 +1,7 @@
- 	var socket = io();
+var socket = io();
 var wallDisplay;
 $(function(){
-	renderWallDisplay();
+  renderWallDisplay();
 	// console.log((abi+'_'+connection_id).split("_")[0]);
 	socket.on('json '+abi+'_'+connection_id+' response', function(jsonString){
 		json=JSON.parse(jsonString);

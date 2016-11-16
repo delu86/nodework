@@ -10,6 +10,7 @@
     var url_db= "mongodb://10.99.252.22:27017/FAC";
     var chartsData = require('./chartsData');
     var servicesData = require('./servicesData');
+    var abiDescription = require('./abiDescription');
     app.use(express.static(path.join(__dirname,'views')));
     app.use('/bootstrap',express.static('C:/Users/cre0260/node/node_modules/bootstrap'));
     app.set('views',__dirname+'/views');
@@ -23,25 +24,37 @@
     app.use(bodyParser.urlencoded({extended:true}));
     app.get('/',getIndex);
     app.get('/index.html',getIndex);
+    app.get('/getAbiDescription',getAbiDescription);
     app.get('/getJSON/:abi_code',getJSONWallDisplay);
     app.get('/getJSON/:abi_code/:service_name',getJSONCharts);
     app.get('/servicePage',getServiceDetailPage);
     app.get('/serviceDetailJSON',getServiceDetailJSON);
-    app.get('/getServiceJSON/:abi_code/:service_name',getServiceDetail);
     app.get('/:abi_code',getWallDisplay);
 
     function getIndex(req,res) {
       res.render('index.html');
+    }
+    function getAbiDescription(req,res) {
+      res.end(JSON.stringify(
+        {
+          description:abiDescription.getAbiDescription(req.query.abi)
+        }
+      ))
     }
     function getWallDisplay(req,res) {
     	  connection_id = Math.floor(Math.random() * 1000);
     		res.render('wallDisplay.jade',{connection_id:connection_id,abi_code:req.params.abi_code});
     }
     function getServiceDetailPage(req,res) {
-      res.render('fea.jade',{abi_code:req.params.abi_code});
+      res.render('service.jade',{abi:req.query.abi,service:req.query.service});
     }
     function getServiceDetailJSON(req,res) {
-      servicesData.getJSONData(res,req.query.abi,req.query.service);
+      try{
+        servicesData.getJSONData(res,req.query.abi,req.query.service);
+      }
+      catch(e){
+        console.log(e)
+      }
     }
     function getJSONCharts(req,res) {
       try{
@@ -49,9 +62,7 @@
       } catch (e) {
         console.log(e);
       }
-
     }
-
     function getJSONWallDisplay(req,res) {
       try{
     	   MongoClient.connect(url_db,function(err,db) {
@@ -64,8 +75,6 @@
       catch(e){
       console.log("Error on db: "+e);
     }};
-
-
   io.on('connection', function(socket){
      try {
        // console.log("new connection");
