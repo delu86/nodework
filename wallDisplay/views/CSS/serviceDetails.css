@@ -12,6 +12,7 @@ body{
   margin-top:2.5%;
 }
 .chart{
+  float: left;
   height: 400px;
   margin-top: 0px;
   padding-top: 0px;
@@ -19,7 +20,6 @@ body{
   width:60%;
   }
 .table{
-  height: 400px;
   margin-top: 0px;
   padding-top: 0px;
   display: inline-block;

@@ -30,6 +30,9 @@ html(lang=it)
             case 'HB_Tempi':
                 $("#sub2").text("Tempi medi HB (.sec)");
                 return {title:"",renderTo:"chart2",category:"data",series:[{name:"login"},{name:"bonifici"},{name:"f24"},{name:"estrattoconto"}]};
+            case 'PWS':
+                $("#sub1").text("PWS tempi medi & Volumi");
+                return {title:"",renderTo:"chart1",category:"data",series:[{name:"hits",type:"column"},{name:"tempo_medio",opposite:true}]};                
           }
         }
         $.getJSON("/getAbiDescription?abi="+abi,function(json){

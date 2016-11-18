@@ -34,7 +34,6 @@ var ServiceDetailsChart= function(jsonData,options){
            {opposite:true,
             min:0,
              labels: {
-             format: '{value:.0f}',
                style: {
                    color: Highcharts.getOptions().colors[1]
                }
