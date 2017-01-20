@@ -1,7 +1,7 @@
 var ServiceDetailsChart= function(jsonData,options){
   var optionsChart={
     chart: {
-        backgroundColor:'#f7f7f7',
+        backgroundColor: 'rgba(247,247,247,0.5)',
         type: 'line',
         renderTo:'chart1'
     },
@@ -34,7 +34,6 @@ var ServiceDetailsChart= function(jsonData,options){
            {opposite:true,
             min:0,
              labels: {
-             format: '{value:.0f}',
                style: {
                    color: Highcharts.getOptions().colors[1]
                }
@@ -46,9 +45,9 @@ var ServiceDetailsChart= function(jsonData,options){
            valueSuffix: ''
        },
        legend: {
-           layout: 'vertical',
-           align: 'right',
-           verticalAlign: 'middle',
+           layout: 'horizontal',
+           align: 'center',
+           verticalAlign: 'bottom',
            borderWidth: 0
        },
        series: []
@@ -63,10 +62,13 @@ var ServiceDetailsChart= function(jsonData,options){
         var seriesName=options.series[i].name;
         var seriesType=options.series[i].type;
         var isOpposite=options.series[i].opposite;
+        var suffixLabel=options.series[i].suffixLabel;
         if(seriesType!=null)
             optionsChart.series[i].type=seriesType;
         if(isOpposite)
             optionsChart.series[i].yAxis=1;
+        if(suffixLabel)
+           optionsChart.tooltip.valueSuffix=suffixLabel;
         optionsChart.series[i].name=seriesName;
         optionsChart.title.text=options.title
         optionsChart.series[i].data.push(el[seriesName]);

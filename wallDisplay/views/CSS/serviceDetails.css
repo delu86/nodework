@@ -3,7 +3,9 @@
 	 }
 body{
   width:100%;
-  background-color: #f7f7f7;
+background-image: url('../img/bg.jpg');
+background-size: 100%;
+background-repeat:repeat;
 }
 
 .body{
@@ -12,6 +14,7 @@ body{
   margin-top:2.5%;
 }
 .chart{
+  float: left;
   height: 400px;
   margin-top: 0px;
   padding-top: 0px;
@@ -19,9 +22,9 @@ body{
   width:60%;
   }
 .table{
-  height: 400px;
   margin-top: 0px;
   padding-top: 0px;
+  padding-left: 2%;
   display: inline-block;
 }
 
@@ -32,12 +35,12 @@ td {
     text-align: right;
 }
 #title{
-	width:80%;
+	width:100%;
 	color: #333333;
 	font-weight: bold;
 	font-family: "Delicious", sans-serif;
   text-align: center;
-  padding-left: 15%;
+  padding-left: 25%;
 	display:inline;
 	margin-top: 0%;
 	font-size: xx-large;

@@ -1,52 +1,53 @@
 "use strict";
-var  url="mongodb://10.99.252.22:27017/FAC";
+var  url=require('./constant.js').urlMongodb;
 //gets data for WallDisplay charts
-var   _getData=function(abi,serviceName,mongoClient,res){
+var   _getData=function(abi,date,serviceName,mongoClient,res){
     mongoClient.connect(url,function(err,db){
       var results;
       //  assert.equal(null,errorConnection);
       switch (serviceName) {
           case "FEU_SintesiStatoCliente":
-           return _getFEUStatoCliente(db,abi,serviceName,res);
+           return _getFEUStatoCliente(db,abi,date,serviceName,res);
             break;
           case "FEU_QuadroDiControllo":
-            return _getFEUQuadroControllo(db,abi,serviceName,res);
+            return _getFEUQuadroControllo(db,abi,date,serviceName,res);
              break;
           case "PWS":
-             return _getPWS(db,abi,serviceName,res);
+             return _getPWS(db,abi,date,serviceName,res);
             break;
           case "HB":
-            return _getHB(db,abi,serviceName,res);
+            return _getHB(db,abi,date,serviceName,res);
             break;
           case "atm":
-            return _getATM(db,abi,serviceName,res);
+            return _getATM(db,abi,date,serviceName,res);
             break;
           case "CBI":
-            return _getCBI(db,abi,serviceName,res);
+            return _getCBI(db,abi,date,serviceName,res);
             break;
           case "Ticket":
-            return _getTicket(db,abi,serviceName,res);
+            return _getTicket(db,abi,date,serviceName,res);
             break;
           case "OperazioniSportello":
-            return _getOperazioniSportello(db,abi,serviceName,res);
+            return _getOperazioniSportello(db,abi,date,serviceName,res);
             break;
           case "CasseSportello":
-            return _getCasse(db,abi,serviceName,res);
+            return _getCasse(db,abi,date,serviceName,res);
             break;
           case "FEAfirmati":
-            return _getFEA(db,abi,serviceName,res);
+            return _getFEA(db,abi,date,serviceName,res);
             break;
           default:
-            return _getPWS(db,abi,serviceName,res);
+            return _getPWS(db,abi,date,serviceName,res);
             break;
         }
     });
   };
-  var _getFEUStatoCliente=function(db,abi,serviceName,res){
+  var _getFEUStatoCliente=function(db,abi,date,serviceName,res){
     // Create a collection
+    try{
     var collection=db.collection('WallDisplay');
     collection.aggregate([
-        {$match: {"abi":abi}}
+        {$match: {"abi":abi,"data":date}}
         ,{$limit: 1}
         ,{$unwind:"$servizio"}
         ,{$match:{"servizio.nomeservizio":"FEU_SintesiStatoCliente"}}
@@ -57,13 +58,17 @@ var   _getData=function(abi,serviceName,mongoClient,res){
     ]).each(function(err, doc) {
       res.end(JSON.stringify(doc));
       db.close();
-  });
+  });}
+  catch(e){
+    console.log("Error on db: "+e);
+  }
   };
-  var _getFEUQuadroControllo=function(db,abi,serviceName,res){
+  var _getFEUQuadroControllo=function(db,abi,date,serviceName,res){
+    try{
     // Create a collection
     var collection=db.collection('WallDisplay');
     collection.aggregate([
-      {$match: {"abi":abi}}
+      {$match: {"abi":abi,"data":date}}
       ,{$limit: 1}
       ,{$unwind:"$servizio"}
       ,{$match:{"servizio.nomeservizio":"FEU_QuadroDiControllo"}}
@@ -74,12 +79,16 @@ var   _getData=function(abi,serviceName,mongoClient,res){
     ]).each(function(err, doc) {
       res.end(JSON.stringify(doc));
       db.close();
-  });
+  });}
+  catch(e){
+    console.log("Error on db: "+e);
+  }
   };
-  var _getFEA=function(db,abi,serviceName,res){
+  var _getFEA=function(db,abi,date,serviceName,res){
+    try{
     var collection=db.collection('WallDisplay');
     collection.aggregate([
-         {$match: {"abi":abi}},
+         {$match: {"abi":abi, "data":{$lte:date}}},
          {$limit: 6}
     ,    {$unwind:"$servizio"}
     ,    {$match: {"servizio.nomeservizio":"FEAfirmati"}}
@@ -92,10 +101,15 @@ var   _getData=function(abi,serviceName,mongoClient,res){
       db.close();
   });
   }
-  var _getCBI=function(db,abi,serviceName,res){
+  catch(e){
+    console.log("Error on db: "+e);
+  }
+  }
+  var _getCBI=function(db,abi,date,serviceName,res){
+    try{
     var collection=db.collection('WallDisplay');
     collection.aggregate([
-         {$match: {"abi":abi}},
+         {$match: {"abi":abi,"data":{$lte:date}}},
          {$limit: 6}
     ,    {$unwind:"$servizio"}
     ,    {$match: {"servizio.nomeservizio":"CBI"}}
@@ -107,11 +121,16 @@ var   _getData=function(abi,serviceName,mongoClient,res){
       res.end(JSON.stringify(doc));
       db.close();
   });
+}
+catch(e){
+  console.log("Error on db: "+e);
+}
   }
-  var _getTicket=function(db,abi,serviceName,res){
+  var _getTicket=function(db,abi,date,serviceName,res){
+    try{
     var collection=db.collection('WallDisplay');
     collection.aggregate([
-         {$match: {"abi":abi}},
+         {$match: {"abi":abi, data:{$lte:date}}},
          {$limit: 6}
     ,    {$unwind:"$servizio"}
     ,    {$match: {"servizio.nomeservizio":"Ticket"}}
@@ -124,10 +143,15 @@ var   _getData=function(abi,serviceName,mongoClient,res){
       db.close();
   });
   }
-  var _getOperazioniSportello=function(db,abi,serviceName,res){
+  catch(e){
+    console.log("Error on db: "+e);
+  }
+  }
+  var _getOperazioniSportello=function(db,abi,date,serviceName,res){
+    try{
     var collection=db.collection('WallDisplay');
     collection.aggregate([
-         {$match: {"abi":abi}},
+         {$match: {"abi":abi, "data":{$lte:date}}},
          {$limit: 6}
     ,    {$unwind:"$servizio"}
     ,    {$match: {"servizio.nomeservizio":"OperazioniSportello"}}
@@ -139,29 +163,39 @@ var   _getData=function(abi,serviceName,mongoClient,res){
       res.end(JSON.stringify(doc));
       db.close();
   });
+}
+catch(e){
+  console.log("Error on db: "+e);
+}
   }
-  var _getATM=function(db,abi,serviceName,res){
+  var _getATM=function(db,abi,date,serviceName,res){
+    try{
        // Create a collection
        var collection=db.collection('WallDisplay');
        collection.aggregate([
-         {$match: {"abi":abi}},
+         {$match: {"abi":abi,"data":date}},
          {$limit: 1}
     ,    {$unwind:"$servizio"}
     ,    {$match: {"servizio.nomeservizio":"atm"}}
     ,    {$project:{rel:{$slice: ["$servizio.rilevazioni",-1]}}}
     ,    {$unwind:"$rel"}
-    ,    {$project:{data:["$rel.disabled","$rel.non_eroga","$rel.fine_soldi","$rel.fuori_linea","$rel.probl_hw"],
-                    categories:["disabled","non_eroga","fine_soldi","fuori_linea","probl_hw"]}}
+    ,    {$project:{data:["$rel.disabled","$rel.non_eroga","$rel.fuori_linea","$rel.probl_hw"],
+                    categories:["disabled","non_eroga","fuori_linea","probl_hw"]}}
        ]).each(function(err, doc) {
          res.end(JSON.stringify(doc));
          db.close();
      });
+   }
+   catch(e){
+     console.log("Error on db: "+e);
+   }
   };
-  var _getPWS=function(db,abi,serviceName,res){
+  var _getPWS=function(db,abi,date,serviceName,res){
+    try{
        // Create a collection
        var collection=db.collection('WallDisplay');
        collection.aggregate([
-         {$match: {"abi":abi}},
+         {$match: {"abi":abi,"data":date}},
          {$limit: 1},
          {$unwind:"$servizio"},
          {$match: {"servizio.nomeservizio":"PWS"}},
@@ -170,12 +204,17 @@ var   _getData=function(abi,serviceName,mongoClient,res){
          res.end(JSON.stringify(doc));
          db.close();
      });
+   }
+   catch(e){
+     console.log("Error on db: "+e);
+   }
   };
-  var _getCasse=function(db,abi,serviceName,res){
+  var _getCasse=function(db,abi,date,serviceName,res){
+    try{
        // Create a collection
        var collection=db.collection('WallDisplay');
        collection.aggregate([
-         {$match: {"abi":abi}},
+         {$match: {"abi":abi,"data":date}},
          {$limit: 1},
          {$unwind:"$servizio"},
          {$match: {"servizio.nomeservizio":"CasseSportello"}},
@@ -184,12 +223,17 @@ var   _getData=function(abi,serviceName,mongoClient,res){
          res.end(JSON.stringify(doc));
          db.close();
      });
+   }
+   catch(e){
+     console.log("Error on db: "+e);
+   }
   };
-  var _getHB=function(db,abi,serviceName,res){
+  var _getHB=function(db,abi,date,serviceName,res){
+      try{
        // Create a collection
        var collection=db.collection('WallDisplay');
        collection.aggregate([
-         {$match: {"abi":abi}},
+         {$match: {"abi":abi,"data":date}},
          {$limit: 1},
          {$unwind:"$servizio"},
          {$match: {"servizio.nomeservizio":"HB"}},
@@ -198,6 +242,10 @@ var   _getData=function(abi,serviceName,mongoClient,res){
          res.end(JSON.stringify(doc));
          db.close();
      });
+   }
+   catch(e){
+     console.log("Error on db: "+e);
+   }
   };
 module.exports=
 {

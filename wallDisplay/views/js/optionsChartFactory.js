@@ -26,6 +26,7 @@ let OptionsChartFactory=	{
 									tickAmount: 5,
 									gridLineWidth: 1,
 									labels: {
+											format: '{value:.0f}',
 											style: {
 													color: 'black',
 													fontSize:'8px'
@@ -221,7 +222,7 @@ let OptionsChartFactory=	{
 							return ret;
 							break;
 						case 'CasseSportello':
-							var ret =Object.assign({field:"OpenCashesToday",fieldLabel:"#Operations",renderCategories:getTime},optionsCharts.optionsAreaChart);
+							var ret =Object.assign({field:"OpenCashesToday",fieldLabel:"#CasseAperte",renderCategories:getTime},optionsCharts.optionsAreaChart);
 							ret.subtitle.text="#OpenCashes";
 							return ret;
 							break;

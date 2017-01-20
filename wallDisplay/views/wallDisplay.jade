@@ -1,14 +1,26 @@
 doctype html
 html(lang=it)
 	head
+		link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")
+		link(rel="icon" href="img/favicon.ico" type="image/x-icon")
 		link(rel="stylesheet" href="CSS/wallDisplay.css")
+		link(rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
 		//- script(src="https://use.fontawesome.com/9921b3da48.js")
 		script(src="js/jquery.min.js")
+		script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
 		script(src="https://code.highcharts.com/highcharts.js")
 		script(src="/socket.io/socket.io.js")
 		script.
 			var abi='#{abi_code}';
 			var connection_id='#{connection_id}';
+			var code='#{code}';
+			var dateString='#{date}';
+			var date=new Date();
+			date.setTime( date.getTime() - date.getTimezoneOffset()*60*1000 );
+			var todayDate=date.toISOString().substring(0,10);
+			if(dateString===''){
+				dateString=todayDate
+			}
 		script(src='js/optionsChartFactory.js')
 		script(src='js/wallDisplay.js')
 		script(src='js/wallScript.js')
@@ -17,6 +29,7 @@ html(lang=it)
 		#header
 			img#logo(src="img/Abiwatch01.png")
 			h3(id="title")
+			input(id="datepicker" maxlength="10" size="10" placeholder="Select date")
 			//- img#uc(src="img/uc.jpg" )
 		#wallDisplay
 		//- #footer

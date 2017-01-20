@@ -1,6 +1,8 @@
 var WallDisplay = function(jsonObject){
 	this.servicesData=jsonObject.lastRel.servizio;
-	this.metaData=jsonObject.metaData.servizio;
+	this.metaData=jsonObject.metaData.servizi;
+	this.tresholds=jsonObject.tresholds;
+	//console.log(this.tresholds);
 	this.setHtmlClasses();
 	this.intervalID=[];
 	this.charts=[];
@@ -8,29 +10,8 @@ var WallDisplay = function(jsonObject){
 
 WallDisplay.prototype.setHtmlClasses = function() {
 	this.assignHtmlClasses("containerSmall container","titleCardSmall titleCard");
-	// 	switch(this.servicesData.length){
-	// 	case 9: this.assignHtmlClasses("containerSmall container","titleCardSmall titleCard");
-	// 				    break;
-	// 	case 8: this.assignHtmlClasses("containerSmall container","titleCardSmall titleCard");
-	// 			    break;
-	// 	case 7: this.assignHtmlClasses("containerSmall container","titleCardSmall titleCard");
-	// 			    break;
-	// 	case 6: this.assignHtmlClasses("containerMedium container","titleCardMedium titleCard");
-	// 			    break;
-	// 	case 5: this.assignHtmlClasses("containerMedium container","titleCardMedium titleCard ");
-	// 			    break;
-	// 	case 4: this.assignHtmlClasses("containerLarge container","titleCardLarge titleCard");
-	// 			    break;
-	// 	case 3: this.assignHtmlClasses("containerLarge container","titleCardLarge titleCard");
-	// 			    break;
-	// 	case 2: this.assignHtmlClasses("containerLarge container","titleCardLarge titleCard");
-	// 			    break;
-	// 	case 1: this.assignHtmlClasses("containerFull container","titleCardFull titleCard");
-	// 			    break;
-	// 	default: this.assignHtmlClasses("containerSmall container","titleCardSmall titleCard");
-	// 											break;
-	// }
 };
+
 WallDisplay.prototype.assignHtmlClasses=function(containerClass,titleCardClass){
 	this.containerClass=containerClass;
 	this.titleCardClass=titleCardClass;
@@ -45,7 +26,7 @@ WallDisplay.prototype.update=function(jsonObject){
 	for (var i = this.intervalID.length - 1; i >= 0; i--) {
 		clearInterval(this.intervalID[i]);
 	}
-	//distrugge i grafici precedentemente creati
+	//distrugge i grafici precedentemente creat	i
 	this.charts.map(function(chart){
 		chart.destroy();
 	});
@@ -54,7 +35,7 @@ WallDisplay.prototype.update=function(jsonObject){
 	//una volta che i dati vengono aggiornati
 	this.intervalID=[];
 	this.servicesData=jsonObject.lastRel.servizio;
-	this.metaData=jsonObject.metaData.servizio;
+	this.metaData=jsonObject.metaData.servizi;
 	this.render();
 }
 WallDisplay.prototype.displayService=function(service) {
@@ -81,9 +62,13 @@ WallDisplay.prototype.drawChart=function(service){
 	var chartsArray=this.charts;
 	var optionsChart=OptionsChartFactory.getOptionsChart(service.nomeservizio);
     if(optionsChart.field!=undefined){
-	  	optionsChart.yAxis.plotLines[0].value=this.getMetaData(service.nomeservizio,optionsChart.field).treshold;
+			if(service.nomeservizio.substr(0,3)!='FEU')
+	  		optionsChart.yAxis.plotLines[0].value=this.tresholds[service.nomeservizio.toUpperCase()];
+			else
+				optionsChart.yAxis.plotLines[0].value=this.tresholds['FEU'];
+
 }
-	$.getJSON('/getJSON/'+abi+'/'+service.nomeservizio,function(json){
+	$.getJSON('/getJSON/'+abi+'/'+service.nomeservizio+'?data='+dateString+'&code='+code,function(json){
 		if(optionsChart.coloured==true)
     	optionsChart.plotOptions.series.colorByPoint=optionsChart.coloured;
     optionsChart.chart.renderTo='containerChart'+service.nomeservizio;
@@ -107,9 +92,10 @@ WallDisplay.prototype.setUpHeaderCard = function (service) {
 	$("#header"+service.nomeservizio).append("<h5 class='"+this.titleCardClass+"'>"+this.getServiceLabel(service.nomeservizio)+"</h5>");
 	$("#header"+service.nomeservizio).css({"cursor":"pointer"});
 	$("#header"+service.nomeservizio).click(function(){
-			location.href='servicePage?abi='+abi+'&service='+service.nomeservizio;
-	})
-	};
+				//location.href='servicePage?abi='+abi+'&service='+service.nomeservizio+'&date='+dateString;
+				window.open('servicePage?abi='+abi+'&code='+code+'&service='+service.nomeservizio+'&date='+dateString, '_blank');
+			})
+};
 WallDisplay.prototype.setUpBodyCard = function (service) {
 	$("#"+service.nomeservizio).append("<div class='info' id='info"+service.nomeservizio+"'></div>");
 	$("#info"+service.nomeservizio).append("<p class='total' id='total"+service.nomeservizio+"'></p>");
@@ -151,10 +137,10 @@ WallDisplay.prototype.getServiceLabel = function (serviceName) {
 WallDisplay.prototype.getMetaData = function (serviceName,key) {
 		for (var i = 0; i < this.metaData.length; i++) {
 			if(this.metaData[i].nomeservizio===serviceName){
-				for (var n = 0; n < this.metaData[i].soglie.length; n++) {
-					if(this.metaData[i].soglie[n][key]!=undefined)
-						return {"treshold":this.metaData[i].soglie[n][key],"label":this.metaData[i].soglie[n].label,
-										"type":this.metaData[i].soglie[n].TipoDato};
+				for (var n = 0; n < this.metaData[i].meta.length; n++) {
+					if(this.metaData[i].meta[n].name===key)
+						return {"treshold":0,"label":this.metaData[i].meta[n].label,
+										"type":this.metaData[i].meta[n].TipoDato};
 				}
 			}
 		}
@@ -162,24 +148,8 @@ WallDisplay.prototype.getMetaData = function (serviceName,key) {
 };
 WallDisplay.prototype.insertValueText=function(service,data,hour,minutes) {
 	var valueText=this.setValueText(data.value);
-	delta=this.calculateDelta(data.value,data.treshold,data.type,hour,minutes);
-	 if(delta>0){
-		// 	$("#delta"+service.nomeservizio).attr("style","color:red");
-		// 	$("#delta"+service.nomeservizio).text("+"+delta.toFixed(1)+'%');
-		$("#total"+service.nomeservizio).text(valueText);
-		// $("#field"+service.nomeservizio).attr("style","color:red");
-	  $("#field"+service.nomeservizio).html(data.label
-			//+" <span style=\"color:red\"> +"+delta.toFixed(1)+'% </span>'
-		);
-	 }
-	 else{
-		 $("#total"+service.nomeservizio).text(valueText);
-		//  $("#field"+service.nomeservizio).attr("style","color:green");
-	 	$("#field"+service.nomeservizio).html(data.label
-		//	+" <span style=\"color:green\">"+delta.toFixed(1)+'% </span>'
-		);
-	 }
-
+	$("#total"+service.nomeservizio).text(valueText);
+	$("#field"+service.nomeservizio).html(data.label)
 }
 
 WallDisplay.prototype.setValueText=function(value){
@@ -190,13 +160,4 @@ WallDisplay.prototype.setValueText=function(value){
 	}else{
 		return value.toString();
 	}
-}
-WallDisplay.prototype.calculateDelta=function(val,treshold,valType,hour,minutes) {
-  if(valType==="Progressivo"){
-		treshold=treshold*(((parseInt(hour)*60+parseInt(minutes))-8*60)/600);
-	}
-	if(treshold!=0)
-		return 100*(val-treshold)/treshold;
-	else
-		return 0
 }
