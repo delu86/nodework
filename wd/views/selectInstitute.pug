@@ -1,0 +1,128 @@
+doctype html
+html
+  head
+    style.
+      body{
+        background-image: url('../img/bg.jpg');
+      }
+      .imgMaxWidth {
+          max-width:140px;
+          height:auto;
+      }
+      .imgMaxHeight {
+          max-height:90px;
+          width:auto;
+      }
+    script(src='js/jquery.min.js')
+    script(type="text/javascript").
+      function onLoadF() {
+      $('.imageToResize').each(function() {
+          var imgWidth = $(this).width();
+          if (imgWidth>150) {
+              $(this).removeClass("imgMaxHeight").addClass("imgMaxWidth");
+              $(this).css("cursor","pointer");
+              }
+        });
+        $('.imageToResize').click(function(){
+           var abi=$(this).attr("src").substr(4,5);
+           location.href ='/'+abi;
+           });
+      }
+      window.onload = onLoadF;
+  body
+    br
+    br
+    center
+      table#institutionsTable(cellpadding = 5)
+        tr
+          td
+            img(src="img/06085.png" class="imageToResize imgMaxHeight")
+          td
+            img(src="img/06370.png" class="imageToResize imgMaxHeight"  alt="volterra")
+          td
+            img(src="img/03127.jpg" class="imageToResize imgMaxHeight" )
+          td
+            img(src="img/06045.png" class="imageToResize imgMaxHeight" )
+          td
+            img(src="img/03365.png" class="imageToResize imgMaxHeight" alt="3venezie" )
+          td
+            img(src="img/10685.jpg" class="imageToResize imgMaxHeight" alt="ge" )
+
+        tr
+          td
+            img(src="img/03440.gif" class="imageToResize imgMaxHeight" )
+          td
+            img(src="img/03643.png" class="imageToResize imgMaxHeight" )
+          td
+            img(src="img/05116.jpg" class="imageToResize imgMaxHeight" )
+          td
+            img(src="img/05385.png" class="imageToResize imgMaxHeight" )
+          td
+            img(src="img/03445.png" class="imageToResize imgMaxHeight"  alt="fca")
+          td
+            img(src="img/03321.gif" class="imageToResize imgMaxHeight"  alt="")
+        tr
+          td
+            img(src="img/05424.jpg" class="imageToResize imgMaxHeight" )
+          td
+            img(src="img/06155.jpg" class="imageToResize imgMaxHeight" alt="nuova cr ferrara")
+          td
+            img(src="img/03048.jpg" class="imageToResize imgMaxHeight"   alt="" )
+          td
+            img(src="img/06115.png" class="imageToResize imgMaxHeight" )
+          td
+            img(src="img/05015.png" class="imageToResize imgMaxHeight" alt="lecchese" )
+          td
+            img(src="img/03051.jpg" class="imageToResize imgMaxHeight" alt="barclays" )
+        tr
+          td
+            img(src="img/03387.jpg" class="imageToResize imgMaxHeight")
+          td
+            img(src="img/06220.png" class="imageToResize imgMaxHeight")
+          td
+            img(src="img/03124.png" class="imageToResize imgMaxHeight")
+          td
+            img(src="img/08340.png" class="imageToResize imgMaxHeight")
+          td
+            img(src="img/03388.jpg" class="imageToResize imgMaxHeight" alt="stabiese")
+          td
+            img(src="img/03126.jpg" class="imageToResize imgMaxHeight" alt="leonardo")
+        tr
+          td
+            img(src="img/03105.jpg" class="imageToResize imgMaxHeight" alt="vw" )
+          td
+            img(src="img/05390.jpg" class="imageToResize imgMaxHeight" alt="etruria" )
+          td
+            img(src="img/10630.jpg" class="imageToResize imgMaxHeight" alt="ist credito sportivo" )
+          td
+            img(src="img/10680.png" class="imageToResize imgMaxHeight" alt="banca del mezzogiorno" )
+          td
+            img(src="img/03115.jpg" class="imageToResize imgMaxHeight" alt="" )
+          td
+            img(src="img/05824.jpg" class="imageToResize imgMaxHeight" alt="" )
+        tr
+          td
+            img(src="img/03353.jpg" class="imageToResize imgMaxHeight" alt="banca del SUD" )
+          td
+            img(src="img/03263.jpg" class="imageToResize imgMaxHeight" alt="IBL" )
+          td
+            img(src="img/03062.jpg" class="imageToResize imgMaxHeight" alt="Mediolanum" )
+          td
+            img(src="img/03032.gif" class="imageToResize imgMaxHeight" alt="Credem" )
+          td
+            img(src="img/03011.jpg" class="imageToResize imgMaxHeight" alt="hypo" )
+          td
+            img(src="img/06090.jpg" class="imageToResize imgMaxHeight" alt="" )
+        tr
+          td
+            img(src="img/03253.jpg" class="imageToResize imgMaxHeight" alt="del vecchio" )
+          td
+            img(src="img/03488.png" class="imageToResize imgMaxHeight" alt="cassa lombarda" )
+          td
+            img(src="img/03183.png" class="imageToResize imgMaxHeight" alt="esperia" )
+          td
+            img(src="img/03598.jpg" class="imageToResize imgMaxHeight" alt="ubae" )
+          td
+            img(src="img/03321.gif" class="imageToResize imgMaxHeight" alt="rbc" )
+          td
+            img(src="img/32502.png" class="imageToResize imgMaxHeight" alt="pasvim" )
