@@ -1,14 +1,14 @@
-const urlMongodb = "mongodb://10.99.19.90:27017/TEST";
+const urlMongodb = "mongodb://localhost:27017/FAC";
 const mySqlConnectionProperties = {
-  host     : '10.99.19.90',
-  user     : 'fac',
-  password : 'facpass',
-  database : 'md'
+  host     : 'localhost',
+  user     : 'root',
+  password : '',
+  database : 'walldisplay'
 };
 const queryTreshold =  `SELECT md_servizio,if(md_servizio='TICKET',round(md_soglia),md_soglia) as
-                      md_soglia from md.wd_soglie where md_abi=? and md_servizio in
+                      md_soglia from md_abi_serv_soglia where md_abi=? and md_servizio in
                       ('TICKET','PWS','HB','CBI','FEU') order by md_data desc,md_abi; `;
-const query = {
+const serviceHistoryQuery = {
   FEAfirmati:"SELECT md_data as data,md_tot_err as errori,md_tot_canc as cancellati,md_tot_regulas as regolari,md_tot_revoked as revocati FROM md.wd_fea_volumi where md_abi=?  and DATEDIFF(?,md_data) BETWEEN 0 and 31 order by 1 asc limit 20;",
   CBI:"SELECT md_data as data,login,bonifici,f24 FROM md.wd_cbi_volumi where md_abi=? and DATEDIFF(?,md_data) BETWEEN 0 and 31 order by 1 asc;",
   HB_Volumi:"SELECT md_data as data,login,bonifici,f24,estrattoconto FROM wd_hb_volumi where md_abi=? and DATEDIFF(?,md_data) BETWEEN 0 and 31 order by 1 asc;",
@@ -24,8 +24,7 @@ class DatabaseClient {
   constructor() {
     this.mysql = require('mysql');
     this.mongodb = require('mongodb').MongoClient;
-    this.mySqlConnection = this.mysql.createConnection(mySqlConnectionProperties);
-  }
+    }
 
 
   findUser(email){
@@ -68,6 +67,105 @@ class DatabaseClient {
       return new Promise(promiseFunction);
     }
   }
+
+  getServiceInformationOnDate(instituteId,date,serviceName){
+    return this._getMongoConnectionPromise().then(this._getServiceInformationOnDate(instituteId,date,serviceName));
+  }
+  _getServiceInformationOnDate(instituteId,date,serviceName){
+    var that=this;
+    return function(db) {
+      var promiseFunction=function(resolve,reject)  {
+        db.collection('WallDisplay').aggregate(that._getServiceInformationOnDateQuery(instituteId,date,serviceName))
+          .each(function(err, doc) {
+              db.close();
+              err?reject(err) : resolve(doc)
+              });}
+      return new Promise(promiseFunction);
+  }
+  }
+
+_getServiceInformationOnDateQuery(instituteId,date,serviceName){
+  var matchAbiDate={$match: {"abi":instituteId,"data":date}};
+  var matchAbiDateLte={$match: {"abi":instituteId,"data":{$lte:date}}};
+  var unwindService={$unwind:"$servizio"};
+  var matchServiceName={$match:{"servizio.nomeservizio":serviceName}};
+  var limit1={$limit:1};
+  var limit6={$limit:6};
+  switch (serviceName) {
+    case "FEU_SintesiStatoCliente":
+      return [matchAbiDate,limit1,unwindService,matchServiceName,{$unwind:"$servizio.rilevazioni"}
+              ,{$group: {_id:{abi:"$abi",logtime:"$servizio.rilevazioni.logtime"},TempoMedio: { $max: "$servizio.rilevazioni.TempoMedio" }}}
+              ,{$sort: {"_id.logtime":1}}
+              ,{$group: {_id:"$_id.abi",categories:{$push:"$_id.logtime"},data:{$push:"$TempoMedio"}}}];
+      break;
+
+    case "FEU_QuadroDiControllo":
+      return[matchAbiDate,limit1,unwindService,matchServiceName,{$unwind:"$servizio.rilevazioni"}
+             ,{$group: {_id:{abi:"$abi",logtime:"$servizio.rilevazioni.logtime"},TempoMedio: { $max: "$servizio.rilevazioni.TempoMedio" }}}
+             ,{$sort: {"_id.logtime":1}}
+             ,{$group: {_id:"$_id.abi",categories:{$push:"$_id.logtime"},data:{$push:"$TempoMedio"}}}]
+      break;
+
+    case "atm":
+      return [matchAbiDate,limit1,unwindService,matchServiceName
+              ,{$project:{rel:{$slice: ["$servizio.rilevazioni",-1]}}}
+              ,{$unwind:"$rel"}
+              ,{$project:{data:["$rel.disabled","$rel.non_eroga","$rel.fuori_linea","$rel.probl_hw"],
+                              categories:["disabled","non_eroga","fuori_linea","probl_hw"]}}]
+      break;
+
+    case "PWS":
+      return [matchAbiDate,limit1,unwindService,matchServiceName
+            ,{$project :   { "categories":"$servizio.rilevazioni.logtime"  , "data":"$servizio.rilevazioni.TempoMedio"}}]
+      break;
+
+    case "HB":
+      return [matchAbiDate,limit1,unwindService,matchServiceName
+              ,{$project :   { "categories":"$servizio.rilevazioni.logtime"  , "data":"$servizio.rilevazioni.Durata"}}]
+      break;
+
+    case "CBI":
+      return [matchAbiDateLte,limit6,unwindService,matchServiceName,
+             {$project:{abi:1,data:1,rel:{$slice: ["$servizio.rilevazioni",-1]}}}
+            ,{$unwind:"$rel"}
+            ,{$sort: {data:1}}
+            ,{$group: {_id:"$abi",data:{$push: "$rel.TotaleLogon"},categories:{$push: "$data"}}}
+          ]
+      break;
+
+    case "Ticket":
+      return [matchAbiDateLte,limit6,unwindService,matchServiceName
+              ,{$project:{abi:1,data:1,rel:{$slice: ["$servizio.rilevazioni",-1]}}}
+              ,{$unwind:"$rel"}
+              ,{$sort: {data:1}}
+              ,{$group: {_id:"$abi",data:{$push: "$rel.Pervenuti"},categories:{$push: "$data"}}}]
+      break;
+
+    case "OperazioniSportello":
+      return [matchAbiDateLte,limit6,unwindService,matchServiceName
+              ,{$project:{abi:1,data:1,rel:{$slice: ["$servizio.rilevazioni",-1]}}}
+              ,{$unwind:"$rel"}
+              ,{$sort: {data:1}}
+              ,{$group: {_id:"$abi",data:{$push: "$rel.Operations"},categories:{$push: "$data"}}}]
+      break;
+
+    case "CasseSportello":
+      return [matchAbiDate,limit1,unwindService,matchServiceName
+            ,{$project :   { "categories":"$servizio.rilevazioni.logtime"  , "data":"$servizio.rilevazioni.OpenCashesToday"}}]
+      break;
+
+    case "FEAfirmati":
+      return [matchAbiDateLte,limit6,unwindService,matchServiceName
+             ,{$project:{abi:1,data:1,rel:{$slice: ["$servizio.rilevazioni",-1]}}}
+             ,{$unwind:"$rel"}
+             ,{$sort: {data:1}}
+             ,{$group: {_id:"$abi",data:{$push: "$rel.firmati"},categories:{$push: "$data"}}}];
+      break;
+
+    default: throw new Error("Servizio sconosciuto");
+
+  }
+}
 
 
   findUserInstitute(email){
@@ -122,16 +220,30 @@ class DatabaseClient {
   getServiceData(instituteId,serviceName,date){
 
   }
+  getMetadata(){
+    return this._getMongoConnectionPromise().then(this._getMetadataPromise());
+  }
+  _getMetadataPromise(){
+    return function(db){
+      var promiseFunction=function(resolve,reject){
+        db.collection("WallDisplayMetadata").findOne({},
+          function(err,data){
+            err? reject(err) : resolve(data);})
+      }
+    return new Promise(promiseFunction);
+    }
+  }
+
 
   getServicesTresholds(instituteId){
-    this.mySqlConnection.connect();
-    var connection = this.mySqlConnection;
+    var connection = this.mysql.createConnection(mySqlConnectionProperties);
     var resolveFunction = this._createTresholdObjectFromQueryResults;
     var promiseFunction = function(resolve, reject) {
-      connection.query(queryTreshold,instituteId,function(err,queryResults){
+        connection.query(queryTreshold,instituteId,function(err,queryResults){
+          err?reject(err.message):resolve(resolveFunction(queryResults));
+          });
         connection.end();
-        err?reject(err.message):resolve(resolveFunction(queryResults));
-      })};
+    };
     return new Promise(promiseFunction);
   }
 
@@ -157,6 +269,3 @@ class DatabaseClient {
 }
 
 module.exports = new DatabaseClient();//return a singleton
-//var database=new DatabaseClient();
-//database.addUser("06370","m.pp@CRVOLTERRA.it","12345","32323232").then(console.log)
-//database.findUser("m.pp@CRVOLTERRA.it").then(console.log);

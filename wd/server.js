@@ -9,7 +9,7 @@ const loginManager = require('./login.js');
 const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
-
+var metadata;
 const INTERNAL_IP_ADDRESS_CONNECTION = '10.99.19.90';
 
 app.use(express.static(path.join(__dirname,'views')));
@@ -24,11 +24,40 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 
 //start http server on port 80
-http.listen(80,onHTTPserverStart);
+http.listen(3000,onHTTPserverStart);
 function onHTTPserverStart(){
-  console.log("Listening on port 80");
+  instituteInformationRetriever.getMetadata().then(onMetadataLoaded());
 }
-
+function onMetadataLoaded(){
+  return function(meta){
+    metadata=meta;
+    console.log("Http server on port 80");
+  }
+}
+//socket io for long polling --> update of walldisplay
+io.on('connection',onConnection);
+function onConnection(socket){
+  try{
+    socket.on('json request', onJSONRequest);
+  }catch(error){
+    console.log(error)
+  }
+}
+function onJSONRequest(id){
+  //params[0]=instituteId,  params[1]=date yyyy-mm-dd,  params[2]=connection id
+  var params=id.split("_");//abi_yyyy-mm-dd_id
+  Promise.all([instituteInformationRetriever.getInstituteServicesRelevation(params[0],params[1]),
+               instituteInformationRetriever.getInstituteServicesTresholds(params[0])]
+             ).then(emitJsonResponse(params[0],params[2])).catch(console.log)
+}
+function emitJsonResponse(instituteId,connectionId) {
+  return function(arrayResults){
+     var json=`{"lastRel":${JSON.stringify(arrayResults[0])},
+                   "tresholds":${JSON.stringify(arrayResults[1])},
+                   "metadata":${JSON.stringify(metadata)}}`;
+      io.emit('json '+instituteId+'_'+connectionId+' response', json);
+  }
+}
 
 
 //Routing
@@ -62,34 +91,62 @@ function onLoginOk(request,response){
   return function(user){
     var session = request.session;
     session.user = user;
-    response.redirect('/selectInstitute');
+    user.controlled_institutions.length==0 ?
+      response.redirect(`/${user.abi}`) :
+      response.redirect('/selectInstitute');
   }
 }
 
 app.get('/selectInstitute',selectInstitute)
 function selectInstitute(request,response) {
   request.session.user ?
-    response.render('selectInstitute.pug') :
+    response.render('selectInstitute.pug',{user:request.session.user}) :
     response.redirect('/');
 }
 
 app.get('/:institute_id',getEISWallDisplay);
 function getEISWallDisplay(request,response) {
+  var connection_id = Math.floor(Math.random() * 10000);
   request.session.user ?
-    (isAuthorizedRequest(request) ? response.end("ok") :
-                                  response.render("error.pug")) :
+    (isAuthorizedRequest(request) ? response.render("wallDisplay.pug",{connection_id:connection_id,abi_code:request.params.institute_id,date:request.query.data}) :
+                                   response.render("error.pug")) :
     response.redirect('/');
 }
 function isAuthorizedRequest(request) {
-  //console.log(request.session.controlled_institutions);
-  return request.session.user.institute_id==request.params.institute_id ||
-             request.session.user.controlled_institutions.includes(request.params.institute_id);
-
+  if(request.get("Host") == INTERNAL_IP_ADDRESS_CONNECTION) return true
+  else{
+    if(request.session.user)
+      return request.session.user.institute_id==request.params.institute_id ||
+          request.session.user.controlled_institutions.includes(request.params.institute_id)
+    else return false;}
 }
 
 
-// app.get('/testSession',testSession);
-// function testSession(request,response){
-//   response.end(`${request.session.user}
-//                 : codice abi ${request.session.abi}`);
-// }
+app.get('/getJSON/:institute_id',createEISWalldisplayJSON);
+function createEISWalldisplayJSON(request,response) {
+  isAuthorizedRequest(request) ?
+  Promise.all([instituteInformationRetriever.getInstituteServicesRelevation(request.params.institute_id,request.query.date),
+               instituteInformationRetriever.getInstituteServicesTresholds(request.params.institute_id)]
+             ).then(onCreateEISWalldisplayJSONPromisesExecuted(response)).catch(console.log)
+               : response.end(`{"message" : "richiesta non autorizzata"}`);
+}
+function onCreateEISWalldisplayJSONPromisesExecuted(response) {
+  return function(results){
+      response.end(`{"lastRel":${JSON.stringify(results[0])},
+                    "tresholds":${JSON.stringify(results[1])},
+                    "metadata":${JSON.stringify(metadata)}}`);
+  }
+}
+
+app.get('/getJSON/:institute_id/:service_name',getWallDisplayServiceChart);
+function getWallDisplayServiceChart(request,response) {
+  isAuthorizedRequest(request)?
+    instituteInformationRetriever.getServiceInformationOnDate(request.params.institute_id,request.query.date,request.params.service_name)
+    .then(onWallDisplayServiceChartDataRetrieved(response)).catch(console.log)
+    : response.end(`{"message" : "richiesta non autorizzata"}`);
+}
+function onWallDisplayServiceChartDataRetrieved(response) {
+  return function(data){
+    response.end(JSON.stringify(data));
+  }
+}

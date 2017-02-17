@@ -11,6 +11,16 @@ class InstituteInformationRetriever {
       console.log(err);
     }
   }
+  getServiceInformationOnDate(instituteId,date,serviceName){
+    try {
+    return  this.databaseClient.getServiceInformationOnDate(instituteId,date,serviceName);
+    } catch (e) {
+      console.log(e);
+    }
+  }
+  getMetadata(){
+    return this.databaseClient.getMetadata();
+  }
   getInstituteServicesTresholds(instituteId){
     try{
       return this.databaseClient.getServicesTresholds(instituteId);

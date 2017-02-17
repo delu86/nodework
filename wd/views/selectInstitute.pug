@@ -15,18 +15,23 @@ html
       }
     script(src='js/jquery.min.js')
     script(type="text/javascript").
+      var institutions='#{user.controlled_institutions}';
+
       function onLoadF() {
-      $('.imageToResize').each(function() {
-          var imgWidth = $(this).width();
-          if (imgWidth>150) {
-              $(this).removeClass("imgMaxHeight").addClass("imgMaxWidth");
-              $(this).css("cursor","pointer");
-              }
-        });
-        $('.imageToResize').click(function(){
-           var abi=$(this).attr("src").substr(4,5);
-           location.href ='/'+abi;
-           });
+      if(institutions==='all'){
+        $('.imageToResize').each(function() {
+            var imgWidth = $(this).width();
+            if (imgWidth>150) {
+                $(this).removeClass("imgMaxHeight").addClass("imgMaxWidth");
+                $(this).css("cursor","pointer");
+                }
+                });
+                $('.imageToResize').click(function(){
+                var abi=$(this).attr("src").substr(4,5);
+                location.href ='/'+abi;
+                });
+                }
+
       }
       window.onload = onLoadF;
   body
