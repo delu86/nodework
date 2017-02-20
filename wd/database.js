@@ -8,6 +8,9 @@ const mySqlConnectionProperties = {
 const queryTreshold =  `SELECT md_servizio,if(md_servizio='TICKET',round(md_soglia),md_soglia) as
                       md_soglia from md_abi_serv_soglia where md_abi=? and md_servizio in
                       ('TICKET','PWS','HB','CBI','FEU') order by md_data desc,md_abi; `;
+
+const emailPattern = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
 const serviceHistoryQuery = {
   FEAfirmati:"SELECT md_data as data,md_tot_err as errori,md_tot_canc as cancellati,md_tot_regulas as regolari,md_tot_revoked as revocati FROM md.wd_fea_volumi where md_abi=?  and DATEDIFF(?,md_data) BETWEEN 0 and 31 order by 1 asc limit 20;",
   CBI:"SELECT md_data as data,login,bonifici,f24 FROM md.wd_cbi_volumi where md_abi=? and DATEDIFF(?,md_data) BETWEEN 0 and 31 order by 1 asc;",
@@ -26,7 +29,9 @@ class DatabaseClient {
     this.mongodb = require('mongodb').MongoClient;
     }
 
-
+/*
+  Functions for user's registration&authentication
+*/
   findUser(email){
     var findUserPromise = this._findUserPromise(email);
     return this._getMongoConnectionPromise().then(findUserPromise);
@@ -34,6 +39,7 @@ class DatabaseClient {
   _findUserPromise(email){
     return function(db){
       var promiseFunction = function(resolve,reject) {
+        if(!email.match(emailPattern)) reject(new Error("formato email non valido"));
         db.collection("Institutions").aggregate([{$match: {mail_domain:email.split('@')[1].toLowerCase()}}
                                                  ,{$unwind:"$users"}
                                                  ,{$match:{"users.email":email.toLowerCase()}}
@@ -68,6 +74,46 @@ class DatabaseClient {
     }
   }
 
+  findUserInstitute(email){
+    var findUserInstitutePromise = this._findUserInstitutePromise(email);
+    return this._getMongoConnectionPromise().then(findUserInstitutePromise);
+  }
+  _findUserInstitutePromise(email){
+    return function(db){
+      var promiseFunction = function(resolve,reject){
+        if(!email.match(emailPattern)) reject(new Error("Email non valida"));
+        db.collection("Institutions").findOne({mail_domain:email.split('@')[1].toLowerCase()},{abi:1},function(err,data) {
+          db.close();
+          err?reject(err):resolve(data)
+        });
+      }
+     return new Promise(promiseFunction);
+    }
+  }
+
+  addUser(instituteId,email,password,activationCode){
+    var addUserPromise = this._addUserPromise(instituteId,email,password,activationCode);
+    return this._getMongoConnectionPromise().then(addUserPromise);
+  }
+  _addUserPromise(instituteId,email,password,activationCode){
+    return function(db){
+      var promiseFunction = function(resolve,reject) {
+        db.collection("Institutions").updateOne({abi:instituteId, "users.email":{$ne: email}},
+          {$push:{users:{email:email.toLowerCase(),password:password,activated:false,activationCode:activationCode}}}
+          ,function(err,updateResult){
+            db.close();
+            err?reject(err):resolve(`${activationCode}`);
+          });
+      }
+      return new Promise(promiseFunction);
+    }
+  }
+
+
+
+/*
+Function for retrieving data for charts & tables
+*/
   getServiceInformationOnDate(instituteId,date,serviceName){
     return this._getMongoConnectionPromise().then(this._getServiceInformationOnDate(instituteId,date,serviceName));
   }
@@ -167,41 +213,6 @@ _getServiceInformationOnDateQuery(instituteId,date,serviceName){
   }
 }
 
-
-  findUserInstitute(email){
-    var findUserInstitutePromise = this._findUserInstitutePromise(email);
-    return this._getMongoConnectionPromise().then(findUserInstitutePromise);
-  }
-  _findUserInstitutePromise(email){
-    return function(db){
-      var promiseFunction = function(resolve,reject){
-        db.collection("Institutions").findOne({mail_domain:email.split('@')[1].toLowerCase()},{abi:1},function(err,data) {
-          db.close();
-          err?reject(err):resolve(data)
-        });
-      }
-     return new Promise(promiseFunction);
-    }
-  }
-
-
-  addUser(instituteId,email,password,activationCode){
-    var addUserPromise = this._addUserPromise(instituteId,email,password,activationCode);
-    return this._getMongoConnectionPromise().then(addUserPromise);
-  }
-  _addUserPromise(instituteId,email,password,activationCode){
-    return function(db){
-      var promiseFunction = function(resolve,reject) {
-        db.collection("Institutions").updateOne({abi:instituteId, "users.email":{$ne: email}},
-          {$push:{users:{email:email.toLowerCase(),password:password,activated:false,activationCode:activationCode}}}
-          ,function(err,updateResult){
-            db.close();
-            err?reject(err):resolve(`${activationCode}`);
-          });
-      }
-      return new Promise(promiseFunction);
-    }
-  }
 
   getInstituteRelevationOnDate(instituteId,relevationDate){
     var getInstituteRelevationOnDatePromise = this._getInstituteRelevationOnDatePromise(instituteId,relevationDate);

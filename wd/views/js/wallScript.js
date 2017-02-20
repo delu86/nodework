@@ -2,6 +2,9 @@ var socket = io();
 var wallDisplay;
   $( function() {
     setBackground();
+    $("#logout").click(function(){
+      location.href='/logout'
+    });
     $("#datepicker").datepicker({
        dateFormat: 'yy-mm-dd',
        onSelect: function(d) {
@@ -17,7 +20,7 @@ var wallDisplay;
 	socket.on('json '+abi+'_'+connection_id+' response', function(jsonString){
 		json=JSON.parse(jsonString);
         wallDisplay.update(json);
-        console.log("Aggiornato!!!!");
+        //console.log("Aggiornato!!!!");
   });
   //update only real-time data
   if(dateString===todayDate)
@@ -25,7 +28,7 @@ var wallDisplay;
 });
 function refreshData() {
     socket.emit('json request',abi+'_'+dateString+'_'+connection_id);
-     console.log("AGGIORNA");
+     //console.log("AGGIORNA");
 
 }
 function setBackground(){

@@ -2,6 +2,7 @@ const express = require('express');
 const session = require('express-session');
 const assert = require('assert');
 const bodyParser = require('body-parser');
+const registration = require('./registration.js');
 const path = require('path');
 const instituteInformationRetriever = require('./institute-information-retriever.js');
 const loginManager = require('./login.js');
@@ -70,6 +71,44 @@ function getIndex(request,response){
     )
 }
 
+app.get('/registration',getRegistrationPage);
+function getRegistrationPage(request,response){
+  response.render('registrationPage.pug');
+}
+
+app.post('/submitRegistration',submitRegistration);
+function submitRegistration(request,response){
+  registration.signIn(request.body.email,request.body.password).then(onRegistrationComplete(response))
+                                                               .catch(onRegistrationError(response));
+}
+function onRegistrationComplete(response){
+  return function(){
+    response.render('authenticationPage'
+      ,{helpMessage: "Registrazione effettuata con successo; completa la procedura cliccando sul link inviato via email."})
+  }
+}
+function onRegistrationError(response){
+  return function(error){
+    response.render('registrationPage'
+      ,{errorMessage: error})
+  }
+}
+
+app.get('/confirm',onAccountConfirm)
+function onAccountConfirm(request,response){
+  registration.activate(request.query.user,request.query.code).then(onAccountActivated(response))
+                                                              .catch(onAccountRejected(response));
+}
+function onAccountActivated(response){
+  return function(){
+    response.render('authenticationPage.pug',{helpMessage:"Account attivato con successo"});
+}}
+function onAccountRejected(response){
+  return function(err){
+    response.render('authenticationPage.pug',{errorMessage:err.message});
+}}
+
+
 app.get('/logout',logout);
 function logout(request,response) {
   request.session.user=null;
@@ -84,7 +123,7 @@ function login(request,response){
 }
 function onLoginError(request,response){
   return function(message){
-    response.redirect('/');
+    response.render('authenticationPage.pug',{errorMessage:"Username o password errati"});
   }
 }
 function onLoginOk(request,response){
@@ -99,28 +138,22 @@ function onLoginOk(request,response){
 
 app.get('/selectInstitute',selectInstitute)
 function selectInstitute(request,response) {
-  request.session.user ?
-    response.render('selectInstitute.pug',{user:request.session.user}) :
-    response.redirect('/');
+  if(request.session.user){
+    request.session.user.controlled_institutions==='all'?
+      response.render('selectInstitute.pug') :
+      response.render('chooseControlledInstitute.pug',{abi:request.session.user.abi,controlledInstitutions:request.session.user.controlled_institutions}) ;
+  }else response.redirect('/');
 }
 
 app.get('/:institute_id',getEISWallDisplay);
 function getEISWallDisplay(request,response) {
+  //console.log(isAuthorizedRequest(request));
   var connection_id = Math.floor(Math.random() * 10000);
-  request.session.user ?
-    (isAuthorizedRequest(request) ? response.render("wallDisplay.pug",{connection_id:connection_id,abi_code:request.params.institute_id,date:request.query.data}) :
-                                   response.render("error.pug")) :
-    response.redirect('/');
+  isAuthorizedRequest(request) ? response.render("wallDisplay.pug",{connection_id:connection_id,abi_code:request.params.institute_id,date:request.query.date}) :
+                      (request.session.user==null || typeof(request.session.user)=="undefined" ?
+                      response.redirect('/') :
+                      response.render("error.pug"));
 }
-function isAuthorizedRequest(request) {
-  if(request.get("Host") == INTERNAL_IP_ADDRESS_CONNECTION) return true
-  else{
-    if(request.session.user)
-      return request.session.user.institute_id==request.params.institute_id ||
-          request.session.user.controlled_institutions.includes(request.params.institute_id)
-    else return false;}
-}
-
 
 app.get('/getJSON/:institute_id',createEISWalldisplayJSON);
 function createEISWalldisplayJSON(request,response) {
@@ -149,4 +182,14 @@ function onWallDisplayServiceChartDataRetrieved(response) {
   return function(data){
     response.end(JSON.stringify(data));
   }
+}
+
+function isAuthorizedRequest(request) {
+  //console.log(request.session.user);
+  if(request.get("Host") == INTERNAL_IP_ADDRESS_CONNECTION) return true
+  else{
+    if(request.session.user)
+      return request.session.user.controlled_institutions==="all"||request.session.user.abi==request.params.institute_id ||
+          request.session.user.controlled_institutions.includes(request.params.institute_id)
+    else return false;}
 }

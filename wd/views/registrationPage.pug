@@ -1,0 +1,53 @@
+doctype html
+html
+  head
+    link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")
+    link(rel="icon" href="img/favicon.ico" type="image/x-icon")
+    link(rel="stylesheet" href="CSS/authentication.css")
+    script(src = "js/jquery.min.js")
+    script(src = "js/registration.js")
+  body
+    #header
+      h1 Executive Information System
+    #form
+      #headerForm
+        h2 Registrati
+        h2#errorMessage #{errorMessage}
+        h2#helpMessage Registrati inserendo la tua <u>EMAIL AZIENDALE</u>  ed un pin di almeno sei cifre(utilizza tastierino numerico)
+        a(href='/') Home
+      #bodyForm
+        #inputBodyForm
+          input(type = '<strong>email</strong>' id = 'email' placeholder = 'Inserisci email aziendale')
+          input(type = 'password' id = 'password' placeholder = 'PIN' readonly="readonly")
+          table#keyNum(align = "center")
+            tr
+              td
+                button.inputButton.inputValue 1
+              td
+                button.inputButton.inputValue 2
+              td
+                button.inputButton.inputValue 3
+            tr
+              td
+                button.inputButton.inputValue 4
+              td
+                button.inputButton.inputValue 5
+              td
+                button.inputButton.inputValue 6
+            tr
+              td
+                button.inputButton.inputValue 7
+              td
+                button.inputButton.inputValue 8
+              td
+                button.inputButton.inputValue 9
+            tr
+              td
+                button.inputButton#submit_button Ok!
+              td
+                button.inputButton.inputValue 0
+              td
+                button.inputButton#cancel_button Canc
+      #footerForm
+    #footer
+      img#logo(src="img/cedacri.png")

@@ -1,5 +1,7 @@
 var WallDisplay = function(jsonObject){
 	this.servicesData=jsonObject.lastRel.servizio;
+	this.abi=jsonObject.lastRel.abi;
+	this.date=jsonObject.lastRel.data;
 	this.metaData=jsonObject.metadata.servizi;
 	this.tresholds=jsonObject.tresholds;
 	//console.log(this.tresholds);
@@ -68,7 +70,7 @@ WallDisplay.prototype.drawChart=function(service){
 				optionsChart.yAxis.plotLines[0].value=this.tresholds['FEU'];
 
 }
-	$.getJSON('/getJSON/'+abi+'/'+service.nomeservizio+'?date='+dateString,function(json){
+	$.getJSON('/getJSON/'+this.abi+'/'+service.nomeservizio+'?date='+this.date,function(json){
 		if(optionsChart.coloured==true)
     	optionsChart.plotOptions.series.colorByPoint=optionsChart.coloured;
     optionsChart.chart.renderTo='containerChart'+service.nomeservizio;
@@ -93,7 +95,7 @@ WallDisplay.prototype.setUpHeaderCard = function (service) {
 	$("#header"+service.nomeservizio).css({"cursor":"pointer"});
 	$("#header"+service.nomeservizio).click(function(){
 				//location.href='servicePage?abi='+abi+'&service='+service.nomeservizio+'&date='+dateString;
-				window.open('servicePage?abi='+abi+'&service='+service.nomeservizio+'&date='+dateString, '_blank');
+				window.open('servicePage?abi='+this.abi+'&service='+service.nomeservizio+'&date='+this.date, '_blank');
 			})
 };
 WallDisplay.prototype.setUpBodyCard = function (service) {

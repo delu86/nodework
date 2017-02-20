@@ -18,6 +18,14 @@ body{
   float: left;
 	height:10%;
 	width:10%;
+
+}
+#logout{
+  float: right;
+  margin-right: 2%;
+  cursor: pointer;
+	height:3%;
+	width:3%;
 }
 #uc{
   float: right;

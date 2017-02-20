@@ -2,6 +2,12 @@ body{
   background-image: url('../img/bg.jpg');
   font-family: monospace;
 }
+#errorMessage{
+  color: red;
+}
+#helpMessage{
+  color: green;
+}
 #header{
   text-align: center;
   font-size: x-large;

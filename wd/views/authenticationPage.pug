@@ -11,7 +11,10 @@ html
       h1 Executive Information System
     #form
       #headerForm
+        h2#errorMessage #{errorMessage}
+        h2#helpMessage #{helpMessage}
         h2 Login
+        a(href='/registration') Non registrato? Registrati!
       #bodyForm
         #inputBodyForm
           input(type = 'text' id = 'email' placeholder = 'Inserisci email aziendale')

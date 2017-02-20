@@ -1,12 +1,11 @@
 const database = require('./database.js');
 const crypto = require('./crypto.js');
 const SecretCodeGenerator = require('./codeGenerator');
-const mailer= require('./mail.js');
-
+const mailer = require('./mail.js');
 function signIn(email,password) {
   return _verifyCondition(email,password)
           .then(_createNewUser(email,password))
-          .then(_sendAccountConfirmationMail(email));
+          //.then(_sendAccountConfirmationMail(email));
 }
 function _sendAccountConfirmationMail(email){
   return function(activationCode){
@@ -41,10 +40,10 @@ function _userAlreadyExistPromise() {
 function _isDomainSurveyed(email){
   return database.findUserInstitute(email).then(_isDomainSurveyedPromise());
 }
-function _isDomainSurveyedPromise(){
+function _isDomainSurveyedPromise(email){
   return function(data){
     return new Promise(function(resolve,reject){
-      data == null ? reject(new Error("Email non censita")) : resolve(data);
+      data == null ? reject(new Error("Dominio email non riconosciuto")) : resolve(data);
     })
   }
 }
@@ -75,6 +74,6 @@ module.exports={
   signIn:signIn
 }
 //_isDomainSurveyed("pippo@crvolterrad.it").then(console.log).catch(console.log);
-activate("simone.deluca@consulenti.cedacri.it","dVWVyJFINbTzFL7vbKeU").then(console.log).catch(console.log);
+//activate("simone.deluca@consulenti.cedacri.it","dVWVyJFINbTzFL7vbKeU").then(console.log).catch(console.log);
 //activate("SIMONE@CRVOLTERRA.it","sjXfyCh6e6LSQ9Z4DIua").then(console.log).catch(console.log);
 //activate("aldo@CRVOLTERRA.it","4tcKd5bOp6w7Y4Pc04oi").then(console.log).catch(console.log);
