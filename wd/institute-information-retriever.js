@@ -1,11 +1,11 @@
 class InstituteInformationRetriever {
   constructor() {//id is the abi_code of the Institute
-    this.databaseClient = require('./database');
+    this.instituteDataManager = require('./database/instituteDataManager.js');
 
   }
-  getInstituteServicesRelevation(instituteId,relevationDate){
+  getInstituteLastServicesRelevation(instituteId,relevationDate){
     try{
-      return this.databaseClient.getInstituteRelevationOnDate(instituteId,relevationDate);
+      return this.instituteDataManager.getInstituteLastRelevationOnDate(instituteId,relevationDate);
     }
     catch(err){
       console.log(err);
@@ -13,25 +13,25 @@ class InstituteInformationRetriever {
   }
   getServiceInformationOnDate(instituteId,date,serviceName){
     try {
-    return  this.databaseClient.getServiceInformationOnDate(instituteId,date,serviceName);
+    return  this.instituteDataManager.getServiceInformationOnDate(instituteId,date,serviceName);
     } catch (e) {
       console.log(e);
     }
   }
   getMetadata(){
-    return this.databaseClient.getMetadata();
+    return this.instituteDataManager.getMetadata();
   }
   getInstituteServicesTresholds(instituteId){
     try{
-      return this.databaseClient.getServicesTresholds(instituteId);
+      return this.instituteDataManager.getServicesTresholds(instituteId);
     }
     catch(err){
       console.log(err);
     }
   }
-  getInstituteServiceData(instituteId,serviceName,date){
+  getInstituteServiceData(serviceName,instituteId,date){
     try{
-      return this.databaseClient.getServiceData(instituteId,serviceName,date);
+      return this.instituteDataManager.getServiceData(serviceName,instituteId,date);
     }
     catch(err){
       console.log(err);

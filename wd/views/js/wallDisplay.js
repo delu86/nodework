@@ -93,9 +93,10 @@ WallDisplay.prototype.setUpHeaderCard = function (service) {
 	$("#"+service.nomeservizio).append("<div class='headerCard' id='header"+service.nomeservizio+"'></div>");
 	$("#header"+service.nomeservizio).append("<h5 class='"+this.titleCardClass+"'>"+this.getServiceLabel(service.nomeservizio)+"</h5>");
 	$("#header"+service.nomeservizio).css({"cursor":"pointer"});
+	var wall=this;
 	$("#header"+service.nomeservizio).click(function(){
 				//location.href='servicePage?abi='+abi+'&service='+service.nomeservizio+'&date='+dateString;
-				window.open('servicePage?abi='+this.abi+'&service='+service.nomeservizio+'&date='+this.date, '_blank');
+				window.open('servicePage/'+wall.abi+'?service='+service.nomeservizio+'&date='+wall.date, '_blank');
 			})
 };
 WallDisplay.prototype.setUpBodyCard = function (service) {

@@ -1,0 +1,111 @@
+doctype html
+html(lang=it)
+  head
+    title Service detail
+    link(rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon")
+    link(rel="icon" href="../img/favicon.ico" type="image/x-icon")
+    link(rel="stylesheet" href="../CSS/serviceDetails.css")
+    link(rel="stylesheet" href="../CSS/datatables.min.css")
+    link(rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css")
+    script(src="../js/jquery.min.js")
+    script(src="../js/datatables.min.js")
+    script(src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js")
+    script(src="//cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js")
+    script(src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js")
+    script(src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js")
+    script(src="//cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js")
+    script(src="//cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js")
+    script(src="https://code.highcharts.com/highcharts.js")
+    script(src="http://code.highcharts.com/modules/exporting.js")
+    script(src="../js/serviceDetailsCharts.js")
+    script(src="../js/table.js")
+    script.
+      $(function(){
+        var abi='#{abi}';
+        var date='#{date}';
+        var service='#{service}';
+        var url="/serviceDetailJSON/";
+        setBackground();
+        var setUpOptionsChart=function(serviceName){
+          switch (serviceName) {
+            case 'Ticket':
+              $("#sub1").text("Ticket aperti");
+              return{title:"",renderTo:"chart1",category:'periodo',series:[{name:"totale", type:"column"},{name:"media_giorno",opposite:true}]};
+            case 'FEAfirmati':
+              $("#sub1").text("FEA firmati");
+              return {title:"",renderTo:"chart1",category:"data",series:[{name:"regolari"},{name:"errori",opposite:true},{name:"cancellati",opposite:true},{name:"revocati",opposite:true}]}
+            case 'CBI':
+              $("#sub1").text("Volumi CBI");
+              return {title:'',renderTo:"chart1",category:"data",series:[{name:"login"},{name:"bonifici"},{name:"f24"}]};
+            case 'HB_Volumi':
+                $("#sub1").text("Volumi HB");
+                return {title:"",renderTo:"chart1",category:"data",series:[{name:"login"},{name:"bonifici"},{name:"f24"},{name:"estrattoconto"}]};
+            case 'HB_Tempi':
+                $("#sub2").text("Tempi medi HB (.sec)");
+                return {title:"",renderTo:"chart2",category:"data",series:[{name:"login",suffixLabel:'s'},{name:"bonifici",tooltip:{valueSuffix:'s'}}
+                        ,{name:"f24",suffixLabel:'s'},{name:"estrattoconto",suffixLabel:'s'}]};
+            case 'PWS':
+                $("#sub1").text("PWS tempi medi & Volumi");
+                return {title:"",renderTo:"chart1",category:"data",series:[{name:"hits",type:"column"},{name:"tempo_medio",opposite:true,tooltip:{valueSuffix:'s'}}]};
+            case 'CasseSportello':
+                $("#sub1").text("Sportello tempi medi & Volumi");
+                return {title:"",renderTo:"chart1",category:"data",series:[{name:"hits",type:"column"},{name:"tempo_medio",opposite:true,tooltip:{valueSuffix:'s'}}]};
+            case 'OperazioniSportello':
+                $("#sub1").text("Sportello tempi medi & Volumi");
+                return {title:"",renderTo:"chart1",category:"data",series:[{name:"hits",type:"column"},{name:"tempo_medio",opposite:true,tooltip:{valueSuffix:'s'}}]};
+            case 'FEU_SintesiStatoCliente':
+                $("#sub1").text("FEU tempi medi & Volumi");
+                return {title:"",renderTo:"chart1",category:"data",series:[{name:"hits",type:"column"},{name:"tempo_medio",opposite:true,tooltip:{valueSuffix:'s'}}]};
+            case 'FEU_QuadroDiControllo':
+                $("#sub1").text("FEU tempi medi & Volumi");
+                return {title:"",renderTo:"chart1",category:"data",series:[{name:"hits",type:"column"},{name:"tempo_medio",opposite:true,tooltip:{valueSuffix:'s'}}]};
+          }
+        }
+        $.getJSON("/getAbiDescription?abi="+abi,function(json){
+            $("#title").text(json.description);
+        })
+        console.log(url+abi+"?date="+date+"&service="+service);
+        if('#{service}'!="HB"){
+          $.getJSON(url+abi+"?date="+date+"&service="+'#{service}',function(json){
+            if('#{service}'!="atm"){
+              var options=setUpOptionsChart('#{service}');
+              var charts=new ServiceDetailsChart(json,options);}
+              else{
+                $("#chart1").hide();
+              }
+            var table=new  Table("table1",json);
+          });}
+        else {
+          $("#body2").show();
+          $.getJSON(url+abi+"?date="+date+"&service=HB_Volumi",function(json){
+            var table=new Table("table1",json);
+            var options=setUpOptionsChart("HB_Volumi");
+            var charts=new ServiceDetailsChart(json,options);
+          });
+          $.getJSON(url+abi+"?date="+date+"&service=HB_Tempi",function(json){
+            var table=new Table("table2",json);
+            var options=setUpOptionsChart("HB_Tempi");
+            var charts=new ServiceDetailsChart(json,options);
+          });
+        }
+        function setBackground(){
+          var date=new Date();
+          if(date.getMonth()==11){
+            $("body").css('background-image','url(../img/snow-background.jpg)')
+          }
+        }
+      })
+    body
+      #header
+      img#logo(src='../img/loghi/'+abi)
+      .subtitle#subtitle1
+        h4#sub1
+      .body#body1
+        .chart#chart1
+        .table.datagrid#table1
+      .subtitle#subtitle2
+          h4#sub2
+      .body#body2("hidden=true")
+        .chart#chart2
+        .table.datagrid#table2
+      #footer

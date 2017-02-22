@@ -1,11 +1,11 @@
-const database = require('./database.js');
+const userDataManager = require('./database/userDataManager.js');
 const crypto = require('./crypto.js');
 const SecretCodeGenerator = require('./codeGenerator');
 const mailer = require('./mail.js');
 function signIn(email,password) {
   return _verifyCondition(email,password)
           .then(_createNewUser(email,password))
-          //.then(_sendAccountConfirmationMail(email));
+          .then(_sendAccountConfirmationMail(email));
 }
 function _sendAccountConfirmationMail(email){
   return function(activationCode){
@@ -28,7 +28,7 @@ function _isPasswordOk(password){
   });
 }
 function _userAlreadyExist(email){
- return database.findUser(email).then(_userAlreadyExistPromise());
+ return userDataManager.findUser(email).then(_userAlreadyExistPromise());
 }
 function _userAlreadyExistPromise() {
   return function(users){
@@ -38,7 +38,7 @@ function _userAlreadyExistPromise() {
   }
 }
 function _isDomainSurveyed(email){
-  return database.findUserInstitute(email).then(_isDomainSurveyedPromise());
+  return userDataManager.findUserInstitute(email).then(_isDomainSurveyedPromise());
 }
 function _isDomainSurveyedPromise(email){
   return function(data){
@@ -52,12 +52,12 @@ function _createNewUser(email,password){
   return function(arrayData){//arrayData[2].abi contains institute ID
     var cryptedPassword = crypto.encrypt(password);
     var activationCode = new SecretCodeGenerator().generate();
-    return database.addUser(arrayData[2].abi,email,cryptedPassword,activationCode);
+    return userDataManager.addUser(arrayData[2].abi,email,cryptedPassword,activationCode);
   }
 }
 
 function activate(email,activationCode){
-  return database.findUser(email).then(_verifyActivationCondition(activationCode)).then(database.activateUser(email));
+  return userDataManager.findUser(email).then(_verifyActivationCondition(activationCode)).then(userDataManager.activateUser(email));
 }
 function _verifyActivationCondition(activationCode){
   return function(user){

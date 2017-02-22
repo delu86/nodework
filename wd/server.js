@@ -11,7 +11,7 @@ const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 var metadata;
-const INTERNAL_IP_ADDRESS_CONNECTION = '10.99.19.90';
+const INTERNAL_IP_ADDRESS_CONNECTION = 'localhost';
 
 app.use(express.static(path.join(__dirname,'views')));
 app.set('views',__dirname+'/views');
@@ -47,7 +47,7 @@ function onConnection(socket){
 function onJSONRequest(id){
   //params[0]=instituteId,  params[1]=date yyyy-mm-dd,  params[2]=connection id
   var params=id.split("_");//abi_yyyy-mm-dd_id
-  Promise.all([instituteInformationRetriever.getInstituteServicesRelevation(params[0],params[1]),
+  Promise.all([instituteInformationRetriever.getInstituteLastServicesRelevation(params[0],params[1]),
                instituteInformationRetriever.getInstituteServicesTresholds(params[0])]
              ).then(emitJsonResponse(params[0],params[2])).catch(console.log)
 }
@@ -158,7 +158,7 @@ function getEISWallDisplay(request,response) {
 app.get('/getJSON/:institute_id',createEISWalldisplayJSON);
 function createEISWalldisplayJSON(request,response) {
   isAuthorizedRequest(request) ?
-  Promise.all([instituteInformationRetriever.getInstituteServicesRelevation(request.params.institute_id,request.query.date),
+  Promise.all([instituteInformationRetriever.getInstituteLastServicesRelevation(request.params.institute_id,request.query.date),
                instituteInformationRetriever.getInstituteServicesTresholds(request.params.institute_id)]
              ).then(onCreateEISWalldisplayJSONPromisesExecuted(response)).catch(console.log)
                : response.end(`{"message" : "richiesta non autorizzata"}`);
@@ -181,6 +181,25 @@ function getWallDisplayServiceChart(request,response) {
 function onWallDisplayServiceChartDataRetrieved(response) {
   return function(data){
     response.end(JSON.stringify(data));
+  }
+}
+app.get('/servicePage/:institute_id',getServiceDetailPage);
+function getServiceDetailPage(request,response){
+  isAuthorizedRequest(request) ? response.render("service.pug",{service:request.query.service,
+                                                                abi:request.params.institute_id,date:request.query.date}) :
+                      (request.session.user==null || typeof(request.session.user)=="undefined" ?
+                      response.redirect('/') :
+                      response.render("error.pug"));
+}
+app.get('/serviceDetailJSON/:institute_id',getServiceDetailJSON);
+function getServiceDetailJSON(request,response) {
+  isAuthorizedRequest(request)? instituteInformationRetriever.getInstituteServiceData(request.query.service,request.params.institute_id,request.query.date)
+                                .then(onServiceDetailRetrieved(response)).catch(console.log) :
+                                response.end(`{"message" : "richiesta non autorizzata"}`);
+}
+function onServiceDetailRetrieved(response){
+  return function(objectData){
+    response.end(JSON.stringify(objectData));
   }
 }
 

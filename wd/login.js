@@ -1,8 +1,8 @@
-const database = require('./database.js');
+const userDataManager = require('./database/userDataManager.js');
 const crypto = require('./crypto.js');
 
 function authenticate(email,password) {
-  return database.findUser(email)
+  return userDataManager.findUser(email)
                  .then(_verifyAuthenticationPromise(password));
 
 }
