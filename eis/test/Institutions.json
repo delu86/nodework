@@ -1,0 +1,18 @@
+{
+	"_id" : ObjectId("589d944c06034015ecfba7be"),
+	"abi" : "89002",
+	"controlled_institutions" : [
+		"03032",
+		"06370"
+	],
+	"description" : "Istituto di test",
+	"mail_domain" : "consulenti.cedacri.it",
+	"users" : [
+		{
+			"email" : "simone.deluca@consulenti.cedacri.it",
+			"password" : "55dc87c47427",
+			"activated" : true,
+			"activationCode" : "dVWVyJFINbTzFL7vbKeU"
+		}
+	]
+}

@@ -1,0 +1,59 @@
+body{
+  background-image: url('../img/bg.jpg');
+  font-family: monospace;
+}
+#errorMessage{
+  color: red;
+}
+#helpMessage{
+  color: green;
+}
+#header{
+  text-align: center;
+  font-size: x-large;
+}
+#footer{
+  margin-top: 3%;
+  text-align: center;
+}
+#form{
+  width: 100%;
+}
+#headerForm{
+  text-align: center;
+}
+
+
+#inputBodyForm{
+}
+
+#inputBodyForm input{
+    height: 30px;
+    font-size: large;
+    font-family: monospace;
+    display: block;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+#email{
+  width: 90%;
+  margin-left: 5%;
+}
+#password{
+  width: 60%;
+  margin-left: 20%;
+}
+#keyNum{
+  margin-top:2.5%;
+}
+.inputButton{
+  font-family: monospace;
+  font-weight: bold;
+  font-size: large;
+  border-radius: 10%;
+  width:100px;
+  height: 60px;
+  background-color: #ebeef4;
+  border-style: double;
+  border-color: 	#b2b5be;
+}

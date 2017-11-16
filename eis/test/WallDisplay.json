@@ -1,0 +1,5085 @@
+{
+	"abi" : "06370",
+	"abi_desc" : "CASSA DI RISPARMIO DI VOLTERRA S.p.A.",
+	"data" : "2017-02-20",
+	"servizio" : [
+		{
+			"nomeservizio" : "atm",
+			"rilevazioni" : [
+				{
+					"logtime" : "2017-02-14 00:02:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 00:26:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 00:30:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 00:58:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 01:07:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 01:26:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 01:35:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 01:53:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 01:53:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 01:53:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 01:53:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 01:53:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 01:53:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 01:53:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 01:53:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 01:53:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 04:08:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 04:13:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 04:35:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 04:41:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 05:08:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 05:19:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 05:39:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 05:47:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 06:09:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 06:18:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 06:40:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 06:50:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 07:10:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 07:21:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 07:41:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 07:51:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 08:11:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("3"),
+					"probl_hw" : NumberInt("3")
+				},
+				{
+					"logtime" : "2017-02-14 08:21:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("4"),
+					"probl_hw" : NumberInt("4")
+				},
+				{
+					"logtime" : "2017-02-14 08:41:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("1"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("5"),
+					"probl_hw" : NumberInt("4")
+				},
+				{
+					"logtime" : "2017-02-14 08:51:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("4"),
+					"probl_hw" : NumberInt("4")
+				},
+				{
+					"logtime" : "2017-02-14 09:12:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("3"),
+					"probl_hw" : NumberInt("3")
+				},
+				{
+					"logtime" : "2017-02-14 09:22:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 09:42:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("3"),
+					"probl_hw" : NumberInt("3")
+				},
+				{
+					"logtime" : "2017-02-14 09:52:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 10:12:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("1"),
+					"probl_hw" : NumberInt("1")
+				},
+				{
+					"logtime" : "2017-02-14 10:22:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("1"),
+					"probl_hw" : NumberInt("1")
+				},
+				{
+					"logtime" : "2017-02-14 10:42:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("1"),
+					"probl_hw" : NumberInt("1")
+				},
+				{
+					"logtime" : "2017-02-14 10:52:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("1"),
+					"probl_hw" : NumberInt("1")
+				},
+				{
+					"logtime" : "2017-02-14 11:13:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("1"),
+					"probl_hw" : NumberInt("1")
+				},
+				{
+					"logtime" : "2017-02-14 11:23:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("1"),
+					"probl_hw" : NumberInt("1")
+				},
+				{
+					"logtime" : "2017-02-14 11:43:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 11:53:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("1"),
+					"probl_hw" : NumberInt("1")
+				},
+				{
+					"logtime" : "2017-02-14 12:13:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("1"),
+					"probl_hw" : NumberInt("1")
+				},
+				{
+					"logtime" : "2017-02-14 12:23:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("1"),
+					"probl_hw" : NumberInt("1")
+				},
+				{
+					"logtime" : "2017-02-14 12:43:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("1"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("1")
+				},
+				{
+					"logtime" : "2017-02-14 12:54:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("1"),
+					"fine_soldi" : NumberInt("4"),
+					"probl_hw" : NumberInt("3")
+				},
+				{
+					"logtime" : "2017-02-14 13:14:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("1"),
+					"fine_soldi" : NumberInt("4"),
+					"probl_hw" : NumberInt("3")
+				},
+				{
+					"logtime" : "2017-02-14 13:24:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("1"),
+					"fine_soldi" : NumberInt("3"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 13:44:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("1"),
+					"probl_hw" : NumberInt("1")
+				},
+				{
+					"logtime" : "2017-02-14 13:54:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 14:04:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("1"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("1")
+				},
+				{
+					"logtime" : "2017-02-14 14:24:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("1"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("1")
+				},
+				{
+					"logtime" : "2017-02-14 14:34:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("1"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("1")
+				},
+				{
+					"logtime" : "2017-02-14 14:54:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("3"),
+					"probl_hw" : NumberInt("3")
+				},
+				{
+					"logtime" : "2017-02-14 15:05:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("1"),
+					"probl_hw" : NumberInt("1")
+				},
+				{
+					"logtime" : "2017-02-14 15:24:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("1"),
+					"probl_hw" : NumberInt("1")
+				},
+				{
+					"logtime" : "2017-02-14 15:35:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 15:55:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 16:05:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("4"),
+					"probl_hw" : NumberInt("4")
+				},
+				{
+					"logtime" : "2017-02-14 16:25:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("1"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("5"),
+					"probl_hw" : NumberInt("4")
+				},
+				{
+					"logtime" : "2017-02-14 16:35:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("1"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("3"),
+					"probl_hw" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 16:55:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("1"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("1")
+				},
+				{
+					"logtime" : "2017-02-14 17:05:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("1"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("2"),
+					"probl_hw" : NumberInt("1")
+				},
+				{
+					"logtime" : "2017-02-14 17:26:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("0"),
+					"probl_hw" : NumberInt("0")
+				},
+				{
+					"logtime" : "2017-02-14 17:36:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("1"),
+					"probl_hw" : NumberInt("1")
+				},
+				{
+					"logtime" : "2017-02-14 17:56:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("0"),
+					"probl_hw" : NumberInt("0")
+				},
+				{
+					"logtime" : "2017-02-14 18:06:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("0"),
+					"probl_hw" : NumberInt("0")
+				},
+				{
+					"logtime" : "2017-02-14 18:26:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("0"),
+					"probl_hw" : NumberInt("0")
+				},
+				{
+					"logtime" : "2017-02-14 18:36:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("0"),
+					"probl_hw" : NumberInt("0")
+				},
+				{
+					"logtime" : "2017-02-14 18:56:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("0"),
+					"probl_hw" : NumberInt("0")
+				},
+				{
+					"logtime" : "2017-02-14 19:07:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("0"),
+					"probl_hw" : NumberInt("0")
+				},
+				{
+					"logtime" : "2017-02-14 19:27:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("0"),
+					"probl_hw" : NumberInt("0")
+				},
+				{
+					"logtime" : "2017-02-14 19:37:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("0"),
+					"probl_hw" : NumberInt("0")
+				},
+				{
+					"logtime" : "2017-02-14 19:56:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("0"),
+					"probl_hw" : NumberInt("0")
+				},
+				{
+					"logtime" : "2017-02-14 20:07:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("0"),
+					"probl_hw" : NumberInt("0")
+				},
+				{
+					"logtime" : "2017-02-14 20:27:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("0"),
+					"probl_hw" : NumberInt("0")
+				},
+				{
+					"logtime" : "2017-02-14 20:37:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("0"),
+					"probl_hw" : NumberInt("0")
+				},
+				{
+					"logtime" : "2017-02-14 20:57:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("0"),
+					"probl_hw" : NumberInt("0")
+				},
+				{
+					"logtime" : "2017-02-14 21:07:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("0"),
+					"probl_hw" : NumberInt("0")
+				},
+				{
+					"logtime" : "2017-02-14 21:28:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("0"),
+					"probl_hw" : NumberInt("0")
+				},
+				{
+					"logtime" : "2017-02-14 21:37:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("0"),
+					"probl_hw" : NumberInt("0")
+				},
+				{
+					"logtime" : "2017-02-14 21:55:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("0"),
+					"probl_hw" : NumberInt("0")
+				},
+				{
+					"logtime" : "2017-02-14 22:07:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("0"),
+					"probl_hw" : NumberInt("0")
+				},
+				{
+					"logtime" : "2017-02-14 22:26:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("0"),
+					"probl_hw" : NumberInt("0")
+				},
+				{
+					"logtime" : "2017-02-14 22:38:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("0"),
+					"probl_hw" : NumberInt("0")
+				},
+				{
+					"logtime" : "2017-02-14 22:58:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("0"),
+					"probl_hw" : NumberInt("0")
+				},
+				{
+					"logtime" : "2017-02-14 23:06:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("0"),
+					"probl_hw" : NumberInt("0")
+				},
+				{
+					"logtime" : "2017-02-14 23:28:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("0"),
+					"probl_hw" : NumberInt("0")
+				},
+				{
+					"logtime" : "2017-02-14 23:37:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("0"),
+					"probl_hw" : NumberInt("0")
+				},
+				{
+					"logtime" : "2017-02-14 23:56:00.0",
+					"tot_atm" : NumberInt("75"),
+					"disabled" : NumberInt("0"),
+					"non_eroga" : NumberInt("0"),
+					"fuori_linea" : NumberInt("0"),
+					"fine_soldi" : NumberInt("0"),
+					"probl_hw" : NumberInt("0")
+				}
+			]
+		},
+		{
+			"nomeservizio" : "CBI",
+			"rilevazioni" : [
+				{
+					"logtime" : "2017-02-14 00:09:21",
+					"TotaleLogon" : NumberInt("2"),
+					"UtentiDistinti" : NumberInt("2")
+				},
+				{
+					"logtime" : "2017-02-14 00:27:14",
+					"TotaleLogon" : NumberInt("5"),
+					"UtentiDistinti" : NumberInt("5")
+				},
+				{
+					"logtime" : "2017-02-14 00:39:27",
+					"TotaleLogon" : NumberInt("9"),
+					"UtentiDistinti" : NumberInt("9")
+				},
+				{
+					"logtime" : "2017-02-14 00:56:27",
+					"TotaleLogon" : NumberInt("10"),
+					"UtentiDistinti" : NumberInt("10")
+				},
+				{
+					"logtime" : "2017-02-14 01:10:22",
+					"TotaleLogon" : NumberInt("12"),
+					"UtentiDistinti" : NumberInt("12")
+				},
+				{
+					"logtime" : "2017-02-14 01:10:22",
+					"TotaleLogon" : NumberInt("12"),
+					"UtentiDistinti" : NumberInt("12")
+				},
+				{
+					"logtime" : "2017-02-14 01:10:22",
+					"TotaleLogon" : NumberInt("12"),
+					"UtentiDistinti" : NumberInt("12")
+				},
+				{
+					"logtime" : "2017-02-14 01:10:22",
+					"TotaleLogon" : NumberInt("12"),
+					"UtentiDistinti" : NumberInt("12")
+				},
+				{
+					"logtime" : "2017-02-14 01:10:22",
+					"TotaleLogon" : NumberInt("12"),
+					"UtentiDistinti" : NumberInt("12")
+				},
+				{
+					"logtime" : "2017-02-14 01:10:22",
+					"TotaleLogon" : NumberInt("12"),
+					"UtentiDistinti" : NumberInt("12")
+				},
+				{
+					"logtime" : "2017-02-14 01:10:22",
+					"TotaleLogon" : NumberInt("12"),
+					"UtentiDistinti" : NumberInt("12")
+				},
+				{
+					"logtime" : "2017-02-14 01:10:22",
+					"TotaleLogon" : NumberInt("12"),
+					"UtentiDistinti" : NumberInt("12")
+				},
+				{
+					"logtime" : "2017-02-14 01:10:22",
+					"TotaleLogon" : NumberInt("12"),
+					"UtentiDistinti" : NumberInt("12")
+				},
+				{
+					"logtime" : "2017-02-14 03:28:43",
+					"TotaleLogon" : NumberInt("13"),
+					"UtentiDistinti" : NumberInt("13")
+				},
+				{
+					"logtime" : "2017-02-14 03:40:03",
+					"TotaleLogon" : NumberInt("15"),
+					"UtentiDistinti" : NumberInt("15")
+				},
+				{
+					"logtime" : "2017-02-14 03:57:36",
+					"TotaleLogon" : NumberInt("17"),
+					"UtentiDistinti" : NumberInt("17")
+				},
+				{
+					"logtime" : "2017-02-14 04:13:44",
+					"TotaleLogon" : NumberInt("19"),
+					"UtentiDistinti" : NumberInt("17")
+				},
+				{
+					"logtime" : "2017-02-14 04:13:44",
+					"TotaleLogon" : NumberInt("19"),
+					"UtentiDistinti" : NumberInt("17")
+				},
+				{
+					"logtime" : "2017-02-14 04:13:44",
+					"TotaleLogon" : NumberInt("19"),
+					"UtentiDistinti" : NumberInt("17")
+				},
+				{
+					"logtime" : "2017-02-14 04:13:44",
+					"TotaleLogon" : NumberInt("19"),
+					"UtentiDistinti" : NumberInt("17")
+				},
+				{
+					"logtime" : "2017-02-14 05:10:05",
+					"TotaleLogon" : NumberInt("20"),
+					"UtentiDistinti" : NumberInt("18")
+				},
+				{
+					"logtime" : "2017-02-14 05:28:55",
+					"TotaleLogon" : NumberInt("22"),
+					"UtentiDistinti" : NumberInt("20")
+				},
+				{
+					"logtime" : "2017-02-14 05:40:33",
+					"TotaleLogon" : NumberInt("25"),
+					"UtentiDistinti" : NumberInt("23")
+				},
+				{
+					"logtime" : "2017-02-14 05:46:36",
+					"TotaleLogon" : NumberInt("26"),
+					"UtentiDistinti" : NumberInt("24")
+				},
+				{
+					"logtime" : "2017-02-14 06:12:41",
+					"TotaleLogon" : NumberInt("31"),
+					"UtentiDistinti" : NumberInt("29")
+				},
+				{
+					"logtime" : "2017-02-14 06:28:05",
+					"TotaleLogon" : NumberInt("39"),
+					"UtentiDistinti" : NumberInt("36")
+				},
+				{
+					"logtime" : "2017-02-14 06:39:57",
+					"TotaleLogon" : NumberInt("46"),
+					"UtentiDistinti" : NumberInt("42")
+				},
+				{
+					"logtime" : "2017-02-14 06:56:50",
+					"TotaleLogon" : NumberInt("53"),
+					"UtentiDistinti" : NumberInt("48")
+				},
+				{
+					"logtime" : "2017-02-14 07:14:43",
+					"TotaleLogon" : NumberInt("67"),
+					"UtentiDistinti" : NumberInt("59")
+				},
+				{
+					"logtime" : "2017-02-14 07:26:29",
+					"TotaleLogon" : NumberInt("89"),
+					"UtentiDistinti" : NumberInt("80")
+				},
+				{
+					"logtime" : "2017-02-14 07:44:37",
+					"TotaleLogon" : NumberInt("118"),
+					"UtentiDistinti" : NumberInt("105")
+				},
+				{
+					"logtime" : "2017-02-14 07:59:34",
+					"TotaleLogon" : NumberInt("168"),
+					"UtentiDistinti" : NumberInt("149")
+				},
+				{
+					"logtime" : "2017-02-14 08:14:58",
+					"TotaleLogon" : NumberInt("250"),
+					"UtentiDistinti" : NumberInt("218")
+				},
+				{
+					"logtime" : "2017-02-14 08:30:02",
+					"TotaleLogon" : NumberInt("344"),
+					"UtentiDistinti" : NumberInt("305")
+				},
+				{
+					"logtime" : "2017-02-14 08:45:02",
+					"TotaleLogon" : NumberInt("500"),
+					"UtentiDistinti" : NumberInt("445")
+				},
+				{
+					"logtime" : "2017-02-14 08:59:56",
+					"TotaleLogon" : NumberInt("680"),
+					"UtentiDistinti" : NumberInt("603")
+				},
+				{
+					"logtime" : "2017-02-14 09:14:56",
+					"TotaleLogon" : NumberInt("889"),
+					"UtentiDistinti" : NumberInt("773")
+				},
+				{
+					"logtime" : "2017-02-14 09:29:52",
+					"TotaleLogon" : NumberInt("1095"),
+					"UtentiDistinti" : NumberInt("949")
+				},
+				{
+					"logtime" : "2017-02-14 09:44:56",
+					"TotaleLogon" : NumberInt("1278"),
+					"UtentiDistinti" : NumberInt("1094")
+				},
+				{
+					"logtime" : "2017-02-14 09:59:52",
+					"TotaleLogon" : NumberInt("1465"),
+					"UtentiDistinti" : NumberInt("1240")
+				},
+				{
+					"logtime" : "2017-02-14 10:15:02",
+					"TotaleLogon" : NumberInt("1621"),
+					"UtentiDistinti" : NumberInt("1342")
+				},
+				{
+					"logtime" : "2017-02-14 10:29:50",
+					"TotaleLogon" : NumberInt("1795"),
+					"UtentiDistinti" : NumberInt("1462")
+				},
+				{
+					"logtime" : "2017-02-14 10:44:48",
+					"TotaleLogon" : NumberInt("1961"),
+					"UtentiDistinti" : NumberInt("1569")
+				},
+				{
+					"logtime" : "2017-02-14 11:00:02",
+					"TotaleLogon" : NumberInt("2110"),
+					"UtentiDistinti" : NumberInt("1662")
+				},
+				{
+					"logtime" : "2017-02-14 11:15:01",
+					"TotaleLogon" : NumberInt("2241"),
+					"UtentiDistinti" : NumberInt("1735")
+				},
+				{
+					"logtime" : "2017-02-14 11:30:02",
+					"TotaleLogon" : NumberInt("2364"),
+					"UtentiDistinti" : NumberInt("1804")
+				},
+				{
+					"logtime" : "2017-02-14 11:44:58",
+					"TotaleLogon" : NumberInt("2513"),
+					"UtentiDistinti" : NumberInt("1881")
+				},
+				{
+					"logtime" : "2017-02-14 12:00:04",
+					"TotaleLogon" : NumberInt("2645"),
+					"UtentiDistinti" : NumberInt("1939")
+				},
+				{
+					"logtime" : "2017-02-14 12:15:00",
+					"TotaleLogon" : NumberInt("2766"),
+					"UtentiDistinti" : NumberInt("2005")
+				},
+				{
+					"logtime" : "2017-02-14 12:30:01",
+					"TotaleLogon" : NumberInt("2879"),
+					"UtentiDistinti" : NumberInt("2055")
+				},
+				{
+					"logtime" : "2017-02-14 12:44:52",
+					"TotaleLogon" : NumberInt("2968"),
+					"UtentiDistinti" : NumberInt("2101")
+				},
+				{
+					"logtime" : "2017-02-14 12:59:59",
+					"TotaleLogon" : NumberInt("3040"),
+					"UtentiDistinti" : NumberInt("2137")
+				},
+				{
+					"logtime" : "2017-02-14 13:14:46",
+					"TotaleLogon" : NumberInt("3084"),
+					"UtentiDistinti" : NumberInt("2164")
+				},
+				{
+					"logtime" : "2017-02-14 13:28:58",
+					"TotaleLogon" : NumberInt("3121"),
+					"UtentiDistinti" : NumberInt("2175")
+				},
+				{
+					"logtime" : "2017-02-14 13:44:46",
+					"TotaleLogon" : NumberInt("3148"),
+					"UtentiDistinti" : NumberInt("2185")
+				},
+				{
+					"logtime" : "2017-02-14 13:59:16",
+					"TotaleLogon" : NumberInt("3187"),
+					"UtentiDistinti" : NumberInt("2200")
+				},
+				{
+					"logtime" : "2017-02-14 14:14:48",
+					"TotaleLogon" : NumberInt("3239"),
+					"UtentiDistinti" : NumberInt("2219")
+				},
+				{
+					"logtime" : "2017-02-14 14:30:01",
+					"TotaleLogon" : NumberInt("3296"),
+					"UtentiDistinti" : NumberInt("2246")
+				},
+				{
+					"logtime" : "2017-02-14 14:44:41",
+					"TotaleLogon" : NumberInt("3381"),
+					"UtentiDistinti" : NumberInt("2274")
+				},
+				{
+					"logtime" : "2017-02-14 15:00:01",
+					"TotaleLogon" : NumberInt("3467"),
+					"UtentiDistinti" : NumberInt("2305")
+				},
+				{
+					"logtime" : "2017-02-14 15:14:34",
+					"TotaleLogon" : NumberInt("3552"),
+					"UtentiDistinti" : NumberInt("2333")
+				},
+				{
+					"logtime" : "2017-02-14 15:30:00",
+					"TotaleLogon" : NumberInt("3633"),
+					"UtentiDistinti" : NumberInt("2364")
+				},
+				{
+					"logtime" : "2017-02-14 15:44:44",
+					"TotaleLogon" : NumberInt("3733"),
+					"UtentiDistinti" : NumberInt("2404")
+				},
+				{
+					"logtime" : "2017-02-14 15:59:40",
+					"TotaleLogon" : NumberInt("3818"),
+					"UtentiDistinti" : NumberInt("2437")
+				},
+				{
+					"logtime" : "2017-02-14 16:14:58",
+					"TotaleLogon" : NumberInt("3927"),
+					"UtentiDistinti" : NumberInt("2471")
+				},
+				{
+					"logtime" : "2017-02-14 16:29:57",
+					"TotaleLogon" : NumberInt("4002"),
+					"UtentiDistinti" : NumberInt("2499")
+				},
+				{
+					"logtime" : "2017-02-14 16:44:48",
+					"TotaleLogon" : NumberInt("4083"),
+					"UtentiDistinti" : NumberInt("2532")
+				},
+				{
+					"logtime" : "2017-02-14 16:59:32",
+					"TotaleLogon" : NumberInt("4150"),
+					"UtentiDistinti" : NumberInt("2561")
+				},
+				{
+					"logtime" : "2017-02-14 17:14:49",
+					"TotaleLogon" : NumberInt("4214"),
+					"UtentiDistinti" : NumberInt("2585")
+				},
+				{
+					"logtime" : "2017-02-14 17:30:06",
+					"TotaleLogon" : NumberInt("4287"),
+					"UtentiDistinti" : NumberInt("2610")
+				},
+				{
+					"logtime" : "2017-02-14 17:44:44",
+					"TotaleLogon" : NumberInt("4361"),
+					"UtentiDistinti" : NumberInt("2637")
+				},
+				{
+					"logtime" : "2017-02-14 17:59:45",
+					"TotaleLogon" : NumberInt("4417"),
+					"UtentiDistinti" : NumberInt("2663")
+				},
+				{
+					"logtime" : "2017-02-14 18:14:29",
+					"TotaleLogon" : NumberInt("4478"),
+					"UtentiDistinti" : NumberInt("2682")
+				},
+				{
+					"logtime" : "2017-02-14 18:29:46",
+					"TotaleLogon" : NumberInt("4539"),
+					"UtentiDistinti" : NumberInt("2704")
+				},
+				{
+					"logtime" : "2017-02-14 18:44:29",
+					"TotaleLogon" : NumberInt("4587"),
+					"UtentiDistinti" : NumberInt("2725")
+				},
+				{
+					"logtime" : "2017-02-14 18:59:53",
+					"TotaleLogon" : NumberInt("4629"),
+					"UtentiDistinti" : NumberInt("2744")
+				},
+				{
+					"logtime" : "2017-02-14 19:14:43",
+					"TotaleLogon" : NumberInt("4666"),
+					"UtentiDistinti" : NumberInt("2759")
+				},
+				{
+					"logtime" : "2017-02-14 19:29:31",
+					"TotaleLogon" : NumberInt("4703"),
+					"UtentiDistinti" : NumberInt("2782")
+				},
+				{
+					"logtime" : "2017-02-14 19:43:42",
+					"TotaleLogon" : NumberInt("4724"),
+					"UtentiDistinti" : NumberInt("2794")
+				},
+				{
+					"logtime" : "2017-02-14 19:59:48",
+					"TotaleLogon" : NumberInt("4739"),
+					"UtentiDistinti" : NumberInt("2805")
+				},
+				{
+					"logtime" : "2017-02-14 20:14:44",
+					"TotaleLogon" : NumberInt("4751"),
+					"UtentiDistinti" : NumberInt("2814")
+				},
+				{
+					"logtime" : "2017-02-14 20:21:34",
+					"TotaleLogon" : NumberInt("4756"),
+					"UtentiDistinti" : NumberInt("2815")
+				},
+				{
+					"logtime" : "2017-02-14 20:41:29",
+					"TotaleLogon" : NumberInt("4760"),
+					"UtentiDistinti" : NumberInt("2818")
+				},
+				{
+					"logtime" : "2017-02-14 20:59:45",
+					"TotaleLogon" : NumberInt("4764"),
+					"UtentiDistinti" : NumberInt("2820")
+				},
+				{
+					"logtime" : "2017-02-14 21:11:58",
+					"TotaleLogon" : NumberInt("4774"),
+					"UtentiDistinti" : NumberInt("2825")
+				},
+				{
+					"logtime" : "2017-02-14 21:28:26",
+					"TotaleLogon" : NumberInt("4778"),
+					"UtentiDistinti" : NumberInt("2829")
+				},
+				{
+					"logtime" : "2017-02-14 21:43:00",
+					"TotaleLogon" : NumberInt("4785"),
+					"UtentiDistinti" : NumberInt("2833")
+				},
+				{
+					"logtime" : "2017-02-14 21:57:36",
+					"TotaleLogon" : NumberInt("4795"),
+					"UtentiDistinti" : NumberInt("2839")
+				},
+				{
+					"logtime" : "2017-02-14 22:14:26",
+					"TotaleLogon" : NumberInt("4806"),
+					"UtentiDistinti" : NumberInt("2847")
+				},
+				{
+					"logtime" : "2017-02-14 22:29:36",
+					"TotaleLogon" : NumberInt("4815"),
+					"UtentiDistinti" : NumberInt("2851")
+				},
+				{
+					"logtime" : "2017-02-14 22:42:11",
+					"TotaleLogon" : NumberInt("4822"),
+					"UtentiDistinti" : NumberInt("2856")
+				},
+				{
+					"logtime" : "2017-02-14 22:52:09",
+					"TotaleLogon" : NumberInt("4825"),
+					"UtentiDistinti" : NumberInt("2857")
+				},
+				{
+					"logtime" : "2017-02-14 23:07:01",
+					"TotaleLogon" : NumberInt("4830"),
+					"UtentiDistinti" : NumberInt("2859")
+				},
+				{
+					"logtime" : "2017-02-14 23:28:12",
+					"TotaleLogon" : NumberInt("4834"),
+					"UtentiDistinti" : NumberInt("2860")
+				},
+				{
+					"logtime" : "2017-02-14 23:42:49",
+					"TotaleLogon" : NumberInt("4840"),
+					"UtentiDistinti" : NumberInt("2864")
+				},
+				{
+					"logtime" : "2017-02-14 23:57:56",
+					"TotaleLogon" : NumberInt("4846"),
+					"UtentiDistinti" : NumberInt("2866")
+				}
+			]
+		},
+		{
+			"nomeservizio" : "HB",
+			"rilevazioni" : [
+				{
+					"logtime" : "2017-02-14 00:10",
+					"TotaleOperazioni" : NumberInt("57"),
+					"TotaleMobile" : NumberInt("35"),
+					"UtentiDistinti" : NumberInt("14"),
+					"Durata" : 0.171
+				},
+				{
+					"logtime" : "2017-02-14 00:26",
+					"TotaleOperazioni" : NumberInt("63"),
+					"TotaleMobile" : NumberInt("41"),
+					"UtentiDistinti" : NumberInt("16"),
+					"Durata" : 0.163
+				},
+				{
+					"logtime" : "2017-02-14 00:46",
+					"TotaleOperazioni" : NumberInt("77"),
+					"TotaleMobile" : NumberInt("48"),
+					"UtentiDistinti" : NumberInt("21"),
+					"Durata" : 0.149
+				},
+				{
+					"logtime" : "2017-02-14 01:01",
+					"TotaleOperazioni" : NumberInt("87"),
+					"TotaleMobile" : NumberInt("50"),
+					"UtentiDistinti" : NumberInt("26"),
+					"Durata" : 0.14
+				},
+				{
+					"logtime" : "2017-02-14 01:14",
+					"TotaleOperazioni" : NumberInt("91"),
+					"TotaleMobile" : NumberInt("50"),
+					"UtentiDistinti" : NumberInt("27"),
+					"Durata" : 0.136
+				},
+				{
+					"logtime" : "2017-02-14 01:20",
+					"TotaleOperazioni" : NumberInt("93"),
+					"TotaleMobile" : NumberInt("50"),
+					"UtentiDistinti" : NumberInt("28"),
+					"Durata" : 0.136
+				},
+				{
+					"logtime" : "2017-02-14 01:46",
+					"TotaleOperazioni" : NumberInt("97"),
+					"TotaleMobile" : NumberInt("52"),
+					"UtentiDistinti" : NumberInt("30"),
+					"Durata" : 0.134
+				},
+				{
+					"logtime" : "2017-02-14 01:50",
+					"TotaleOperazioni" : NumberInt("101"),
+					"TotaleMobile" : NumberInt("55"),
+					"UtentiDistinti" : NumberInt("31"),
+					"Durata" : 0.131
+				},
+				{
+					"logtime" : "2017-02-14 02:11",
+					"TotaleOperazioni" : NumberInt("107"),
+					"TotaleMobile" : NumberInt("57"),
+					"UtentiDistinti" : NumberInt("33"),
+					"Durata" : 0.128
+				},
+				{
+					"logtime" : "2017-02-14 02:27",
+					"TotaleOperazioni" : NumberInt("111"),
+					"TotaleMobile" : NumberInt("61"),
+					"UtentiDistinti" : NumberInt("34"),
+					"Durata" : 0.126
+				},
+				{
+					"logtime" : "2017-02-14 02:27",
+					"TotaleOperazioni" : NumberInt("111"),
+					"TotaleMobile" : NumberInt("61"),
+					"UtentiDistinti" : NumberInt("34"),
+					"Durata" : 0.126
+				},
+				{
+					"logtime" : "2017-02-14 02:27",
+					"TotaleOperazioni" : NumberInt("111"),
+					"TotaleMobile" : NumberInt("61"),
+					"UtentiDistinti" : NumberInt("34"),
+					"Durata" : 0.126
+				},
+				{
+					"logtime" : "2017-02-14 03:13",
+					"TotaleOperazioni" : NumberInt("114"),
+					"TotaleMobile" : NumberInt("64"),
+					"UtentiDistinti" : NumberInt("35"),
+					"Durata" : 0.124
+				},
+				{
+					"logtime" : "2017-02-14 03:13",
+					"TotaleOperazioni" : NumberInt("114"),
+					"TotaleMobile" : NumberInt("64"),
+					"UtentiDistinti" : NumberInt("35"),
+					"Durata" : 0.124
+				},
+				{
+					"logtime" : "2017-02-14 03:45",
+					"TotaleOperazioni" : NumberInt("119"),
+					"TotaleMobile" : NumberInt("66"),
+					"UtentiDistinti" : NumberInt("38"),
+					"Durata" : 0.126
+				},
+				{
+					"logtime" : "2017-02-14 03:55",
+					"TotaleOperazioni" : NumberInt("121"),
+					"TotaleMobile" : NumberInt("68"),
+					"UtentiDistinti" : NumberInt("39"),
+					"Durata" : 0.125
+				},
+				{
+					"logtime" : "2017-02-14 04:08",
+					"TotaleOperazioni" : NumberInt("124"),
+					"TotaleMobile" : NumberInt("71"),
+					"UtentiDistinti" : NumberInt("40"),
+					"Durata" : 0.124
+				},
+				{
+					"logtime" : "2017-02-14 04:08",
+					"TotaleOperazioni" : NumberInt("124"),
+					"TotaleMobile" : NumberInt("71"),
+					"UtentiDistinti" : NumberInt("40"),
+					"Durata" : 0.124
+				},
+				{
+					"logtime" : "2017-02-14 04:08",
+					"TotaleOperazioni" : NumberInt("124"),
+					"TotaleMobile" : NumberInt("71"),
+					"UtentiDistinti" : NumberInt("40"),
+					"Durata" : 0.124
+				},
+				{
+					"logtime" : "2017-02-14 04:59",
+					"TotaleOperazioni" : NumberInt("130"),
+					"TotaleMobile" : NumberInt("74"),
+					"UtentiDistinti" : NumberInt("42"),
+					"Durata" : 0.123
+				},
+				{
+					"logtime" : "2017-02-14 05:11",
+					"TotaleOperazioni" : NumberInt("136"),
+					"TotaleMobile" : NumberInt("76"),
+					"UtentiDistinti" : NumberInt("44"),
+					"Durata" : 0.121
+				},
+				{
+					"logtime" : "2017-02-14 05:11",
+					"TotaleOperazioni" : NumberInt("136"),
+					"TotaleMobile" : NumberInt("76"),
+					"UtentiDistinti" : NumberInt("44"),
+					"Durata" : 0.121
+				},
+				{
+					"logtime" : "2017-02-14 05:46",
+					"TotaleOperazioni" : NumberInt("151"),
+					"TotaleMobile" : NumberInt("87"),
+					"UtentiDistinti" : NumberInt("50"),
+					"Durata" : 0.12
+				},
+				{
+					"logtime" : "2017-02-14 06:01",
+					"TotaleOperazioni" : NumberInt("162"),
+					"TotaleMobile" : NumberInt("89"),
+					"UtentiDistinti" : NumberInt("54"),
+					"Durata" : 0.118
+				},
+				{
+					"logtime" : "2017-02-14 06:16",
+					"TotaleOperazioni" : NumberInt("176"),
+					"TotaleMobile" : NumberInt("93"),
+					"UtentiDistinti" : NumberInt("58"),
+					"Durata" : 0.115
+				},
+				{
+					"logtime" : "2017-02-14 06:31",
+					"TotaleOperazioni" : NumberInt("198"),
+					"TotaleMobile" : NumberInt("98"),
+					"UtentiDistinti" : NumberInt("62"),
+					"Durata" : 0.116
+				},
+				{
+					"logtime" : "2017-02-14 06:46",
+					"TotaleOperazioni" : NumberInt("228"),
+					"TotaleMobile" : NumberInt("112"),
+					"UtentiDistinti" : NumberInt("71"),
+					"Durata" : 0.148
+				},
+				{
+					"logtime" : "2017-02-14 07:01",
+					"TotaleOperazioni" : NumberInt("284"),
+					"TotaleMobile" : NumberInt("135"),
+					"UtentiDistinti" : NumberInt("86"),
+					"Durata" : 0.195
+				},
+				{
+					"logtime" : "2017-02-14 07:16",
+					"TotaleOperazioni" : NumberInt("346"),
+					"TotaleMobile" : NumberInt("180"),
+					"UtentiDistinti" : NumberInt("102"),
+					"Durata" : 0.177
+				},
+				{
+					"logtime" : "2017-02-14 07:30",
+					"TotaleOperazioni" : NumberInt("431"),
+					"TotaleMobile" : NumberInt("223"),
+					"UtentiDistinti" : NumberInt("118"),
+					"Durata" : 0.157
+				},
+				{
+					"logtime" : "2017-02-14 07:46",
+					"TotaleOperazioni" : NumberInt("569"),
+					"TotaleMobile" : NumberInt("290"),
+					"UtentiDistinti" : NumberInt("143"),
+					"Durata" : 0.169
+				},
+				{
+					"logtime" : "2017-02-14 08:00",
+					"TotaleOperazioni" : NumberInt("721"),
+					"TotaleMobile" : NumberInt("334"),
+					"UtentiDistinti" : NumberInt("175"),
+					"Durata" : 0.204
+				},
+				{
+					"logtime" : "2017-02-14 08:16",
+					"TotaleOperazioni" : NumberInt("862"),
+					"TotaleMobile" : NumberInt("394"),
+					"UtentiDistinti" : NumberInt("207"),
+					"Durata" : 0.222
+				},
+				{
+					"logtime" : "2017-02-14 08:31",
+					"TotaleOperazioni" : NumberInt("1061"),
+					"TotaleMobile" : NumberInt("455"),
+					"UtentiDistinti" : NumberInt("246"),
+					"Durata" : 0.204
+				},
+				{
+					"logtime" : "2017-02-14 08:46",
+					"TotaleOperazioni" : NumberInt("1238"),
+					"TotaleMobile" : NumberInt("496"),
+					"UtentiDistinti" : NumberInt("285"),
+					"Durata" : 0.19
+				},
+				{
+					"logtime" : "2017-02-14 09:01",
+					"TotaleOperazioni" : NumberInt("1469"),
+					"TotaleMobile" : NumberInt("534"),
+					"UtentiDistinti" : NumberInt("331"),
+					"Durata" : 0.214
+				},
+				{
+					"logtime" : "2017-02-14 09:16",
+					"TotaleOperazioni" : NumberInt("1804"),
+					"TotaleMobile" : NumberInt("639"),
+					"UtentiDistinti" : NumberInt("400"),
+					"Durata" : 0.209
+				},
+				{
+					"logtime" : "2017-02-14 09:31",
+					"TotaleOperazioni" : NumberInt("2092"),
+					"TotaleMobile" : NumberInt("697"),
+					"UtentiDistinti" : NumberInt("452"),
+					"Durata" : 0.204
+				},
+				{
+					"logtime" : "2017-02-14 09:46",
+					"TotaleOperazioni" : NumberInt("2315"),
+					"TotaleMobile" : NumberInt("749"),
+					"UtentiDistinti" : NumberInt("490"),
+					"Durata" : 0.195
+				},
+				{
+					"logtime" : "2017-02-14 10:01",
+					"TotaleOperazioni" : NumberInt("2608"),
+					"TotaleMobile" : NumberInt("828"),
+					"UtentiDistinti" : NumberInt("541"),
+					"Durata" : 0.197
+				},
+				{
+					"logtime" : "2017-02-14 10:16",
+					"TotaleOperazioni" : NumberInt("2852"),
+					"TotaleMobile" : NumberInt("897"),
+					"UtentiDistinti" : NumberInt("581"),
+					"Durata" : 0.198
+				},
+				{
+					"logtime" : "2017-02-14 10:31",
+					"TotaleOperazioni" : NumberInt("3129"),
+					"TotaleMobile" : NumberInt("994"),
+					"UtentiDistinti" : NumberInt("636"),
+					"Durata" : 0.199
+				},
+				{
+					"logtime" : "2017-02-14 10:46",
+					"TotaleOperazioni" : NumberInt("3340"),
+					"TotaleMobile" : NumberInt("1042"),
+					"UtentiDistinti" : NumberInt("682"),
+					"Durata" : 0.198
+				},
+				{
+					"logtime" : "2017-02-14 11:01",
+					"TotaleOperazioni" : NumberInt("3602"),
+					"TotaleMobile" : NumberInt("1088"),
+					"UtentiDistinti" : NumberInt("714"),
+					"Durata" : 0.201
+				},
+				{
+					"logtime" : "2017-02-14 11:16",
+					"TotaleOperazioni" : NumberInt("3876"),
+					"TotaleMobile" : NumberInt("1152"),
+					"UtentiDistinti" : NumberInt("751"),
+					"Durata" : 0.204
+				},
+				{
+					"logtime" : "2017-02-14 11:31",
+					"TotaleOperazioni" : NumberInt("4076"),
+					"TotaleMobile" : NumberInt("1188"),
+					"UtentiDistinti" : NumberInt("782"),
+					"Durata" : 0.21
+				},
+				{
+					"logtime" : "2017-02-14 11:46",
+					"TotaleOperazioni" : NumberInt("4305"),
+					"TotaleMobile" : NumberInt("1234"),
+					"UtentiDistinti" : NumberInt("821"),
+					"Durata" : 0.214
+				},
+				{
+					"logtime" : "2017-02-14 12:01",
+					"TotaleOperazioni" : NumberInt("4570"),
+					"TotaleMobile" : NumberInt("1323"),
+					"UtentiDistinti" : NumberInt("860"),
+					"Durata" : 0.209
+				},
+				{
+					"logtime" : "2017-02-14 12:16",
+					"TotaleOperazioni" : NumberInt("4757"),
+					"TotaleMobile" : NumberInt("1363"),
+					"UtentiDistinti" : NumberInt("891"),
+					"Durata" : 0.207
+				},
+				{
+					"logtime" : "2017-02-14 12:31",
+					"TotaleOperazioni" : NumberInt("5029"),
+					"TotaleMobile" : NumberInt("1442"),
+					"UtentiDistinti" : NumberInt("933"),
+					"Durata" : 0.204
+				},
+				{
+					"logtime" : "2017-02-14 12:46",
+					"TotaleOperazioni" : NumberInt("5285"),
+					"TotaleMobile" : NumberInt("1521"),
+					"UtentiDistinti" : NumberInt("982"),
+					"Durata" : 0.227
+				},
+				{
+					"logtime" : "2017-02-14 13:01",
+					"TotaleOperazioni" : NumberInt("5507"),
+					"TotaleMobile" : NumberInt("1573"),
+					"UtentiDistinti" : NumberInt("1014"),
+					"Durata" : 0.23
+				},
+				{
+					"logtime" : "2017-02-14 13:16",
+					"TotaleOperazioni" : NumberInt("5709"),
+					"TotaleMobile" : NumberInt("1631"),
+					"UtentiDistinti" : NumberInt("1047"),
+					"Durata" : 0.23
+				},
+				{
+					"logtime" : "2017-02-14 13:31",
+					"TotaleOperazioni" : NumberInt("5867"),
+					"TotaleMobile" : NumberInt("1704"),
+					"UtentiDistinti" : NumberInt("1077"),
+					"Durata" : 0.23
+				},
+				{
+					"logtime" : "2017-02-14 13:46",
+					"TotaleOperazioni" : NumberInt("5986"),
+					"TotaleMobile" : NumberInt("1779"),
+					"UtentiDistinti" : NumberInt("1100"),
+					"Durata" : 0.227
+				},
+				{
+					"logtime" : "2017-02-14 14:01",
+					"TotaleOperazioni" : NumberInt("6117"),
+					"TotaleMobile" : NumberInt("1818"),
+					"UtentiDistinti" : NumberInt("1128"),
+					"Durata" : 0.224
+				},
+				{
+					"logtime" : "2017-02-14 14:16",
+					"TotaleOperazioni" : NumberInt("6254"),
+					"TotaleMobile" : NumberInt("1843"),
+					"UtentiDistinti" : NumberInt("1140"),
+					"Durata" : 0.226
+				},
+				{
+					"logtime" : "2017-02-14 14:31",
+					"TotaleOperazioni" : NumberInt("6390"),
+					"TotaleMobile" : NumberInt("1883"),
+					"UtentiDistinti" : NumberInt("1163"),
+					"Durata" : 0.229
+				},
+				{
+					"logtime" : "2017-02-14 14:46",
+					"TotaleOperazioni" : NumberInt("6567"),
+					"TotaleMobile" : NumberInt("1932"),
+					"UtentiDistinti" : NumberInt("1187"),
+					"Durata" : 0.228
+				},
+				{
+					"logtime" : "2017-02-14 15:01",
+					"TotaleOperazioni" : NumberInt("6727"),
+					"TotaleMobile" : NumberInt("1976"),
+					"UtentiDistinti" : NumberInt("1212"),
+					"Durata" : 0.228
+				},
+				{
+					"logtime" : "2017-02-14 15:16",
+					"TotaleOperazioni" : NumberInt("6889"),
+					"TotaleMobile" : NumberInt("2027"),
+					"UtentiDistinti" : NumberInt("1237"),
+					"Durata" : 0.227
+				},
+				{
+					"logtime" : "2017-02-14 15:31",
+					"TotaleOperazioni" : NumberInt("7049"),
+					"TotaleMobile" : NumberInt("2091"),
+					"UtentiDistinti" : NumberInt("1261"),
+					"Durata" : 0.224
+				},
+				{
+					"logtime" : "2017-02-14 15:46",
+					"TotaleOperazioni" : NumberInt("7259"),
+					"TotaleMobile" : NumberInt("2136"),
+					"UtentiDistinti" : NumberInt("1286"),
+					"Durata" : 0.22
+				},
+				{
+					"logtime" : "2017-02-14 16:01",
+					"TotaleOperazioni" : NumberInt("7497"),
+					"TotaleMobile" : NumberInt("2190"),
+					"UtentiDistinti" : NumberInt("1311"),
+					"Durata" : 0.22
+				},
+				{
+					"logtime" : "2017-02-14 16:16",
+					"TotaleOperazioni" : NumberInt("7701"),
+					"TotaleMobile" : NumberInt("2237"),
+					"UtentiDistinti" : NumberInt("1340"),
+					"Durata" : 0.219
+				},
+				{
+					"logtime" : "2017-02-14 16:31",
+					"TotaleOperazioni" : NumberInt("7914"),
+					"TotaleMobile" : NumberInt("2290"),
+					"UtentiDistinti" : NumberInt("1367"),
+					"Durata" : 0.217
+				},
+				{
+					"logtime" : "2017-02-14 16:46",
+					"TotaleOperazioni" : NumberInt("8049"),
+					"TotaleMobile" : NumberInt("2336"),
+					"UtentiDistinti" : NumberInt("1392"),
+					"Durata" : 0.221
+				},
+				{
+					"logtime" : "2017-02-14 17:01",
+					"TotaleOperazioni" : NumberInt("8175"),
+					"TotaleMobile" : NumberInt("2356"),
+					"UtentiDistinti" : NumberInt("1414"),
+					"Durata" : 0.218
+				},
+				{
+					"logtime" : "2017-02-14 17:16",
+					"TotaleOperazioni" : NumberInt("8364"),
+					"TotaleMobile" : NumberInt("2406"),
+					"UtentiDistinti" : NumberInt("1438"),
+					"Durata" : 0.217
+				},
+				{
+					"logtime" : "2017-02-14 17:31",
+					"TotaleOperazioni" : NumberInt("8619"),
+					"TotaleMobile" : NumberInt("2501"),
+					"UtentiDistinti" : NumberInt("1453"),
+					"Durata" : 0.213
+				},
+				{
+					"logtime" : "2017-02-14 17:46",
+					"TotaleOperazioni" : NumberInt("8754"),
+					"TotaleMobile" : NumberInt("2538"),
+					"UtentiDistinti" : NumberInt("1473"),
+					"Durata" : 0.214
+				},
+				{
+					"logtime" : "2017-02-14 18:01",
+					"TotaleOperazioni" : NumberInt("8928"),
+					"TotaleMobile" : NumberInt("2588"),
+					"UtentiDistinti" : NumberInt("1499"),
+					"Durata" : 0.213
+				},
+				{
+					"logtime" : "2017-02-14 18:16",
+					"TotaleOperazioni" : NumberInt("9112"),
+					"TotaleMobile" : NumberInt("2616"),
+					"UtentiDistinti" : NumberInt("1522"),
+					"Durata" : 0.213
+				},
+				{
+					"logtime" : "2017-02-14 18:31",
+					"TotaleOperazioni" : NumberInt("9277"),
+					"TotaleMobile" : NumberInt("2647"),
+					"UtentiDistinti" : NumberInt("1542"),
+					"Durata" : 0.217
+				},
+				{
+					"logtime" : "2017-02-14 18:46",
+					"TotaleOperazioni" : NumberInt("9432"),
+					"TotaleMobile" : NumberInt("2684"),
+					"UtentiDistinti" : NumberInt("1560"),
+					"Durata" : 0.217
+				},
+				{
+					"logtime" : "2017-02-14 19:01",
+					"TotaleOperazioni" : NumberInt("9540"),
+					"TotaleMobile" : NumberInt("2714"),
+					"UtentiDistinti" : NumberInt("1581"),
+					"Durata" : 0.216
+				},
+				{
+					"logtime" : "2017-02-14 19:16",
+					"TotaleOperazioni" : NumberInt("9757"),
+					"TotaleMobile" : NumberInt("2748"),
+					"UtentiDistinti" : NumberInt("1610"),
+					"Durata" : 0.216
+				},
+				{
+					"logtime" : "2017-02-14 19:30",
+					"TotaleOperazioni" : NumberInt("9915"),
+					"TotaleMobile" : NumberInt("2803"),
+					"UtentiDistinti" : NumberInt("1633"),
+					"Durata" : 0.217
+				},
+				{
+					"logtime" : "2017-02-14 19:46",
+					"TotaleOperazioni" : NumberInt("10114"),
+					"TotaleMobile" : NumberInt("2883"),
+					"UtentiDistinti" : NumberInt("1661"),
+					"Durata" : 0.217
+				},
+				{
+					"logtime" : "2017-02-14 20:01",
+					"TotaleOperazioni" : NumberInt("10229"),
+					"TotaleMobile" : NumberInt("2898"),
+					"UtentiDistinti" : NumberInt("1674"),
+					"Durata" : 0.215
+				},
+				{
+					"logtime" : "2017-02-14 20:16",
+					"TotaleOperazioni" : NumberInt("10357"),
+					"TotaleMobile" : NumberInt("2957"),
+					"UtentiDistinti" : NumberInt("1687"),
+					"Durata" : 0.214
+				},
+				{
+					"logtime" : "2017-02-14 20:31",
+					"TotaleOperazioni" : NumberInt("10430"),
+					"TotaleMobile" : NumberInt("2986"),
+					"UtentiDistinti" : NumberInt("1699"),
+					"Durata" : 0.215
+				},
+				{
+					"logtime" : "2017-02-14 20:46",
+					"TotaleOperazioni" : NumberInt("10517"),
+					"TotaleMobile" : NumberInt("2999"),
+					"UtentiDistinti" : NumberInt("1713"),
+					"Durata" : 0.216
+				},
+				{
+					"logtime" : "2017-02-14 21:01",
+					"TotaleOperazioni" : NumberInt("10618"),
+					"TotaleMobile" : NumberInt("3034"),
+					"UtentiDistinti" : NumberInt("1726"),
+					"Durata" : 0.214
+				},
+				{
+					"logtime" : "2017-02-14 21:16",
+					"TotaleOperazioni" : NumberInt("10691"),
+					"TotaleMobile" : NumberInt("3061"),
+					"UtentiDistinti" : NumberInt("1739"),
+					"Durata" : 0.215
+				},
+				{
+					"logtime" : "2017-02-14 21:31",
+					"TotaleOperazioni" : NumberInt("10768"),
+					"TotaleMobile" : NumberInt("3111"),
+					"UtentiDistinti" : NumberInt("1751"),
+					"Durata" : 0.214
+				},
+				{
+					"logtime" : "2017-02-14 21:46",
+					"TotaleOperazioni" : NumberInt("10851"),
+					"TotaleMobile" : NumberInt("3148"),
+					"UtentiDistinti" : NumberInt("1763"),
+					"Durata" : 0.214
+				},
+				{
+					"logtime" : "2017-02-14 22:01",
+					"TotaleOperazioni" : NumberInt("10918"),
+					"TotaleMobile" : NumberInt("3160"),
+					"UtentiDistinti" : NumberInt("1776"),
+					"Durata" : 0.213
+				},
+				{
+					"logtime" : "2017-02-14 22:16",
+					"TotaleOperazioni" : NumberInt("11016"),
+					"TotaleMobile" : NumberInt("3198"),
+					"UtentiDistinti" : NumberInt("1792"),
+					"Durata" : 0.213
+				},
+				{
+					"logtime" : "2017-02-14 22:30",
+					"TotaleOperazioni" : NumberInt("11093"),
+					"TotaleMobile" : NumberInt("3236"),
+					"UtentiDistinti" : NumberInt("1803"),
+					"Durata" : 0.213
+				},
+				{
+					"logtime" : "2017-02-14 22:46",
+					"TotaleOperazioni" : NumberInt("11198"),
+					"TotaleMobile" : NumberInt("3306"),
+					"UtentiDistinti" : NumberInt("1814"),
+					"Durata" : 0.211
+				},
+				{
+					"logtime" : "2017-02-14 23:01",
+					"TotaleOperazioni" : NumberInt("11273"),
+					"TotaleMobile" : NumberInt("3339"),
+					"UtentiDistinti" : NumberInt("1824"),
+					"Durata" : 0.211
+				},
+				{
+					"logtime" : "2017-02-14 23:16",
+					"TotaleOperazioni" : NumberInt("11364"),
+					"TotaleMobile" : NumberInt("3359"),
+					"UtentiDistinti" : NumberInt("1831"),
+					"Durata" : 0.214
+				},
+				{
+					"logtime" : "2017-02-14 23:31",
+					"TotaleOperazioni" : NumberInt("11436"),
+					"TotaleMobile" : NumberInt("3377"),
+					"UtentiDistinti" : NumberInt("1841"),
+					"Durata" : 0.214
+				},
+				{
+					"logtime" : "2017-02-14 23:46",
+					"TotaleOperazioni" : NumberInt("11471"),
+					"TotaleMobile" : NumberInt("3391"),
+					"UtentiDistinti" : NumberInt("1847"),
+					"Durata" : 0.213
+				},
+				{
+					"logtime" : "2017-02-14 23:59",
+					"TotaleOperazioni" : NumberInt("11506"),
+					"TotaleMobile" : NumberInt("3419"),
+					"UtentiDistinti" : NumberInt("1854"),
+					"Durata" : 0.213
+				}
+			]
+		},
+		{
+			"nomeservizio" : "PWS",
+			"rilevazioni" : [
+				{
+					"Hits" : NumberInt("1"),
+					"logtime" : "2017-02-14 07:26:33.14",
+					"Utenti" : NumberInt("1"),
+					"TempoMedio" : 0.02
+				},
+				{
+					"Hits" : NumberInt("5"),
+					"logtime" : "2017-02-14 07:32:42.30",
+					"Utenti" : NumberInt("1"),
+					"TempoMedio" : 0.04
+				},
+				{
+					"Hits" : NumberInt("126"),
+					"logtime" : "2017-02-14 08:01:39.94",
+					"Utenti" : NumberInt("13"),
+					"TempoMedio" : 0.06
+				},
+				{
+					"Hits" : NumberInt("1046"),
+					"logtime" : "2017-02-14 08:17:07.98",
+					"Utenti" : NumberInt("83"),
+					"TempoMedio" : 0.06
+				},
+				{
+					"Hits" : NumberInt("3738"),
+					"logtime" : "2017-02-14 08:31:48.56",
+					"Utenti" : NumberInt("228"),
+					"TempoMedio" : 0.06
+				},
+				{
+					"Hits" : NumberInt("8171"),
+					"logtime" : "2017-02-14 08:47:00.18",
+					"Utenti" : NumberInt("290"),
+					"TempoMedio" : 0.06
+				},
+				{
+					"Hits" : NumberInt("12706"),
+					"logtime" : "2017-02-14 09:01:35.86",
+					"Utenti" : NumberInt("316"),
+					"TempoMedio" : 0.06
+				},
+				{
+					"Hits" : NumberInt("16912"),
+					"logtime" : "2017-02-14 09:17:22.88",
+					"Utenti" : NumberInt("328"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("20969"),
+					"logtime" : "2017-02-14 09:32:04.48",
+					"Utenti" : NumberInt("341"),
+					"TempoMedio" : 0.06
+				},
+				{
+					"Hits" : NumberInt("24966"),
+					"logtime" : "2017-02-14 09:46:57.48",
+					"Utenti" : NumberInt("350"),
+					"TempoMedio" : 0.06
+				},
+				{
+					"Hits" : NumberInt("29214"),
+					"logtime" : "2017-02-14 10:02:21.91",
+					"Utenti" : NumberInt("355"),
+					"TempoMedio" : 0.06
+				},
+				{
+					"Hits" : NumberInt("33158"),
+					"logtime" : "2017-02-14 10:17:07.84",
+					"Utenti" : NumberInt("357"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("37212"),
+					"logtime" : "2017-02-14 10:32:09.05",
+					"Utenti" : NumberInt("360"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("41707"),
+					"logtime" : "2017-02-14 10:47:25.68",
+					"Utenti" : NumberInt("362"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("46231"),
+					"logtime" : "2017-02-14 11:02:24.29",
+					"Utenti" : NumberInt("365"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("51003"),
+					"logtime" : "2017-02-14 11:17:22.90",
+					"Utenti" : NumberInt("369"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("55359"),
+					"logtime" : "2017-02-14 11:32:31.88",
+					"Utenti" : NumberInt("370"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("59238"),
+					"logtime" : "2017-02-14 11:47:12.61",
+					"Utenti" : NumberInt("371"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("63369"),
+					"logtime" : "2017-02-14 12:02:22.67",
+					"Utenti" : NumberInt("375"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("67758"),
+					"logtime" : "2017-02-14 12:17:52.30",
+					"Utenti" : NumberInt("377"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("71618"),
+					"logtime" : "2017-02-14 12:32:21.22",
+					"Utenti" : NumberInt("377"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("76332"),
+					"logtime" : "2017-02-14 12:47:27.45",
+					"Utenti" : NumberInt("378"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("81006"),
+					"logtime" : "2017-02-14 13:02:30.75",
+					"Utenti" : NumberInt("379"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("85477"),
+					"logtime" : "2017-02-14 13:17:38.93",
+					"Utenti" : NumberInt("379"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("88614"),
+					"logtime" : "2017-02-14 13:32:30.50",
+					"Utenti" : NumberInt("380"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("89789"),
+					"logtime" : "2017-02-14 13:47:28.60",
+					"Utenti" : NumberInt("380"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("90181"),
+					"logtime" : "2017-02-14 14:01:43.41",
+					"Utenti" : NumberInt("380"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("90587"),
+					"logtime" : "2017-02-14 14:17:01.62",
+					"Utenti" : NumberInt("380"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("91577"),
+					"logtime" : "2017-02-14 14:32:42.78",
+					"Utenti" : NumberInt("382"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("94448"),
+					"logtime" : "2017-02-14 14:47:41.57",
+					"Utenti" : NumberInt("382"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("98578"),
+					"logtime" : "2017-02-14 15:02:51.29",
+					"Utenti" : NumberInt("385"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("103091"),
+					"logtime" : "2017-02-14 15:18:02.13",
+					"Utenti" : NumberInt("385"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("107417"),
+					"logtime" : "2017-02-14 15:32:46.39",
+					"Utenti" : NumberInt("386"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("111324"),
+					"logtime" : "2017-02-14 15:47:45.99",
+					"Utenti" : NumberInt("386"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("114555"),
+					"logtime" : "2017-02-14 16:03:03.56",
+					"Utenti" : NumberInt("387"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("117555"),
+					"logtime" : "2017-02-14 16:18:01.46",
+					"Utenti" : NumberInt("388"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("120473"),
+					"logtime" : "2017-02-14 16:32:53.79",
+					"Utenti" : NumberInt("389"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("122942"),
+					"logtime" : "2017-02-14 16:47:41.35",
+					"Utenti" : NumberInt("390"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("125332"),
+					"logtime" : "2017-02-14 17:02:26.50",
+					"Utenti" : NumberInt("390"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("127217"),
+					"logtime" : "2017-02-14 17:18:03.46",
+					"Utenti" : NumberInt("390"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("128654"),
+					"logtime" : "2017-02-14 17:32:47.56",
+					"Utenti" : NumberInt("390"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("129310"),
+					"logtime" : "2017-02-14 17:47:43.97",
+					"Utenti" : NumberInt("390"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("129736"),
+					"logtime" : "2017-02-14 18:03:16.10",
+					"Utenti" : NumberInt("390"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130035"),
+					"logtime" : "2017-02-14 18:18:01.40",
+					"Utenti" : NumberInt("390"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130239"),
+					"logtime" : "2017-02-14 18:32:33.76",
+					"Utenti" : NumberInt("390"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130403"),
+					"logtime" : "2017-02-14 18:48:03.89",
+					"Utenti" : NumberInt("390"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130626"),
+					"logtime" : "2017-02-14 19:03:06.21",
+					"Utenti" : NumberInt("390"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130694"),
+					"logtime" : "2017-02-14 19:12:13.31",
+					"Utenti" : NumberInt("390"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130696"),
+					"logtime" : "2017-02-14 19:28:18.05",
+					"Utenti" : NumberInt("390"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130697"),
+					"logtime" : "2017-02-14 19:30:43.96",
+					"Utenti" : NumberInt("391"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130698"),
+					"logtime" : "2017-02-14 19:48:46.53",
+					"Utenti" : NumberInt("391"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130698"),
+					"logtime" : "2017-02-14 19:48:46.53",
+					"Utenti" : NumberInt("391"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130698"),
+					"logtime" : "2017-02-14 19:48:46.53",
+					"Utenti" : NumberInt("391"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130698"),
+					"logtime" : "2017-02-14 19:48:46.53",
+					"Utenti" : NumberInt("391"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130698"),
+					"logtime" : "2017-02-14 19:48:46.53",
+					"Utenti" : NumberInt("391"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130698"),
+					"logtime" : "2017-02-14 19:48:46.53",
+					"Utenti" : NumberInt("391"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130698"),
+					"logtime" : "2017-02-14 19:48:46.53",
+					"Utenti" : NumberInt("391"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130698"),
+					"logtime" : "2017-02-14 19:48:46.53",
+					"Utenti" : NumberInt("391"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130698"),
+					"logtime" : "2017-02-14 19:48:46.53",
+					"Utenti" : NumberInt("391"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130698"),
+					"logtime" : "2017-02-14 19:48:46.53",
+					"Utenti" : NumberInt("391"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130698"),
+					"logtime" : "2017-02-14 19:48:46.53",
+					"Utenti" : NumberInt("391"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130698"),
+					"logtime" : "2017-02-14 19:48:46.53",
+					"Utenti" : NumberInt("391"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130698"),
+					"logtime" : "2017-02-14 19:48:46.53",
+					"Utenti" : NumberInt("391"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130698"),
+					"logtime" : "2017-02-14 19:48:46.53",
+					"Utenti" : NumberInt("391"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130698"),
+					"logtime" : "2017-02-14 19:48:46.53",
+					"Utenti" : NumberInt("391"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130698"),
+					"logtime" : "2017-02-14 19:48:46.53",
+					"Utenti" : NumberInt("391"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130698"),
+					"logtime" : "2017-02-14 19:48:46.53",
+					"Utenti" : NumberInt("391"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130698"),
+					"logtime" : "2017-02-14 19:48:46.53",
+					"Utenti" : NumberInt("391"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130698"),
+					"logtime" : "2017-02-14 19:48:46.53",
+					"Utenti" : NumberInt("391"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130698"),
+					"logtime" : "2017-02-14 19:48:46.53",
+					"Utenti" : NumberInt("391"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130698"),
+					"logtime" : "2017-02-14 19:48:46.53",
+					"Utenti" : NumberInt("391"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130698"),
+					"logtime" : "2017-02-14 19:48:46.53",
+					"Utenti" : NumberInt("391"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130698"),
+					"logtime" : "2017-02-14 19:48:46.53",
+					"Utenti" : NumberInt("391"),
+					"TempoMedio" : 0.07
+				},
+				{
+					"Hits" : NumberInt("130698"),
+					"logtime" : "2017-02-14 19:48:46.53",
+					"Utenti" : NumberInt("391"),
+					"TempoMedio" : 0.07
+				}
+			]
+		},
+		{
+			"nomeservizio" : "CasseSportello",
+			"rilevazioni" : [
+				{
+					"OpenCashes" : NumberInt("1"),
+					"OpenCashesToday" : NumberInt("1"),
+					"TotalCashes" : NumberInt("1"),
+					"logtime" : "2017-02-14 07:46:52"
+				},
+				{
+					"OpenCashes" : NumberInt("7"),
+					"OpenCashesToday" : NumberInt("7"),
+					"TotalCashes" : NumberInt("7"),
+					"logtime" : "2017-02-14 08:01:37"
+				},
+				{
+					"OpenCashes" : NumberInt("57"),
+					"OpenCashesToday" : NumberInt("57"),
+					"TotalCashes" : NumberInt("57"),
+					"logtime" : "2017-02-14 08:17:01"
+				},
+				{
+					"OpenCashes" : NumberInt("174"),
+					"OpenCashesToday" : NumberInt("174"),
+					"TotalCashes" : NumberInt("174"),
+					"logtime" : "2017-02-14 08:31:41"
+				},
+				{
+					"OpenCashes" : NumberInt("232"),
+					"OpenCashesToday" : NumberInt("232"),
+					"TotalCashes" : NumberInt("232"),
+					"logtime" : "2017-02-14 08:46:52"
+				},
+				{
+					"OpenCashes" : NumberInt("253"),
+					"OpenCashesToday" : NumberInt("253"),
+					"TotalCashes" : NumberInt("253"),
+					"logtime" : "2017-02-14 09:01:28"
+				},
+				{
+					"OpenCashes" : NumberInt("265"),
+					"OpenCashesToday" : NumberInt("265"),
+					"TotalCashes" : NumberInt("265"),
+					"logtime" : "2017-02-14 09:17:13"
+				},
+				{
+					"OpenCashes" : NumberInt("269"),
+					"OpenCashesToday" : NumberInt("269"),
+					"TotalCashes" : NumberInt("269"),
+					"logtime" : "2017-02-14 09:31:56"
+				},
+				{
+					"OpenCashes" : NumberInt("271"),
+					"OpenCashesToday" : NumberInt("271"),
+					"TotalCashes" : NumberInt("271"),
+					"logtime" : "2017-02-14 09:46:52"
+				},
+				{
+					"OpenCashes" : NumberInt("274"),
+					"OpenCashesToday" : NumberInt("274"),
+					"TotalCashes" : NumberInt("274"),
+					"logtime" : "2017-02-14 10:02:11"
+				},
+				{
+					"OpenCashes" : NumberInt("276"),
+					"OpenCashesToday" : NumberInt("276"),
+					"TotalCashes" : NumberInt("277"),
+					"logtime" : "2017-02-14 10:16:58"
+				},
+				{
+					"OpenCashes" : NumberInt("275"),
+					"OpenCashesToday" : NumberInt("275"),
+					"TotalCashes" : NumberInt("278"),
+					"logtime" : "2017-02-14 10:32:02"
+				},
+				{
+					"OpenCashes" : NumberInt("276"),
+					"OpenCashesToday" : NumberInt("276"),
+					"TotalCashes" : NumberInt("279"),
+					"logtime" : "2017-02-14 10:47:18"
+				},
+				{
+					"OpenCashes" : NumberInt("277"),
+					"OpenCashesToday" : NumberInt("277"),
+					"TotalCashes" : NumberInt("280"),
+					"logtime" : "2017-02-14 11:02:17"
+				},
+				{
+					"OpenCashes" : NumberInt("281"),
+					"OpenCashesToday" : NumberInt("281"),
+					"TotalCashes" : NumberInt("284"),
+					"logtime" : "2017-02-14 11:17:16"
+				},
+				{
+					"OpenCashes" : NumberInt("282"),
+					"OpenCashesToday" : NumberInt("282"),
+					"TotalCashes" : NumberInt("285"),
+					"logtime" : "2017-02-14 11:32:12"
+				},
+				{
+					"OpenCashes" : NumberInt("283"),
+					"OpenCashesToday" : NumberInt("283"),
+					"TotalCashes" : NumberInt("286"),
+					"logtime" : "2017-02-14 11:47:05"
+				},
+				{
+					"OpenCashes" : NumberInt("288"),
+					"OpenCashesToday" : NumberInt("288"),
+					"TotalCashes" : NumberInt("291"),
+					"logtime" : "2017-02-14 12:02:15"
+				},
+				{
+					"OpenCashes" : NumberInt("288"),
+					"OpenCashesToday" : NumberInt("288"),
+					"TotalCashes" : NumberInt("291"),
+					"logtime" : "2017-02-14 12:17:34"
+				},
+				{
+					"OpenCashes" : NumberInt("286"),
+					"OpenCashesToday" : NumberInt("286"),
+					"TotalCashes" : NumberInt("291"),
+					"logtime" : "2017-02-14 12:32:08"
+				},
+				{
+					"OpenCashes" : NumberInt("286"),
+					"OpenCashesToday" : NumberInt("286"),
+					"TotalCashes" : NumberInt("293"),
+					"logtime" : "2017-02-14 12:47:20"
+				},
+				{
+					"OpenCashes" : NumberInt("287"),
+					"OpenCashesToday" : NumberInt("287"),
+					"TotalCashes" : NumberInt("294"),
+					"logtime" : "2017-02-14 13:02:23"
+				},
+				{
+					"OpenCashes" : NumberInt("285"),
+					"OpenCashesToday" : NumberInt("285"),
+					"TotalCashes" : NumberInt("294"),
+					"logtime" : "2017-02-14 13:17:21"
+				},
+				{
+					"OpenCashes" : NumberInt("273"),
+					"OpenCashesToday" : NumberInt("273"),
+					"TotalCashes" : NumberInt("295"),
+					"logtime" : "2017-02-14 13:32:23"
+				},
+				{
+					"OpenCashes" : NumberInt("259"),
+					"OpenCashesToday" : NumberInt("259"),
+					"TotalCashes" : NumberInt("295"),
+					"logtime" : "2017-02-14 13:47:27"
+				},
+				{
+					"OpenCashes" : NumberInt("258"),
+					"OpenCashesToday" : NumberInt("258"),
+					"TotalCashes" : NumberInt("295"),
+					"logtime" : "2017-02-14 14:01:38"
+				},
+				{
+					"OpenCashes" : NumberInt("255"),
+					"OpenCashesToday" : NumberInt("255"),
+					"TotalCashes" : NumberInt("295"),
+					"logtime" : "2017-02-14 14:16:54"
+				},
+				{
+					"OpenCashes" : NumberInt("256"),
+					"OpenCashesToday" : NumberInt("256"),
+					"TotalCashes" : NumberInt("296"),
+					"logtime" : "2017-02-14 14:32:36"
+				},
+				{
+					"OpenCashes" : NumberInt("258"),
+					"OpenCashesToday" : NumberInt("258"),
+					"TotalCashes" : NumberInt("298"),
+					"logtime" : "2017-02-14 14:47:34"
+				},
+				{
+					"OpenCashes" : NumberInt("256"),
+					"OpenCashesToday" : NumberInt("256"),
+					"TotalCashes" : NumberInt("299"),
+					"logtime" : "2017-02-14 15:02:29"
+				},
+				{
+					"OpenCashes" : NumberInt("255"),
+					"OpenCashesToday" : NumberInt("255"),
+					"TotalCashes" : NumberInt("299"),
+					"logtime" : "2017-02-14 15:17:34"
+				},
+				{
+					"OpenCashes" : NumberInt("254"),
+					"OpenCashesToday" : NumberInt("254"),
+					"TotalCashes" : NumberInt("299"),
+					"logtime" : "2017-02-14 15:32:19"
+				},
+				{
+					"OpenCashes" : NumberInt("253"),
+					"OpenCashesToday" : NumberInt("253"),
+					"TotalCashes" : NumberInt("299"),
+					"logtime" : "2017-02-14 15:47:38"
+				},
+				{
+					"OpenCashes" : NumberInt("248"),
+					"OpenCashesToday" : NumberInt("248"),
+					"TotalCashes" : NumberInt("299"),
+					"logtime" : "2017-02-14 16:02:56"
+				},
+				{
+					"OpenCashes" : NumberInt("240"),
+					"OpenCashesToday" : NumberInt("240"),
+					"TotalCashes" : NumberInt("299"),
+					"logtime" : "2017-02-14 16:17:41"
+				},
+				{
+					"OpenCashes" : NumberInt("234"),
+					"OpenCashesToday" : NumberInt("234"),
+					"TotalCashes" : NumberInt("300"),
+					"logtime" : "2017-02-14 16:32:47"
+				},
+				{
+					"OpenCashes" : NumberInt("197"),
+					"OpenCashesToday" : NumberInt("197"),
+					"TotalCashes" : NumberInt("300"),
+					"logtime" : "2017-02-14 16:47:19"
+				},
+				{
+					"OpenCashes" : NumberInt("153"),
+					"OpenCashesToday" : NumberInt("153"),
+					"TotalCashes" : NumberInt("301"),
+					"logtime" : "2017-02-14 17:02:19"
+				},
+				{
+					"OpenCashes" : NumberInt("118"),
+					"OpenCashesToday" : NumberInt("118"),
+					"TotalCashes" : NumberInt("301"),
+					"logtime" : "2017-02-14 17:17:57"
+				},
+				{
+					"OpenCashes" : NumberInt("93"),
+					"OpenCashesToday" : NumberInt("93"),
+					"TotalCashes" : NumberInt("302"),
+					"logtime" : "2017-02-14 17:32:42"
+				},
+				{
+					"OpenCashes" : NumberInt("73"),
+					"OpenCashesToday" : NumberInt("73"),
+					"TotalCashes" : NumberInt("302"),
+					"logtime" : "2017-02-14 17:47:47"
+				},
+				{
+					"OpenCashes" : NumberInt("55"),
+					"OpenCashesToday" : NumberInt("55"),
+					"TotalCashes" : NumberInt("303"),
+					"logtime" : "2017-02-14 18:03:12"
+				},
+				{
+					"OpenCashes" : NumberInt("53"),
+					"OpenCashesToday" : NumberInt("53"),
+					"TotalCashes" : NumberInt("303"),
+					"logtime" : "2017-02-14 18:17:57"
+				},
+				{
+					"OpenCashes" : NumberInt("44"),
+					"OpenCashesToday" : NumberInt("44"),
+					"TotalCashes" : NumberInt("303"),
+					"logtime" : "2017-02-14 18:32:35"
+				},
+				{
+					"OpenCashes" : NumberInt("41"),
+					"OpenCashesToday" : NumberInt("41"),
+					"TotalCashes" : NumberInt("303"),
+					"logtime" : "2017-02-14 18:47:59"
+				},
+				{
+					"OpenCashes" : NumberInt("37"),
+					"OpenCashesToday" : NumberInt("37"),
+					"TotalCashes" : NumberInt("303"),
+					"logtime" : "2017-02-14 19:03:11"
+				},
+				{
+					"OpenCashes" : NumberInt("36"),
+					"OpenCashesToday" : NumberInt("36"),
+					"TotalCashes" : NumberInt("303"),
+					"logtime" : "2017-02-14 19:17:09"
+				},
+				{
+					"OpenCashes" : NumberInt("35"),
+					"OpenCashesToday" : NumberInt("35"),
+					"TotalCashes" : NumberInt("303"),
+					"logtime" : "2017-02-14 19:30:23"
+				},
+				{
+					"OpenCashes" : NumberInt("35"),
+					"OpenCashesToday" : NumberInt("35"),
+					"TotalCashes" : NumberInt("303"),
+					"logtime" : "2017-02-14 19:46:37"
+				},
+				{
+					"OpenCashes" : NumberInt("35"),
+					"OpenCashesToday" : NumberInt("35"),
+					"TotalCashes" : NumberInt("303"),
+					"logtime" : "2017-02-14 20:01:59"
+				},
+				{
+					"OpenCashes" : NumberInt("35"),
+					"OpenCashesToday" : NumberInt("35"),
+					"TotalCashes" : NumberInt("303"),
+					"logtime" : "2017-02-14 20:16:28"
+				},
+				{
+					"OpenCashes" : NumberInt("35"),
+					"OpenCashesToday" : NumberInt("35"),
+					"TotalCashes" : NumberInt("303"),
+					"logtime" : "2017-02-14 20:31:37"
+				},
+				{
+					"OpenCashes" : NumberInt("35"),
+					"OpenCashesToday" : NumberInt("35"),
+					"TotalCashes" : NumberInt("303"),
+					"logtime" : "2017-02-14 20:46:53"
+				},
+				{
+					"OpenCashes" : NumberInt("35"),
+					"OpenCashesToday" : NumberInt("35"),
+					"TotalCashes" : NumberInt("303"),
+					"logtime" : "2017-02-14 21:01:39"
+				},
+				{
+					"OpenCashes" : NumberInt("35"),
+					"OpenCashesToday" : NumberInt("35"),
+					"TotalCashes" : NumberInt("303"),
+					"logtime" : "2017-02-14 21:16:34"
+				},
+				{
+					"OpenCashes" : NumberInt("35"),
+					"OpenCashesToday" : NumberInt("35"),
+					"TotalCashes" : NumberInt("303"),
+					"logtime" : "2017-02-14 21:31:56"
+				},
+				{
+					"OpenCashes" : NumberInt("35"),
+					"OpenCashesToday" : NumberInt("35"),
+					"TotalCashes" : NumberInt("303"),
+					"logtime" : "2017-02-14 21:46:41"
+				},
+				{
+					"OpenCashes" : NumberInt("35"),
+					"OpenCashesToday" : NumberInt("35"),
+					"TotalCashes" : NumberInt("303"),
+					"logtime" : "2017-02-14 22:02:03"
+				},
+				{
+					"OpenCashes" : NumberInt("35"),
+					"OpenCashesToday" : NumberInt("35"),
+					"TotalCashes" : NumberInt("303"),
+					"logtime" : "2017-02-14 22:16:50"
+				},
+				{
+					"OpenCashes" : NumberInt("35"),
+					"OpenCashesToday" : NumberInt("35"),
+					"TotalCashes" : NumberInt("303"),
+					"logtime" : "2017-02-14 22:31:25"
+				},
+				{
+					"OpenCashes" : NumberInt("35"),
+					"OpenCashesToday" : NumberInt("35"),
+					"TotalCashes" : NumberInt("303"),
+					"logtime" : "2017-02-14 22:46:45"
+				},
+				{
+					"OpenCashes" : NumberInt("35"),
+					"OpenCashesToday" : NumberInt("35"),
+					"TotalCashes" : NumberInt("303"),
+					"logtime" : "2017-02-14 23:01:57"
+				},
+				{
+					"OpenCashes" : NumberInt("35"),
+					"OpenCashesToday" : NumberInt("35"),
+					"TotalCashes" : NumberInt("303"),
+					"logtime" : "2017-02-14 23:16:59"
+				},
+				{
+					"OpenCashes" : NumberInt("35"),
+					"OpenCashesToday" : NumberInt("35"),
+					"TotalCashes" : NumberInt("303"),
+					"logtime" : "2017-02-14 23:31:45"
+				},
+				{
+					"OpenCashes" : NumberInt("35"),
+					"OpenCashesToday" : NumberInt("35"),
+					"TotalCashes" : NumberInt("303"),
+					"logtime" : "2017-02-14 23:47:41"
+				}
+			]
+		},
+		{
+			"nomeservizio" : "OperazioniSportello",
+			"rilevazioni" : [
+				{
+					"Operations" : NumberInt("3"),
+					"logtime" : "2017-02-14 07:46:58"
+				},
+				{
+					"Operations" : NumberInt("20"),
+					"logtime" : "2017-02-14 08:01:43"
+				},
+				{
+					"Operations" : NumberInt("128"),
+					"logtime" : "2017-02-14 08:17:07"
+				},
+				{
+					"Operations" : NumberInt("586"),
+					"logtime" : "2017-02-14 08:31:47"
+				},
+				{
+					"Operations" : NumberInt("1164"),
+					"logtime" : "2017-02-14 08:46:59"
+				},
+				{
+					"Operations" : NumberInt("1782"),
+					"logtime" : "2017-02-14 09:01:34"
+				},
+				{
+					"Operations" : NumberInt("2394"),
+					"logtime" : "2017-02-14 09:17:20"
+				},
+				{
+					"Operations" : NumberInt("2926"),
+					"logtime" : "2017-02-14 09:32:03"
+				},
+				{
+					"Operations" : NumberInt("3456"),
+					"logtime" : "2017-02-14 09:46:58"
+				},
+				{
+					"Operations" : NumberInt("4059"),
+					"logtime" : "2017-02-14 10:02:17"
+				},
+				{
+					"Operations" : NumberInt("4606"),
+					"logtime" : "2017-02-14 10:17:04"
+				},
+				{
+					"Operations" : NumberInt("5202"),
+					"logtime" : "2017-02-14 10:32:08"
+				},
+				{
+					"Operations" : NumberInt("5791"),
+					"logtime" : "2017-02-14 10:47:24"
+				},
+				{
+					"Operations" : NumberInt("6443"),
+					"logtime" : "2017-02-14 11:02:23"
+				},
+				{
+					"Operations" : NumberInt("7070"),
+					"logtime" : "2017-02-14 11:17:22"
+				},
+				{
+					"Operations" : NumberInt("7565"),
+					"logtime" : "2017-02-14 11:32:19"
+				},
+				{
+					"Operations" : NumberInt("8100"),
+					"logtime" : "2017-02-14 11:47:12"
+				},
+				{
+					"Operations" : NumberInt("8691"),
+					"logtime" : "2017-02-14 12:02:22"
+				},
+				{
+					"Operations" : NumberInt("9271"),
+					"logtime" : "2017-02-14 12:17:40"
+				},
+				{
+					"Operations" : NumberInt("9838"),
+					"logtime" : "2017-02-14 12:32:14"
+				},
+				{
+					"Operations" : NumberInt("10403"),
+					"logtime" : "2017-02-14 12:47:26"
+				},
+				{
+					"Operations" : NumberInt("11007"),
+					"logtime" : "2017-02-14 13:02:30"
+				},
+				{
+					"Operations" : NumberInt("11544"),
+					"logtime" : "2017-02-14 13:17:28"
+				},
+				{
+					"Operations" : NumberInt("12076"),
+					"logtime" : "2017-02-14 13:32:30"
+				},
+				{
+					"Operations" : NumberInt("12238"),
+					"logtime" : "2017-02-14 13:47:33"
+				},
+				{
+					"Operations" : NumberInt("12279"),
+					"logtime" : "2017-02-14 14:01:45"
+				},
+				{
+					"Operations" : NumberInt("12303"),
+					"logtime" : "2017-02-14 14:17:01"
+				},
+				{
+					"Operations" : NumberInt("12375"),
+					"logtime" : "2017-02-14 14:32:42"
+				},
+				{
+					"Operations" : NumberInt("12769"),
+					"logtime" : "2017-02-14 14:47:41"
+				},
+				{
+					"Operations" : NumberInt("13253"),
+					"logtime" : "2017-02-14 15:02:36"
+				},
+				{
+					"Operations" : NumberInt("13694"),
+					"logtime" : "2017-02-14 15:17:41"
+				},
+				{
+					"Operations" : NumberInt("14156"),
+					"logtime" : "2017-02-14 15:32:25"
+				},
+				{
+					"Operations" : NumberInt("14552"),
+					"logtime" : "2017-02-14 15:47:45"
+				},
+				{
+					"Operations" : NumberInt("14885"),
+					"logtime" : "2017-02-14 16:03:02"
+				},
+				{
+					"Operations" : NumberInt("15135"),
+					"logtime" : "2017-02-14 16:17:48"
+				},
+				{
+					"Operations" : NumberInt("15361"),
+					"logtime" : "2017-02-14 16:32:53"
+				},
+				{
+					"Operations" : NumberInt("15590"),
+					"logtime" : "2017-02-14 16:47:26"
+				},
+				{
+					"Operations" : NumberInt("15836"),
+					"logtime" : "2017-02-14 17:02:26"
+				},
+				{
+					"Operations" : NumberInt("15993"),
+					"logtime" : "2017-02-14 17:18:03"
+				},
+				{
+					"Operations" : NumberInt("16105"),
+					"logtime" : "2017-02-14 17:32:49"
+				},
+				{
+					"Operations" : NumberInt("16170"),
+					"logtime" : "2017-02-14 17:47:53"
+				},
+				{
+					"Operations" : NumberInt("16236"),
+					"logtime" : "2017-02-14 18:03:18"
+				},
+				{
+					"Operations" : NumberInt("16268"),
+					"logtime" : "2017-02-14 18:18:03"
+				},
+				{
+					"Operations" : NumberInt("16314"),
+					"logtime" : "2017-02-14 18:32:41"
+				},
+				{
+					"Operations" : NumberInt("16328"),
+					"logtime" : "2017-02-14 18:48:06"
+				},
+				{
+					"Operations" : NumberInt("16355"),
+					"logtime" : "2017-02-14 19:03:18"
+				},
+				{
+					"Operations" : NumberInt("16367"),
+					"logtime" : "2017-02-14 19:17:15"
+				},
+				{
+					"Operations" : NumberInt("16370"),
+					"logtime" : "2017-02-14 19:30:29"
+				},
+				{
+					"Operations" : NumberInt("16376"),
+					"logtime" : "2017-02-14 19:46:44"
+				},
+				{
+					"Operations" : NumberInt("16377"),
+					"logtime" : "2017-02-14 20:02:11"
+				},
+				{
+					"Operations" : NumberInt("16377"),
+					"logtime" : "2017-02-14 20:16:35"
+				},
+				{
+					"Operations" : NumberInt("16377"),
+					"logtime" : "2017-02-14 20:31:46"
+				},
+				{
+					"Operations" : NumberInt("16377"),
+					"logtime" : "2017-02-14 20:47:00"
+				},
+				{
+					"Operations" : NumberInt("16377"),
+					"logtime" : "2017-02-14 21:01:46"
+				},
+				{
+					"Operations" : NumberInt("16377"),
+					"logtime" : "2017-02-14 21:16:41"
+				},
+				{
+					"Operations" : NumberInt("16377"),
+					"logtime" : "2017-02-14 21:32:03"
+				},
+				{
+					"Operations" : NumberInt("16377"),
+					"logtime" : "2017-02-14 21:46:48"
+				},
+				{
+					"Operations" : NumberInt("16377"),
+					"logtime" : "2017-02-14 22:02:10"
+				},
+				{
+					"Operations" : NumberInt("16377"),
+					"logtime" : "2017-02-14 22:30:12"
+				},
+				{
+					"Operations" : NumberInt("16377"),
+					"logtime" : "2017-02-14 22:31:31"
+				},
+				{
+					"Operations" : NumberInt("16377"),
+					"logtime" : "2017-02-14 22:46:51"
+				},
+				{
+					"Operations" : NumberInt("16377"),
+					"logtime" : "2017-02-14 23:02:03"
+				},
+				{
+					"Operations" : NumberInt("16377"),
+					"logtime" : "2017-02-14 23:17:06"
+				},
+				{
+					"Operations" : NumberInt("16377"),
+					"logtime" : "2017-02-14 23:31:52"
+				},
+				{
+					"Operations" : NumberInt("16377"),
+					"logtime" : "2017-02-14 23:47:47"
+				}
+			]
+		},
+		{
+			"nomeservizio" : "FEU_QuadroDiControllo",
+			"rilevazioni" : [
+				{
+					"Hits" : NumberInt("21"),
+					"logtime" : "2017-02-14 08:00:00.0",
+					"Utenti" : NumberInt("3"),
+					"TempoMedio" : 0.27,
+					"deviazione" : 0.44
+				},
+				{
+					"Hits" : NumberInt("21"),
+					"logtime" : "2017-02-14 08:00:00.0",
+					"Utenti" : NumberInt("3"),
+					"TempoMedio" : 0.27,
+					"deviazione" : 0.44
+				},
+				{
+					"Hits" : NumberInt("440"),
+					"logtime" : "2017-02-14 08:30:00.0",
+					"Utenti" : NumberInt("51"),
+					"TempoMedio" : 0.16,
+					"deviazione" : 0.42
+				},
+				{
+					"Hits" : NumberInt("440"),
+					"logtime" : "2017-02-14 08:30:00.0",
+					"Utenti" : NumberInt("51"),
+					"TempoMedio" : 0.16,
+					"deviazione" : 0.42
+				},
+				{
+					"Hits" : NumberInt("753"),
+					"logtime" : "2017-02-14 09:00:00.0",
+					"Utenti" : NumberInt("71"),
+					"TempoMedio" : 0.21,
+					"deviazione" : 0.81
+				},
+				{
+					"Hits" : NumberInt("753"),
+					"logtime" : "2017-02-14 09:00:00.0",
+					"Utenti" : NumberInt("71"),
+					"TempoMedio" : 0.21,
+					"deviazione" : 0.81
+				},
+				{
+					"Hits" : NumberInt("850"),
+					"logtime" : "2017-02-14 09:30:00.0",
+					"Utenti" : NumberInt("77"),
+					"TempoMedio" : 0.22,
+					"deviazione" : 0.81
+				},
+				{
+					"Hits" : NumberInt("850"),
+					"logtime" : "2017-02-14 09:30:00.0",
+					"Utenti" : NumberInt("77"),
+					"TempoMedio" : 0.22,
+					"deviazione" : 0.81
+				},
+				{
+					"Hits" : NumberInt("906"),
+					"logtime" : "2017-02-14 09:50:00.0",
+					"Utenti" : NumberInt("79"),
+					"TempoMedio" : 0.21,
+					"deviazione" : 0.78
+				},
+				{
+					"Hits" : NumberInt("906"),
+					"logtime" : "2017-02-14 09:50:00.0",
+					"Utenti" : NumberInt("79"),
+					"TempoMedio" : 0.21,
+					"deviazione" : 0.78
+				},
+				{
+					"Hits" : NumberInt("1025"),
+					"logtime" : "2017-02-14 10:20:00.0",
+					"Utenti" : NumberInt("81"),
+					"TempoMedio" : 0.2,
+					"deviazione" : 0.74
+				},
+				{
+					"Hits" : NumberInt("1025"),
+					"logtime" : "2017-02-14 10:20:00.0",
+					"Utenti" : NumberInt("81"),
+					"TempoMedio" : 0.2,
+					"deviazione" : 0.74
+				},
+				{
+					"Hits" : NumberInt("1087"),
+					"logtime" : "2017-02-14 10:50:00.0",
+					"Utenti" : NumberInt("81"),
+					"TempoMedio" : 0.2,
+					"deviazione" : 0.72
+				},
+				{
+					"Hits" : NumberInt("1087"),
+					"logtime" : "2017-02-14 10:50:00.0",
+					"Utenti" : NumberInt("81"),
+					"TempoMedio" : 0.2,
+					"deviazione" : 0.72
+				},
+				{
+					"Hits" : NumberInt("1162"),
+					"logtime" : "2017-02-14 11:20:00.0",
+					"Utenti" : NumberInt("82"),
+					"TempoMedio" : 0.2,
+					"deviazione" : 0.69
+				},
+				{
+					"Hits" : NumberInt("1162"),
+					"logtime" : "2017-02-14 11:20:00.0",
+					"Utenti" : NumberInt("82"),
+					"TempoMedio" : 0.2,
+					"deviazione" : 0.69
+				},
+				{
+					"Hits" : NumberInt("1237"),
+					"logtime" : "2017-02-14 12:00:00.0",
+					"Utenti" : NumberInt("84"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.67
+				},
+				{
+					"Hits" : NumberInt("1237"),
+					"logtime" : "2017-02-14 12:00:00.0",
+					"Utenti" : NumberInt("84"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.67
+				},
+				{
+					"Hits" : NumberInt("1263"),
+					"logtime" : "2017-02-14 12:30:00.0",
+					"Utenti" : NumberInt("85"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.67
+				},
+				{
+					"Hits" : NumberInt("1263"),
+					"logtime" : "2017-02-14 12:30:00.0",
+					"Utenti" : NumberInt("85"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.67
+				},
+				{
+					"Hits" : NumberInt("1328"),
+					"logtime" : "2017-02-14 13:00:00.0",
+					"Utenti" : NumberInt("85"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1328"),
+					"logtime" : "2017-02-14 13:00:00.0",
+					"Utenti" : NumberInt("85"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1342"),
+					"logtime" : "2017-02-14 13:20:00.0",
+					"Utenti" : NumberInt("85"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1342"),
+					"logtime" : "2017-02-14 13:20:00.0",
+					"Utenti" : NumberInt("85"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1370"),
+					"logtime" : "2017-02-14 13:50:00.0",
+					"Utenti" : NumberInt("85"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.64
+				},
+				{
+					"Hits" : NumberInt("1370"),
+					"logtime" : "2017-02-14 13:50:00.0",
+					"Utenti" : NumberInt("85"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.64
+				},
+				{
+					"Hits" : NumberInt("1370"),
+					"logtime" : "2017-02-14 13:50:00.0",
+					"Utenti" : NumberInt("85"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.64
+				},
+				{
+					"Hits" : NumberInt("1370"),
+					"logtime" : "2017-02-14 13:50:00.0",
+					"Utenti" : NumberInt("85"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.64
+				},
+				{
+					"Hits" : NumberInt("1455"),
+					"logtime" : "2017-02-14 15:00:00.0",
+					"Utenti" : NumberInt("87"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.64
+				},
+				{
+					"Hits" : NumberInt("1455"),
+					"logtime" : "2017-02-14 15:00:00.0",
+					"Utenti" : NumberInt("87"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.64
+				},
+				{
+					"Hits" : NumberInt("1485"),
+					"logtime" : "2017-02-14 15:20:00.0",
+					"Utenti" : NumberInt("87"),
+					"TempoMedio" : 0.2,
+					"deviazione" : 0.71
+				},
+				{
+					"Hits" : NumberInt("1485"),
+					"logtime" : "2017-02-14 15:20:00.0",
+					"Utenti" : NumberInt("87"),
+					"TempoMedio" : 0.2,
+					"deviazione" : 0.71
+				},
+				{
+					"Hits" : NumberInt("1631"),
+					"logtime" : "2017-02-14 16:30:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.2,
+					"deviazione" : 0.69
+				},
+				{
+					"Hits" : NumberInt("1631"),
+					"logtime" : "2017-02-14 16:30:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.2,
+					"deviazione" : 0.69
+				},
+				{
+					"Hits" : NumberInt("1638"),
+					"logtime" : "2017-02-14 16:50:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.2,
+					"deviazione" : 0.68
+				},
+				{
+					"Hits" : NumberInt("1638"),
+					"logtime" : "2017-02-14 16:50:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.2,
+					"deviazione" : 0.68
+				},
+				{
+					"Hits" : NumberInt("1659"),
+					"logtime" : "2017-02-14 17:20:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.68
+				},
+				{
+					"Hits" : NumberInt("1659"),
+					"logtime" : "2017-02-14 17:20:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.68
+				},
+				{
+					"Hits" : NumberInt("1780"),
+					"logtime" : "2017-02-14 18:00:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.66
+				},
+				{
+					"Hits" : NumberInt("1780"),
+					"logtime" : "2017-02-14 18:00:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.66
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				},
+				{
+					"Hits" : NumberInt("1842"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("89"),
+					"TempoMedio" : 0.19,
+					"deviazione" : 0.65
+				}
+			]
+		},
+		{
+			"nomeservizio" : "FEAfirmati",
+			"rilevazioni" : [
+				{
+					"firmati" : NumberInt("1"),
+					"logtime" : "2017-02-14 08:16:15"
+				},
+				{
+					"firmati" : NumberInt("41"),
+					"logtime" : "2017-02-14 08:31:13"
+				},
+				{
+					"firmati" : NumberInt("126"),
+					"logtime" : "2017-02-14 08:46:13"
+				},
+				{
+					"firmati" : NumberInt("220"),
+					"logtime" : "2017-02-14 09:01:03"
+				},
+				{
+					"firmati" : NumberInt("327"),
+					"logtime" : "2017-02-14 09:16:17"
+				},
+				{
+					"firmati" : NumberInt("416"),
+					"logtime" : "2017-02-14 09:31:08"
+				},
+				{
+					"firmati" : NumberInt("513"),
+					"logtime" : "2017-02-14 09:46:07"
+				},
+				{
+					"firmati" : NumberInt("616"),
+					"logtime" : "2017-02-14 10:01:15"
+				},
+				{
+					"firmati" : NumberInt("724"),
+					"logtime" : "2017-02-14 10:16:07"
+				},
+				{
+					"firmati" : NumberInt("836"),
+					"logtime" : "2017-02-14 10:31:07"
+				},
+				{
+					"firmati" : NumberInt("963"),
+					"logtime" : "2017-02-14 10:46:16"
+				},
+				{
+					"firmati" : NumberInt("1096"),
+					"logtime" : "2017-02-14 11:01:14"
+				},
+				{
+					"firmati" : NumberInt("1214"),
+					"logtime" : "2017-02-14 11:16:16"
+				},
+				{
+					"firmati" : NumberInt("1310"),
+					"logtime" : "2017-02-14 11:31:11"
+				},
+				{
+					"firmati" : NumberInt("1400"),
+					"logtime" : "2017-02-14 11:46:14"
+				},
+				{
+					"firmati" : NumberInt("1486"),
+					"logtime" : "2017-02-14 12:01:16"
+				},
+				{
+					"firmati" : NumberInt("1597"),
+					"logtime" : "2017-02-14 12:16:12"
+				},
+				{
+					"firmati" : NumberInt("1703"),
+					"logtime" : "2017-02-14 12:31:01"
+				},
+				{
+					"firmati" : NumberInt("1814"),
+					"logtime" : "2017-02-14 12:46:16"
+				},
+				{
+					"firmati" : NumberInt("1914"),
+					"logtime" : "2017-02-14 13:01:03"
+				},
+				{
+					"firmati" : NumberInt("2027"),
+					"logtime" : "2017-02-14 13:16:08"
+				},
+				{
+					"firmati" : NumberInt("2102"),
+					"logtime" : "2017-02-14 13:31:01"
+				},
+				{
+					"firmati" : NumberInt("2110"),
+					"logtime" : "2017-02-14 13:46:01"
+				},
+				{
+					"firmati" : NumberInt("2110"),
+					"logtime" : "2017-02-14 14:00:42"
+				},
+				{
+					"firmati" : NumberInt("2110"),
+					"logtime" : "2017-02-14 14:16:01"
+				},
+				{
+					"firmati" : NumberInt("2111"),
+					"logtime" : "2017-02-14 14:31:02"
+				},
+				{
+					"firmati" : NumberInt("2177"),
+					"logtime" : "2017-02-14 14:46:01"
+				},
+				{
+					"firmati" : NumberInt("2252"),
+					"logtime" : "2017-02-14 15:00:58"
+				},
+				{
+					"firmati" : NumberInt("2316"),
+					"logtime" : "2017-02-14 15:16:19"
+				},
+				{
+					"firmati" : NumberInt("2395"),
+					"logtime" : "2017-02-14 15:31:03"
+				},
+				{
+					"firmati" : NumberInt("2447"),
+					"logtime" : "2017-02-14 15:46:29"
+				},
+				{
+					"firmati" : NumberInt("2467"),
+					"logtime" : "2017-02-14 16:01:29"
+				},
+				{
+					"firmati" : NumberInt("2468"),
+					"logtime" : "2017-02-14 16:16:15"
+				},
+				{
+					"firmati" : NumberInt("2472"),
+					"logtime" : "2017-02-14 16:31:06"
+				},
+				{
+					"firmati" : NumberInt("2472"),
+					"logtime" : "2017-02-14 16:46:06"
+				},
+				{
+					"firmati" : NumberInt("2473"),
+					"logtime" : "2017-02-14 17:01:11"
+				},
+				{
+					"firmati" : NumberInt("2477"),
+					"logtime" : "2017-02-14 17:16:07"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 17:31:12"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 17:46:08"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 18:01:09"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 18:16:17"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 18:30:58"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 18:46:18"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 19:01:09"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 19:15:48"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 19:30:09"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 19:45:52"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 20:01:02"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 20:15:53"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 20:31:16"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 20:46:02"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 21:00:54"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 21:16:06"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 21:31:02"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 21:46:05"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 22:01:49"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 22:16:36"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 22:31:11"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 22:46:19"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 23:01:28"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 23:16:23"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 23:31:12"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 23:47:00"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 23:59:00"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 23:59:00"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 23:59:00"
+				},
+				{
+					"firmati" : NumberInt("2478"),
+					"logtime" : "2017-02-14 23:59:00"
+				}
+			]
+		},
+		{
+			"nomeservizio" : "Ticket",
+			"rilevazioni" : [
+				{
+					"Pervenuti" : NumberInt("1"),
+					"logtime" : "2017-02-14 08:31:49"
+				},
+				{
+					"Pervenuti" : NumberInt("1"),
+					"logtime" : "2017-02-14 08:47:02"
+				},
+				{
+					"Pervenuti" : NumberInt("3"),
+					"logtime" : "2017-02-14 09:01:38"
+				},
+				{
+					"Pervenuti" : NumberInt("4"),
+					"logtime" : "2017-02-14 09:17:26"
+				},
+				{
+					"Pervenuti" : NumberInt("5"),
+					"logtime" : "2017-02-14 09:32:09"
+				},
+				{
+					"Pervenuti" : NumberInt("5"),
+					"logtime" : "2017-02-14 09:47:06"
+				},
+				{
+					"Pervenuti" : NumberInt("6"),
+					"logtime" : "2017-02-14 10:02:25"
+				},
+				{
+					"Pervenuti" : NumberInt("5"),
+					"logtime" : "2017-02-14 10:17:12"
+				},
+				{
+					"Pervenuti" : NumberInt("8"),
+					"logtime" : "2017-02-14 10:32:21"
+				},
+				{
+					"Pervenuti" : NumberInt("8"),
+					"logtime" : "2017-02-14 10:47:37"
+				},
+				{
+					"Pervenuti" : NumberInt("8"),
+					"logtime" : "2017-02-14 11:02:36"
+				},
+				{
+					"Pervenuti" : NumberInt("10"),
+					"logtime" : "2017-02-14 11:17:40"
+				},
+				{
+					"Pervenuti" : NumberInt("10"),
+					"logtime" : "2017-02-14 11:32:41"
+				},
+				{
+					"Pervenuti" : NumberInt("11"),
+					"logtime" : "2017-02-14 11:47:30"
+				},
+				{
+					"Pervenuti" : NumberInt("11"),
+					"logtime" : "2017-02-14 12:02:36"
+				},
+				{
+					"Pervenuti" : NumberInt("14"),
+					"logtime" : "2017-02-14 12:17:57"
+				},
+				{
+					"Pervenuti" : NumberInt("16"),
+					"logtime" : "2017-02-14 12:32:29"
+				},
+				{
+					"Pervenuti" : NumberInt("18"),
+					"logtime" : "2017-02-14 12:47:49"
+				},
+				{
+					"Pervenuti" : NumberInt("18"),
+					"logtime" : "2017-02-14 13:02:48"
+				},
+				{
+					"Pervenuti" : NumberInt("18"),
+					"logtime" : "2017-02-14 13:17:45"
+				},
+				{
+					"Pervenuti" : NumberInt("23"),
+					"logtime" : "2017-02-14 13:32:51"
+				},
+				{
+					"Pervenuti" : NumberInt("23"),
+					"logtime" : "2017-02-14 13:47:50"
+				},
+				{
+					"Pervenuti" : NumberInt("23"),
+					"logtime" : "2017-02-14 14:02:03"
+				},
+				{
+					"Pervenuti" : NumberInt("23"),
+					"logtime" : "2017-02-14 14:17:18"
+				},
+				{
+					"Pervenuti" : NumberInt("23"),
+					"logtime" : "2017-02-14 14:33:05"
+				},
+				{
+					"Pervenuti" : NumberInt("23"),
+					"logtime" : "2017-02-14 14:48:02"
+				},
+				{
+					"Pervenuti" : NumberInt("23"),
+					"logtime" : "2017-02-14 15:03:00"
+				},
+				{
+					"Pervenuti" : NumberInt("23"),
+					"logtime" : "2017-02-14 15:18:19"
+				},
+				{
+					"Pervenuti" : NumberInt("23"),
+					"logtime" : "2017-02-14 15:32:58"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 16:33:21"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 16:47:50"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 17:02:55"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 17:18:29"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 17:33:14"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 17:48:22"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 18:03:51"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 18:18:28"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 18:33:06"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 18:48:32"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 19:03:43"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 19:18:10"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 19:30:53"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 19:47:08"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 20:02:35"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 20:16:59"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 20:32:10"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 20:47:24"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 21:02:10"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 21:17:05"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 21:32:27"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 21:47:12"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 22:02:34"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 22:31:00"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 22:32:02"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 22:47:15"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:02:28"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:17:31"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:32:17"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:48:11"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 00:02:15"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 00:16:54"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 00:32:22"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 00:47:05"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:59:00"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:59:00"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:59:00"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:59:00"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:59:00"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:59:00"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:59:00"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:59:00"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:59:00"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:59:00"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:59:00"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:59:00"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:59:00"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:59:00"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:59:00"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:59:00"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:59:00"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:59:00"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:59:00"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:59:00"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:59:00"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:59:00"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:59:00"
+				},
+				{
+					"Pervenuti" : NumberInt("26"),
+					"logtime" : "2017-02-14 23:59:00"
+				}
+			]
+		},
+		{
+			"nomeservizio" : "FEU_SintesiStatoCliente",
+			"rilevazioni" : [
+				{
+					"Hits" : NumberInt("64"),
+					"logtime" : "2017-02-14 08:30:00.0",
+					"Utenti" : NumberInt("9"),
+					"TempoMedio" : 0.4,
+					"deviazione" : 0.76
+				},
+				{
+					"Hits" : NumberInt("64"),
+					"logtime" : "2017-02-14 08:30:00.0",
+					"Utenti" : NumberInt("9"),
+					"TempoMedio" : 0.4,
+					"deviazione" : 0.76
+				},
+				{
+					"Hits" : NumberInt("386"),
+					"logtime" : "2017-02-14 09:00:00.0",
+					"Utenti" : NumberInt("30"),
+					"TempoMedio" : 0.4,
+					"deviazione" : 1.05
+				},
+				{
+					"Hits" : NumberInt("386"),
+					"logtime" : "2017-02-14 09:00:00.0",
+					"Utenti" : NumberInt("30"),
+					"TempoMedio" : 0.4,
+					"deviazione" : 1.05
+				},
+				{
+					"Hits" : NumberInt("756"),
+					"logtime" : "2017-02-14 09:30:00.0",
+					"Utenti" : NumberInt("44"),
+					"TempoMedio" : 0.42,
+					"deviazione" : 1.03
+				},
+				{
+					"Hits" : NumberInt("756"),
+					"logtime" : "2017-02-14 09:30:00.0",
+					"Utenti" : NumberInt("44"),
+					"TempoMedio" : 0.42,
+					"deviazione" : 1.03
+				},
+				{
+					"Hits" : NumberInt("1163"),
+					"logtime" : "2017-02-14 10:00:00.0",
+					"Utenti" : NumberInt("52"),
+					"TempoMedio" : 0.37,
+					"deviazione" : 0.83
+				},
+				{
+					"Hits" : NumberInt("1163"),
+					"logtime" : "2017-02-14 10:00:00.0",
+					"Utenti" : NumberInt("52"),
+					"TempoMedio" : 0.37,
+					"deviazione" : 0.83
+				},
+				{
+					"Hits" : NumberInt("1538"),
+					"logtime" : "2017-02-14 10:30:00.0",
+					"Utenti" : NumberInt("58"),
+					"TempoMedio" : 0.37,
+					"deviazione" : 0.91
+				},
+				{
+					"Hits" : NumberInt("1538"),
+					"logtime" : "2017-02-14 10:30:00.0",
+					"Utenti" : NumberInt("58"),
+					"TempoMedio" : 0.37,
+					"deviazione" : 0.91
+				},
+				{
+					"Hits" : NumberInt("1878"),
+					"logtime" : "2017-02-14 11:00:00.0",
+					"Utenti" : NumberInt("66"),
+					"TempoMedio" : 0.37,
+					"deviazione" : 0.9
+				},
+				{
+					"Hits" : NumberInt("1878"),
+					"logtime" : "2017-02-14 11:00:00.0",
+					"Utenti" : NumberInt("66"),
+					"TempoMedio" : 0.37,
+					"deviazione" : 0.9
+				},
+				{
+					"Hits" : NumberInt("2138"),
+					"logtime" : "2017-02-14 11:30:00.0",
+					"Utenti" : NumberInt("67"),
+					"TempoMedio" : 0.36,
+					"deviazione" : 0.84
+				},
+				{
+					"Hits" : NumberInt("2138"),
+					"logtime" : "2017-02-14 11:30:00.0",
+					"Utenti" : NumberInt("67"),
+					"TempoMedio" : 0.36,
+					"deviazione" : 0.84
+				},
+				{
+					"Hits" : NumberInt("2458"),
+					"logtime" : "2017-02-14 12:00:00.0",
+					"Utenti" : NumberInt("70"),
+					"TempoMedio" : 0.36,
+					"deviazione" : 0.86
+				},
+				{
+					"Hits" : NumberInt("2458"),
+					"logtime" : "2017-02-14 12:00:00.0",
+					"Utenti" : NumberInt("70"),
+					"TempoMedio" : 0.36,
+					"deviazione" : 0.86
+				},
+				{
+					"Hits" : NumberInt("2694"),
+					"logtime" : "2017-02-14 12:30:00.0",
+					"Utenti" : NumberInt("70"),
+					"TempoMedio" : 0.37,
+					"deviazione" : 0.91
+				},
+				{
+					"Hits" : NumberInt("2694"),
+					"logtime" : "2017-02-14 12:30:00.0",
+					"Utenti" : NumberInt("70"),
+					"TempoMedio" : 0.37,
+					"deviazione" : 0.91
+				},
+				{
+					"Hits" : NumberInt("2933"),
+					"logtime" : "2017-02-14 13:00:00.0",
+					"Utenti" : NumberInt("70"),
+					"TempoMedio" : 0.37,
+					"deviazione" : 0.88
+				},
+				{
+					"Hits" : NumberInt("2933"),
+					"logtime" : "2017-02-14 13:00:00.0",
+					"Utenti" : NumberInt("70"),
+					"TempoMedio" : 0.37,
+					"deviazione" : 0.88
+				},
+				{
+					"Hits" : NumberInt("3106"),
+					"logtime" : "2017-02-14 13:30:00.0",
+					"Utenti" : NumberInt("73"),
+					"TempoMedio" : 0.36,
+					"deviazione" : 0.85
+				},
+				{
+					"Hits" : NumberInt("3106"),
+					"logtime" : "2017-02-14 13:30:00.0",
+					"Utenti" : NumberInt("73"),
+					"TempoMedio" : 0.36,
+					"deviazione" : 0.85
+				},
+				{
+					"Hits" : NumberInt("3143"),
+					"logtime" : "2017-02-14 13:50:00.0",
+					"Utenti" : NumberInt("73"),
+					"TempoMedio" : 0.37,
+					"deviazione" : 0.86
+				},
+				{
+					"Hits" : NumberInt("3143"),
+					"logtime" : "2017-02-14 13:50:00.0",
+					"Utenti" : NumberInt("73"),
+					"TempoMedio" : 0.37,
+					"deviazione" : 0.86
+				},
+				{
+					"Hits" : NumberInt("3183"),
+					"logtime" : "2017-02-14 14:30:00.0",
+					"Utenti" : NumberInt("73"),
+					"TempoMedio" : 0.37,
+					"deviazione" : 0.86
+				},
+				{
+					"Hits" : NumberInt("3183"),
+					"logtime" : "2017-02-14 14:30:00.0",
+					"Utenti" : NumberInt("73"),
+					"TempoMedio" : 0.37,
+					"deviazione" : 0.86
+				},
+				{
+					"Hits" : NumberInt("3647"),
+					"logtime" : "2017-02-14 15:00:00.0",
+					"Utenti" : NumberInt("75"),
+					"TempoMedio" : 0.37,
+					"deviazione" : 0.87
+				},
+				{
+					"Hits" : NumberInt("3647"),
+					"logtime" : "2017-02-14 15:00:00.0",
+					"Utenti" : NumberInt("75"),
+					"TempoMedio" : 0.37,
+					"deviazione" : 0.87
+				},
+				{
+					"Hits" : NumberInt("4128"),
+					"logtime" : "2017-02-14 15:30:00.0",
+					"Utenti" : NumberInt("75"),
+					"TempoMedio" : 0.37,
+					"deviazione" : 0.84
+				},
+				{
+					"Hits" : NumberInt("4128"),
+					"logtime" : "2017-02-14 15:30:00.0",
+					"Utenti" : NumberInt("75"),
+					"TempoMedio" : 0.37,
+					"deviazione" : 0.84
+				},
+				{
+					"Hits" : NumberInt("4566"),
+					"logtime" : "2017-02-14 16:30:00.0",
+					"Utenti" : NumberInt("76"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.15
+				},
+				{
+					"Hits" : NumberInt("4566"),
+					"logtime" : "2017-02-14 16:30:00.0",
+					"Utenti" : NumberInt("76"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.15
+				},
+				{
+					"Hits" : NumberInt("4742"),
+					"logtime" : "2017-02-14 17:00:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.37,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4742"),
+					"logtime" : "2017-02-14 17:00:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.37,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4828"),
+					"logtime" : "2017-02-14 17:20:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.37,
+					"deviazione" : 1.12
+				},
+				{
+					"Hits" : NumberInt("4828"),
+					"logtime" : "2017-02-14 17:20:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.37,
+					"deviazione" : 1.12
+				},
+				{
+					"Hits" : NumberInt("4839"),
+					"logtime" : "2017-02-14 17:50:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4839"),
+					"logtime" : "2017-02-14 17:50:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				},
+				{
+					"Hits" : NumberInt("4887"),
+					"logtime" : "2017-02-14 18:10:00.0",
+					"Utenti" : NumberInt("78"),
+					"TempoMedio" : 0.38,
+					"deviazione" : 1.13
+				}
+			]
+		}
+	]
+}

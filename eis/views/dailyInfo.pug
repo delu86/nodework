@@ -1,0 +1,32 @@
+doctype html
+html(lang="it")
+    head
+        link(rel="shortcut icon" href="../../../img/favicon.ico" type="image/x-icon")
+        link(rel="icon" href="../../../img/favicon.ico" type="image/x-icon")
+        link(rel="stylesheet" href="../../../CSS/serviceDetails.css")
+        link(rel="stylesheet" href="../../../CSS/datatables.min.css")
+        link(rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css")
+        title #{service} #{date}
+    body
+        #header
+        img#logo(src='../../../img/loghi/'+abi_code)
+        .table.datagrid#table1
+    script(src="../../../js/jquery.min.js")
+    script(src="../../../js/datatables.min.js")
+    script(src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js")
+    script(src="//cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js")
+    script(src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js")
+    script(src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js")
+    script(src="//cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js")
+    script(src="//cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js")
+    script(src="../../../js/table.js")
+    script.
+      $(function(){
+        var abi='#{abi_code}';
+        var date='#{date}';
+        var service='#{service}';
+        var url = '/getInfoJSON/'
+        $.getJSON(url+abi+"/"+service+"/"+date,function(json){
+            var table=new  Table("table1",json);
+            });
+      })

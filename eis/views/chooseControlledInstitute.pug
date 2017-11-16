@@ -1,0 +1,34 @@
+doctype html
+html
+  head
+    style.
+      body{
+        font-family: monospace;
+        background-image: url('../img/bg.jpg');
+      }
+      ul {
+        list-style-type: none;
+      }
+
+      img{
+          max-width:400px;
+          height:auto;
+      }
+    script(src="js/jquery.min.js")
+    script.
+      $(function(){
+        $(".instituteLogo").css("cursor","pointer");
+        $(".instituteLogo").click(function(){
+          var abi=$(this).attr("src").substr(10,5);
+          location.href ='/'+abi;
+        })
+      })
+  body
+    h1 Seleziona l'istituto
+    #institutions
+      ul
+        li
+         img.instituteLogo(src='img/loghi/'+abi)
+        each value in controlledInstitutions
+            li
+              img.instituteLogo(src='img/loghi/'+value)
